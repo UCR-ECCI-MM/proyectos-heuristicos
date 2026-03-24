@@ -6,7 +6,7 @@ symbols = ["LBRACE", "RBRACE", "LBRACKET", "RBRACKET", "COLON", "COMMA"]
 
 literal_values = ["BOOLEAN", "NUMBER", "NULL", "STRING", "DATETIME"]
 
-addresses = ["IP", "URL", "DNS"] # ip hace referencia al tipo ipv4 mas especificamente
+addresses = ["IPV4", "URL", "DNS"] # ip hace referencia al tipo ipv4 mas especificamente
 
 keys = ["NUMBER_KEYS", "URL_KEYS", "STRING_KEYS", "DNS_KEYS", "POLICIES_KEYS", 
         "PORT_DIR_KEYS", "NULL_KEYS", "RESERVED_VALUES"]
@@ -34,12 +34,12 @@ unique_keys = {
     "destination-ipv4-network" : "DESTINATION_IPV4_NETWORK",
     "destination-mac-address" : "DESTINATION_MAC_ADDRESS",
     "ethertype" : "ETHERTYPE",
-    "ietf-mud:direction-initiated" : "IETF_MUD:DIRECTION_INITIATED",
+    "ietf-mud:direction-initiated" : "IETF_MUD_DIRECTION_INITIATED",
     "operator" : "OPERATOR",
     "forwarding" : "FORWARDING",
     "extensions" : "EXTENSIONS", 
-    "ietf-mud:mud" : "IETF_MUD:MUD",
-    "ietf-access-control-list:access-lists" : "IETF_ACCESS_CONTROL_LIST:ACCESS_LISTS",
+    "ietf-mud:mud" : "IETF_MUD_MUD",
+    "ietf-access-control-list:access-lists" : "IETF_ACCESS_CONTROL_LIST_ACCESS_LISTS",
     "access-lists" : "ACCESS_LISTS",
     "access-list" : "ACCESS_LIST",
     "acl" : "ACL",
@@ -67,3 +67,15 @@ t_COLON = r":"
 t_COMMA = r","
 
 # agregar datetime y url antes de string para que no lo capture
+# funcion string va hasta el final del archivo
+def t_STRING(t):
+    # regex strings
+    # cualquier cadena que empiece y termine con quote se considera un string (hasta verificar si es una clave)
+    r'"[^"]*"'
+
+    value = t.value.split('"')[1] # quitar comillas de la palabra
+
+    if value in reserved:
+        t.type = reserved[value]
+
+    return t
