@@ -1,7 +1,7 @@
 from lexer import lexer
 
 # leer el archivo de entrada
-with open("./Proyecto1/MUD/validos/blipcareBPmeterMud.json", "r") as mudFile:
+with open("./Proyecto1/MUD/validos/test.json", "r") as mudFile:
     data = mudFile.read()
 
 # pasar los datos al lexer
