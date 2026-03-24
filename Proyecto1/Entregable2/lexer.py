@@ -6,13 +6,57 @@ symbols = ["LBRACE", "RBRACE", "LBRACKET", "RBRACKET", "COLON", "COMMA"]
 
 literal_values = ["BOOLEAN", "NUMBER", "NULL", "STRING", "DATETIME"]
 
-addresses = ["IPV4", "URL"]
+addresses = ["IP", "URL", "DNS"] # ip hace referencia al tipo ipv4 mas especificamente
 
-keys = ["ROOT_KEYS", "MUD_KEYS", "METADATA_KEYS", "POLICIES_KEYS", 
-        "ACL_KEYS", "MATCHES_KEYS", "ACTIONS_KEYS", "RESERVED_VALUES"]
+keys = ["NUMBER_KEYS", "URL_KEYS", "STRING_KEYS", "DNS_KEYS", "POLICIES_KEYS", 
+        "PORT_DIR_KEYS", "NULL_KEYS", "RESERVED_VALUES"]
+
+# maps for key types
+# faltan port, null and reserved
+
+number_keys = {"mud-version" : "NUMBER_KEYS", "cache-validity" : "NUMBER_KEYS",
+               "protocol" : "NUMBER_KEYS", "port" : "NUMBER_KEYS"}
+
+url_keys = {"mud-url" : "URL_KEYS", "mud-signature" : "URL_KEYS", 
+            "documentation" : "URL_KEYS", "controller" : "URL_KEYS"}
+
+string_keys = {"name" : "STRING_KEYS", "type" : "STRING_KEYS", "systeminfo" : "STRING_KEYS",
+               "mfg-name" : "STRING_KEYS", "model-name" : "STRING_KEYS"}
+
+dns_keys = {"ietf-acldns:dst-dnsname" : "DNS_KEYS", "ietf-acldns:src-dnsname": "DNS_KEYS"}
+
+policies_keys = {"from-device-policy" : "POLICIES_KEYS", "to-device-policy" : "POLICIES_KEYS"}
+
+# for unique keys
+unique_keys = {
+    "last-update" : "LAST_UPDATE",
+    "is-supported" : "IS_SUPPORTED",
+    "destination-ipv4-network" : "DESTINATION_IPV4_NETWORK",
+    "destination-mac-address" : "DESTINATION_MAC_ADDRESS",
+    "ethertype" : "ETHERTYPE",
+    "ietf-mud:direction-initiated" : "IETF_MUD:DIRECTION_INITIATED",
+    "operator" : "OPERATOR",
+    "forwarding" : "FORWARDING",
+    "extensions" : "EXTENSIONS", 
+    "ietf-mud:mud" : "IETF_MUD:MUD",
+    "ietf-access-control-list:access-lists" : "IETF_ACCESS_CONTROL_LIST:ACCESS_LISTS",
+    "access-lists" : "ACCESS_LISTS",
+    "access-list" : "ACCESS_LIST",
+    "acl" : "ACL",
+    "aces" : "ACES",
+    "ace" : "ACE",
+    "matches" : "MATCHES",
+    "actions" : "ACTIONS",
+    "ipv4" : "IPV4_KEY",
+    "policy" : "POLICY"
+}
+
+reserved = { # desempaquetar diccionarios en un solo diccionario maestro para manipular
+    **number_keys, **url_keys, **string_keys, **dns_keys, **policies_keys, **unique_keys
+}
 
 # complete token list for ply
-tokens = symbols + literal_values + addresses + keys
+tokens = symbols + literal_values + addresses + keys + list(unique_keys.values())
 
 # symbols regex
 t_LBRACE = r"\{"
@@ -22,23 +66,4 @@ t_RBRACKET = r"\]"
 t_COLON = r":"
 t_COMMA = r","
 
-# maps for key types
-root_keys = {"ietf-mud:mud" : "ROOT_KEYS",
-             "ietf-access-control-list:access-lists" : "ROOT_KEYS"}
-
-mud_keys = {"name" : "MUD_KEYS", "type" : "MUD_KEYS",
-            "access-lists" : "MUD_KEYS", "access-list" : "MUD_KEYS",
-            "extensions" : "MUD_KEYS"}
-
-metadata_keys = {"mud-version" : "METADATA_KEYS", "mud-url" : "METADATA_KEYS",
-            "mud-signature" : "METADATA_KEYS", "last-update" : "METADATA_KEYS",
-            "cache-validity" : "METADATA_KEYS", "is-supported" : "METADATA_KEYS",
-            "systeminfo" : "METADATA_KEYS", "documentation" : "METADATA_KEYS",
-            "mfg-name" : "METADATA_KEYS", "model-name" : "METADATA_KEYS"}
-
-policies_keys = {"from-device-policy" : "POLICIES_KEYS", "to-device-policy" : "POLICIES_KEYS", 
-            "policy" : "POLICIES_KEYS"}
-
-acl_keys = {"acl" : "ACL_KEYS", "aces" : "ACL_KEYS", 
-       "ace" : "ACL_KEYS", "matches" : "ACL_KEYS", 
-       "actions" : "ACL_KEYS"}
+# agregar datetime y url antes de string para que no lo capture
