@@ -1,15 +1,17 @@
-from lexer import lexer
+from lexer import lexer, reporte_lexico
 
 # leer el archivo de entrada
-with open("./Proyecto1/MUD/validos/test.json", "r") as mudFile:
+with open("./Proyecto1/MUD/invalidos/test.json", "r") as mudFile:
     data = mudFile.read()
 
 # pasar los datos al lexer
 lexer.input(data)
 
-# Imprimir tokens
+# Tokenize
 while True:
     tok = lexer.token()
-    if not tok:
-        break
+    if not tok: 
+        break      # No more input
     print(tok)
+
+reporte_lexico()

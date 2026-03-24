@@ -79,8 +79,6 @@ t_RBRACKET = r"\]"
 t_COLON = r":"
 t_COMMA = r","
 
-# agregar datetime y url antes de string para que no lo capture
-
 #def t_DATETIME(t):
     #r'"(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})?)"'
    # t.value = t.value.strip('"')
@@ -116,31 +114,69 @@ def t_DNS(t):
     #t.value = None
     #return t
 
-#def t_NUMBER(t):
-    #r'\b\d+\b'
-    #t.value = int(t.value)
-    #return t
-
-# funcion string va hasta el final del archivo y captura todo lo que queda entre comillas
-def t_STRING(t):
-    # regex strings
-    # cualquier cadena que empiece y termine con quote se considera un string (hasta verificar si es una clave)
-    r'"[^"]*"'
-
-    value = t.value.split('"')[1] # quitar comillas de la palabra
-
-    if value in reserved:
-        t.type = reserved[value]
-
+def t_NUMBER(t):
+    r'\b\d+\b'
+    t.value = int(t.value)
     return t
 
-# A string containing ignored characters (spaces, tabs and newlines)
-t_ignore = ' \t\n'
+last_key = None
+errores = []
+
+def t_STRING(t):
+    r'"[^"]*"'
+    global last_key
+    value = t.value.strip('"')
+    if value in reserved:
+        t.type = reserved[value]
+        last_key = value  # guarda la clave para el siguiente token
+    else:
+        # validar según la clave anterior
+        validar_valor(value, t.lineno)
+    return t
+
+# expresiones regulares 
+ipv4_expr = r'"[0-2][0-5][0-5]\.[0-2][0-5][0-5]\.[0-2][0-5][0-5]\.[0-2][0-5][0-5]/(3[0-2]|[1-2]?[0-9])"'
+dns_expr = r'"([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]?\.)+[a-zA-Z]{2,24}"'
+url_expr = r'"https?://[a-zA-Z0-9:/.?=&%\-_~#@!]+"'
+
+# ver si el valor que cayó en string es un error de formato.
+def validar_valor(value, lineno):
+    import re
+    global last_key
+    # mud-url y documentation deben ser URLs validas
+    if last_key in url_keys:
+        if not re.match(url_expr, value):
+            errores.append(f"Línea {lineno}: URL invalida en '{last_key}' → '{value}'")
+
+    # dns keys deben ser validos
+    elif last_key in dns_keys:
+        if not re.match(dns_expr, value):
+            errores.append(f"Línea {lineno}: DNS invalido en '{last_key}' → '{value}'")
+
+    # destination-ipv4-network debe ser IPv4 valida
+    elif last_key == "destination-ipv4-network":
+        if not re.match(ipv4_expr, value):
+            errores.append(f"Línea {lineno}: IPv4 invalida en 'destination-ipv4-network' → '{value}'")
+
+def t_newline(t):
+    r'\n+'
+    t.lexer.lineno += len(t.value)
+
+# un string con caracteres a ignorar (espacios y tabs)
+t_ignore = ' \t' 
  
-# Error handling rule
+# se agrega el error a la lista de errores y se salta el caracter ilegal
 def t_error(t):
-    print("Illegal character '%s'" % t.value[0])
+    errores.append(f"Illegal character '{t.value[0]}'")
     t.lexer.skip(1)
+
+#cant de errores encontrados y reporte de los mismos
+def reporte_lexico():
+    print(f"\n Errores encontrados: {len(errores)}")
+    if errores:
+        print("\n  ERRORES:")
+        for e in errores:
+            print(f"{e}")
 
 # creando el lexer
 lexer = lex.lex()

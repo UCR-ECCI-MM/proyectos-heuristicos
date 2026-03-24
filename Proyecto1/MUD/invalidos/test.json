@@ -1,0 +1,9 @@
+{  
+    "ietf-acldns:src-dnsname": "-tech.carematix.com",
+    "ipv4": {
+        "protocol": 17,
+        "destination-ipv4-network": "200.355.255.255/30"
+    },
+    "port": 8777,
+    "mud-url": "htps://iotanalytics.unsw.edu.au/mud/blipcareBPmeterMud.fjson"
+}
