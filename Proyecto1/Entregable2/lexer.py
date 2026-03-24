@@ -79,3 +79,14 @@ def t_STRING(t):
         t.type = reserved[value]
 
     return t
+
+# A string containing ignored characters (spaces and tabs)
+t_ignore = ' \t\n'
+ 
+# Error handling rule
+def t_error(t):
+     print("Illegal character '%s'" % t.value[0])
+     t.lexer.skip(1)
+
+# creando el lexer
+lexer = lex.lex()
