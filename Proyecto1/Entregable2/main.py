@@ -5,9 +5,9 @@ from lexer import lexer, reporte_lexico
 num = input("1 = validos, 2 = invalidos: ")
 
 if num == "1":
-    carpeta = "./Proyecto1/Entregable2/MUD/validos"
+    carpeta = "./MUD/validos"
 else:
-    carpeta = "./Proyecto1/Entregable2/MUD/invalidos"
+    carpeta = "./MUD/invalidos"
 
 # listar archivos
 archivos = os.listdir(carpeta)
