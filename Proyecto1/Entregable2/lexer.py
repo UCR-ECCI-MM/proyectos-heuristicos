@@ -103,7 +103,7 @@ def t_URL(t):
 def t_DNS(t):
     # inicia en letra o numero, luego puede tener letras, numeros o guiones, seguido de un punto, y termina con una extension de 2 a
     # 24 caracteres para el .com o lo que sea, todo esto entre comillas
-    r'"([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]?\.)+[a-zA-Z]{2,24}"'
+    r'"([a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z]{2,24}"'
     t.value = t.value.strip('"')
     return t
 
@@ -142,7 +142,7 @@ def t_STRING(t):
 
 # expresiones regulares 
 ipv4_expr = r'"((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\/(3[0-2]|[1-2]?[0-9]|[0-9])"'
-dns_expr = r'"([a-zA-Z0-9][a-zA-Z0-9-]*[a-zA-Z0-9]?\.)+[a-zA-Z]{2,24}"'
+dns_expr =  r'"([a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z]{2,24}"'
 url_expr = r'"https?://[a-zA-Z0-9:/.?=&%\-_~#@!]+"'
 
 # ver si el valor que cayó en string es un error de formato.
