@@ -147,10 +147,13 @@ def t_STRING(t):
         validar_valor(t.value, t.lineno) # pasarselo con comillas pq la funcion lo espera asi
     return t
 
+
 # expresiones regulares 
 ipv4_expr = r'"((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\/(3[0-2]|[1-2]?[0-9]|[0-9])"'
 dns_expr =  r'"([a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z]{2,24}"'
 url_expr = r'"(https?://[a-zA-Z0-9:/.?=&%\-_~#@!]+|urn:[a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?:[a-zA-Z0-9._~!$&()*+,;=@%/-]+(:[a-zA-Z0-9._~!$&()*+,;=@%/-]+)*)"'
+datetime_expr = r'"[0-9]{4}-((0[1-9])|(1[0-2]))-((0[1-9])|([12][0-9])|(3[01]))T((0[0-9])|(1[0-9])|(2[0-3])):([0-5][0-9]):([0-5][0-9]\+|([0-5][0-9]\.[1-9]{3,5}\+))([0-9]{2}:[0-9]{2})"'
+mac_expr = r'"([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}"'
 
 # ver si el valor que cayó en string es un error de formato.
 def validar_valor(value, lineno):
@@ -169,6 +172,17 @@ def validar_valor(value, lineno):
     elif last_key == "destination-ipv4-network":
         if not re.match(ipv4_expr, value):
             errores.append(f"Línea {lineno}: IPv4 invalida en 'destination-ipv4-network' → '{value}'")
+
+    # fecha incorrecta
+    elif last_key == "last-update":
+            if not re.match(datetime_expr, value):
+                errores.append(f"Línea {lineno}: Fecha inválida en '{last_key}' → '{value}'")
+
+    # mac address incorrecta
+    elif last_key == "destination-mac-address":
+        if not re.match(mac_expr, value):
+            errores.append(f"Línea {lineno}: MAC inválida en '{last_key}' → '{value}'")
+    
 
 # Captura uno o más saltos de línea
 # Referencia del ejemplo de calculadora
