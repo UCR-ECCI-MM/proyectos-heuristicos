@@ -1,8 +1,8 @@
 from lexer import lexer, reporte_lexico
 
 # Read file
-nombre_archivo = "input_file_mud.json"
-# nombre_archivo = ./Proyecto1/MUD/invalidos/test.json
+
+nombre_archivo = "./Proyecto1/Entregable2/MUD/validos/test.json"
 
 try:
   with open(nombre_archivo, "r", encoding="UTF-8") as mudFile:
