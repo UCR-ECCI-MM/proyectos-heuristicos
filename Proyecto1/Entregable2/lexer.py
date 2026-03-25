@@ -83,8 +83,7 @@ t_COMMA = r","
 # "2026-03-07T12:00:00+00:00",
 # "2025-04-01T17:53:34.611+11:00",
 def t_DATETIME(t):
-    [0-9]{4}-((0[1-9])|(1[0-2]))-((0[1-9])|([12][0-9])|(3[01]))
-        T((0[0-9])|(1[0-9])|2[0-3]):([0-5]{1}[0-9]):([0-5][0-9]\+|([0-5]{1}[0-9]\.[1-9]{3,5}\+))([0-9]{2}:[0-9]{2})
+    r"[0-9]{4}-((0[1-9])|(1[0-2]))-((0[1-9])|([12][0-9])|(3[01]))T((0[0-9])|(1[0-9])|(2[0-3])):([0-5][0-9]):([0-5][0-9]\+|([0-5][0-9]\.[1-9]{3,5}\+))([0-9]{2}:[0-9]{2})"
     return t
 
 def t_IPV4(t):
@@ -112,6 +111,7 @@ def t_BOOLEAN(t):
     return t
 
 def t_NULL(t):
+    r"NULL"
     t.value = None
     return t
 
@@ -119,6 +119,10 @@ def t_NUMBER(t):
     r'\b\d+\b'
     t.value = int(t.value)
     return t
+
+#def t_RESERVED_VALUE(t):
+#    r'\b(accept|eq)\b'
+#    return t
 
 last_key = None
 errores = []
@@ -159,6 +163,8 @@ def validar_valor(value, lineno):
         if not re.match(ipv4_expr, value):
             errores.append(f"Línea {lineno}: IPv4 invalida en 'destination-ipv4-network' → '{value}'")
 
+# Captura uno o más saltos de línea
+# Referencia del ejemplo de calculadora
 def t_newline(t):
     r'\n+'
     t.lexer.lineno += len(t.value)
