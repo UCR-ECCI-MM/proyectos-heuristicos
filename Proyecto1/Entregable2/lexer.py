@@ -1,5 +1,6 @@
 import ply.lex as lex
 import ply.yacc as yacc
+import re
 
 # tokens types
 symbols = ["LBRACE", "RBRACE", "LBRACKET", "RBRACKET", "COLON", "COMMA"]
@@ -111,7 +112,7 @@ def t_BOOLEAN(t):
     return t
 
 def t_NULL(t):
-    r"NULL"
+    r"null" # el null en json y mud es en minusculas
     t.value = None
     return t
 
@@ -136,7 +137,7 @@ def t_STRING(t):
         last_key = value  # guarda la clave para el siguiente token
     else:
         # validar según la clave anterior
-        validar_valor(value, t.lineno)
+        validar_valor(t.value, t.lineno) # pasarselo con comillas pq la funcion lo espera asi
     return t
 
 # expresiones regulares 
@@ -146,7 +147,6 @@ url_expr = r'"https?://[a-zA-Z0-9:/.?=&%\-_~#@!]+"'
 
 # ver si el valor que cayó en string es un error de formato.
 def validar_valor(value, lineno):
-    import re
     global last_key
     # mud-url y documentation deben ser URLs validas
     if last_key in url_keys:
