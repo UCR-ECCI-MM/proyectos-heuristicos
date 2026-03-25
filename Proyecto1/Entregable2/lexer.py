@@ -96,7 +96,7 @@ def t_IPV4(t):
 def t_URL(t):
     #empieza con http puede ser https, seguido de ://,luego cualquier combinacion de caracteres validos en una URL
     # y termina con comillas
-    r'"https?://[a-zA-Z0-9:/.?=&%\-_~#@!]+"'
+    r'"(https?://[a-zA-Z0-9:/.?=&%\-_~#@!]+|urn:[a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?:[a-zA-Z0-9._~!$&()*+,;=@%/-]+(:[a-zA-Z0-9._~!$&()*+,;=@%/-]+)*)"'
     t.value = t.value.strip('"')  
     return t
 
@@ -143,7 +143,7 @@ def t_STRING(t):
 # expresiones regulares 
 ipv4_expr = r'"((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\/(3[0-2]|[1-2]?[0-9]|[0-9])"'
 dns_expr =  r'"([a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z]{2,24}"'
-url_expr = r'"https?://[a-zA-Z0-9:/.?=&%\-_~#@!]+"'
+url_expr = r'"(https?://[a-zA-Z0-9:/.?=&%\-_~#@!]+|urn:[a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?:[a-zA-Z0-9._~!$&()*+,;=@%/-]+(:[a-zA-Z0-9._~!$&()*+,;=@%/-]+)*)"'
 
 # ver si el valor que cayó en string es un error de formato.
 def validar_valor(value, lineno):

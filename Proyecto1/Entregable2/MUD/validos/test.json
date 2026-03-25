@@ -1,11 +1,12 @@
 {  
+    "controller": "urn:ietf1:params:mud:dns",
+    "mud-url": "https://iotanalytics.unsw.edu.au/mud/blipcareBPmeterMud.fjson",
     "ietf-acldns:src-dnsname": "tech.carematix.com",
     "ipv4": {
         "protocol": 17,
         "destination-ipv4-network": "200.255.255.255/30"
     },
     "port": 8777,
-    "mud-url": "https://iotanalytics.unsw.edu.au/mud/blipcareBPmeterMud.fjson",
     "udp": {
         "destination-port": {
             "operator": "eq",
