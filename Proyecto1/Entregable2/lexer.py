@@ -79,10 +79,13 @@ t_RBRACKET = r"\]"
 t_COLON = r":"
 t_COMMA = r","
 
-#def t_DATETIME(t):
-    #r'"(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})?)"'
-   # t.value = t.value.strip('"')
-    #return t
+# Comprobar que last-update tenga formato correcto de fecha/hora.
+# "2026-03-07T12:00:00+00:00",
+# "2025-04-01T17:53:34.611+11:00",
+def t_DATETIME(t):
+    [0-9]{4}-((0[1-9])|(1[0-2]))-((0[1-9])|([12][0-9])|(3[01]))
+        T((0[0-9])|(1[0-9])|2[0-3]):([0-5]{1}[0-9]):([0-5][0-9]\+|([0-5]{1}[0-9]\.[1-9]{3,5}\+))([0-9]{2}:[0-9]{2})
+    return t
 
 def t_IPV4(t):
     # es 0.0.0.0/00 hasta 255.255.255/32, con comillas al inicio y al final
@@ -104,15 +107,13 @@ def t_DNS(t):
     t.value = t.value.strip('"')
     return t
 
-#def t_BOOLEAN(t):
-   
-   
-    #return t
+def t_BOOLEAN(t):
+    r'(true)|(false)'
+    return t
 
-#def t_NULL(t):
-   
-    #t.value = None
-    #return t
+def t_NULL(t):
+    t.value = None
+    return t
 
 def t_NUMBER(t):
     r'\b\d+\b'
