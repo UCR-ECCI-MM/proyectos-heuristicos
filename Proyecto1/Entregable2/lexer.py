@@ -21,7 +21,8 @@ null_keys = {
 }
 
 reserved_values = {
-    "eq" : "RESERVED_VALUES", "accept" : "RESERVED_VALUES"
+    "eq" : "RESERVED_VALUES", "accept" : "RESERVED_VALUES",
+    "from-device": "RESERVED_VALUES", "to-device": "RESERVED_VALUES"
 }
 
 number_keys = {"mud-version" : "NUMBER_KEYS", "cache-validity" : "NUMBER_KEYS",
