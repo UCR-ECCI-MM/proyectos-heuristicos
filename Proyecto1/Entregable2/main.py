@@ -25,14 +25,14 @@ except FileNotFoundError:
   print("Archivo no encontrado")
   quit() # detener el programa para que no continue y haga un crash con la parte de abajo
 
-# Give the lexer some input
+# leemos el archivo y lo pasamos al lexer
 lexer.input(data)
  
-# Tokenize
+# imprimimos los tokens encontrados
 while True:
   tok = lexer.token()
   if not tok: 
-    break      # No more input
+    break      # no mas tokens
   print(tok)
 
 reporte_lexico()

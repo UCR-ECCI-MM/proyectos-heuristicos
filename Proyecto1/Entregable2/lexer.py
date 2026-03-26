@@ -40,7 +40,7 @@ policies_keys = {"from-device-policy" : "POLICIES_KEYS", "to-device-policy" : "P
 
 protocol_keys = {"tcp" : "PROTOCOL_KEYS", "udp" : "PROTOCOL_KEYS", "eth" : "PROTOCOL_KEYS"}
 
-# for unique keys
+# para claves unicas
 unique_keys = {
     "last-update" : "LAST_UPDATE",
     "is-supported" : "IS_SUPPORTED",
@@ -69,7 +69,7 @@ reserved = { # desempaquetar diccionarios en un solo diccionario maestro para ma
          **port_dir_keys, **null_keys, **reserved_values, **protocol_keys
 }
 
-# complete token list for ply
+# lista de tokens completa para ply
 tokens = symbols + literal_values + addresses + keys + list(unique_keys.values())
 
 # symbols regex
@@ -129,6 +129,7 @@ def t_NULL(t):
     return t
 
 def t_NUMBER(t):
+    # un numero entero y permite con \b para asegurar que no este pegado a una palabra
     r'\b\d+\b'
     t.value = int(t.value)
     return t
@@ -137,10 +138,12 @@ def t_NUMBER(t):
 #    r'\b(accept|eq)\b'
 #    return t
 
+# para ver cual es la clave anterior a un string y con esto compararla y ver si el valor si pasa por su respectiva regex
 last_key = None
 errores = []
 
 def t_STRING(t):
+    #permite caracteres normales y tambien caracteres escapados como \" o \\
     r'"([^"\\]|\\.)*"'
     global last_key
     value = t.value.strip('"')
