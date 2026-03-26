@@ -1,11 +1,10 @@
 import ply.lex as lex
-import ply.yacc as yacc
 import re
 
 # tokens types
 symbols = ["LBRACE", "RBRACE", "LBRACKET", "RBRACKET", "COLON", "COMMA"]
 
-literal_values = ["BOOLEAN", "NUMBER", "NULL", "STRING", "DATETIME"]
+literal_values = ["BOOLEAN", "NUMBER", "NULL", "STRING", "DATETIME", "MAC_ADDRESS", "ETHERTYPE"]
 
 addresses = ["IPV4", "URL", "DNS"] # ip hace referencia al tipo ipv4 mas especificamente
 
@@ -46,7 +45,7 @@ unique_keys = {
     "is-supported" : "IS_SUPPORTED",
     "destination-ipv4-network" : "DESTINATION_IPV4_NETWORK",
     "destination-mac-address" : "DESTINATION_MAC_ADDRESS",
-    "ethertype" : "ETHERTYPE",
+    "ethertype" : "ETHERTYPE_KEY",
     "ietf-mud:direction-initiated" : "IETF_MUD_DIRECTION_INITIATED",
     "operator" : "OPERATOR",
     "forwarding" : "FORWARDING",
@@ -84,15 +83,21 @@ t_COMMA = r","
 # "2026-03-07T12:00:00+00:00",
 # "2025-04-01T17:53:34.611+11:00",
 def t_DATETIME(t):
-    r'"[0-9]{4}-((0[1-9])|(1[0-2]))-((0[1-9])|([12][0-9])|(3[01]))T((0[0-9])|(1[0-9])|(2[0-3])):([0-5][0-9]):([0-5][0-9]\+|([0-5][0-9]\.[1-9]{3,5}\+))([0-9]{2}:[0-9]{2})"'
+    #r'"[0-9]{4}-((0[1-9])|(1[0-2]))-((0[1-9])|([12][0-9])|(3[01]))T((0[0-9])|(1[0-9])|(2[0-3])):([0-5][0-9]):([0-5][0-9]\+|([0-5][0-9]\.[1-9]{3,5}\+))([0-9]{2}:[0-9]{2})"'
+    r'"[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|[0-5][0-9]\.[0-9]{3,6})([+-][0-9]{2}:[0-9]{2}|Z)"'
+    t.value = t.value.strip('"')
     return t
 
 # "ff:ff:ff:ff:ff:ff"
-def t_DESTINATION_MAC_ADDRESS(t):
+def t_MAC_ADDRESS(t):
     r'"([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}"'
     t.value = t.value.strip('"')  
     return t
 
+def t_ETHERTYPE(t):
+    r'"0x[0-9A-Fa-f]{4}"'
+    t.value = t.value.strip('"')
+    return t
 
 def t_IPV4(t):
     # es 0.0.0.0/00 hasta 255.255.255/32, con comillas al inicio y al final
@@ -136,52 +141,65 @@ last_key = None
 errores = []
 
 def t_STRING(t):
-    r'"[^"]*"'
+    r'"([^"\\]|\\.)*"'
     global last_key
     value = t.value.strip('"')
     if value in reserved:
         t.type = reserved[value]
-        last_key = value  # guarda la clave para el siguiente token
+        #last_key = value  # guarda la clave para el siguiente token
+
+        # solo guardar como last_key si realmente es una clave
+        if value not in reserved_values:
+            last_key = value
+
     else:
         # validar según la clave anterior
-        validar_valor(t.value, t.lineno) # pasarselo con comillas pq la funcion lo espera asi
+        validar_valor(value, t.lineno) 
+
     return t
 
 
 # expresiones regulares 
-ipv4_expr = r'"((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\/(3[0-2]|[1-2]?[0-9]|[0-9])"'
-dns_expr =  r'"([a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z]{2,24}"'
-url_expr = r'"(https?://[a-zA-Z0-9:/.?=&%\-_~#@!]+|urn:[a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?:[a-zA-Z0-9._~!$&()*+,;=@%/-]+(:[a-zA-Z0-9._~!$&()*+,;=@%/-]+)*)"'
-datetime_expr = r'"[0-9]{4}-((0[1-9])|(1[0-2]))-((0[1-9])|([12][0-9])|(3[01]))T((0[0-9])|(1[0-9])|(2[0-3])):([0-5][0-9]):([0-5][0-9]\+|([0-5][0-9]\.[1-9]{3,5}\+))([0-9]{2}:[0-9]{2})"'
-mac_expr = r'"([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}"'
+ipv4_expr = r'((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\/(3[0-2]|[1-2]?[0-9]|[0-9])'
+dns_expr = r'([a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z]{2,24}'
+url_expr = r'(https?://[a-zA-Z0-9:/.?=&%\-_~#@!]+|urn:[a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?:[a-zA-Z0-9._~!$&()*+,;=@%/-]+(:[a-zA-Z0-9._~!$&()*+,;=@%/-]+)*)'
+#datetime_expr = r'[0-9]{4}-((0[1-9])|(1[0-2]))-((0[1-9])|([12][0-9])|(3[01]))T((0[0-9])|(1[0-9])|(2[0-3])):([0-5][0-9]):([0-5][0-9]\+|([0-5][0-9]\.[1-9]{3,5}\+))([0-9]{2}:[0-9]{2})'
+datetime_expr = r'[0-9]{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(0[0-9]|1[0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|[0-5][0-9]\.[0-9]{3,6})([+-][0-9]{2}:[0-9]{2}|Z)'
+mac_expr = r'([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}'
+ethertype_expr = r'0x[0-9A-Fa-f]{4}'
 
 # ver si el valor que cayó en string es un error de formato.
 def validar_valor(value, lineno):
     global last_key
     # mud-url y documentation deben ser URLs validas
     if last_key in url_keys:
-        if not re.match(url_expr, value):
+        if not re.fullmatch(url_expr, value):
             errores.append(f"Línea {lineno}: URL invalida en '{last_key}' → '{value}'")
 
     # dns keys deben ser validos
     elif last_key in dns_keys:
-        if not re.match(dns_expr, value):
+        if not re.fullmatch(dns_expr, value):
             errores.append(f"Línea {lineno}: DNS invalido en '{last_key}' → '{value}'")
 
     # destination-ipv4-network debe ser IPv4 valida
     elif last_key == "destination-ipv4-network":
-        if not re.match(ipv4_expr, value):
+        if not re.fullmatch(ipv4_expr, value):
             errores.append(f"Línea {lineno}: IPv4 invalida en 'destination-ipv4-network' → '{value}'")
 
     # fecha incorrecta
     elif last_key == "last-update":
-            if not re.match(datetime_expr, value):
+            if not re.fullmatch(datetime_expr, value):
                 errores.append(f"Línea {lineno}: Fecha inválida en '{last_key}' → '{value}'")
 
     # mac address incorrecta
     elif last_key == "destination-mac-address":
-        if not re.match(mac_expr, value):
+        if not re.fullmatch(mac_expr, value):
             errores.append(f"Línea {lineno}: MAC inválida en '{last_key}' → '{value}'")
+
+    # ethertype incorrecto
+    elif last_key == "ethertype":
+        if not re.fullmatch(ethertype_expr, value):
+            errores.append(f"Línea {lineno}: Ethertype inválido en '{last_key}' → '{value}'")
     
 
 # Captura uno o más saltos de línea
