@@ -53,6 +53,7 @@ dividir el contenido del documento en las siguientes categorias:
 | `"0x0800"`                   | **ETHERTYPE**   |
 
 El lenguaje MUD contiene diversas palabras clave que:
+
     - Tienen un significado especifico
     - Se repiten de forma consistente en los archivos
     - Definen la estructura del MUD
@@ -140,7 +141,7 @@ Por lo que estas palabras clave tendran tokens personalizados divididos por cate
 | `"from-device"` | **RESERVED_VALUES** |
 | `"to-device"`   | **RESERVED_VALUES** |
 
-## Claves únicas:
+## Claves unicas:
 *No entran dentro de ningun grupo o son partes muy especificas del MUD*
 *Son su propio tipo de token*
 
@@ -167,17 +168,17 @@ Por lo que estas palabras clave tendran tokens personalizados divididos por cate
 | `"ipv4"`                                  | **IPV4_KEY**                              |
 | `"policy"`                                | **POLICY**                                |
 
-Como se menciono anteriormente, el tipo de token de los valores depende de la clave anterior (`last_key`), permitiendo validaciones específicas como URL, DNS, IPv4, fecha, MAC y ethertype.
+Como se menciono anteriormente, el tipo de token de los valores depende de la clave anterior (*last_key*), permitiendo validaciones específicas como URL, DNS, IPv4, fecha, MAC y ethertype.
 
 ## Uso de contexto (last_key)
 
-El lexer utiliza una variable llamada `last_key` para recordar la ultima clave leida.
+El lexer utiliza una variable llamada *last_key* para recordar la ultima clave leida.
 Esto permite determinar el tipo de valor esperado a continuacion y aplicar validaciones especificas segun el contexto.
 
 Por ejemplo:
 
-- Si la clave es `"mud-url"`, se espera una URL valida
-- Si la clave es `"last-update"`, se espera una fecha en el formato adecuado
+- Si la clave es *"mud-url"*, se espera una URL valida
+- Si la clave es *"last-update"*, se espera una fecha en el formato adecuado
 
 ### Casos de prueba y ejemplos
 
@@ -202,7 +203,7 @@ Al final, un desglose de errores encontrados a la hora de validar tipos como URL
 ### Referencias
 
 - OpenAI. (2026). ChatGPT (versión GPT-5.3) [Modelo de lenguaje grande]. https://chat.openai.com
-- Se utilizo ChatGPT como herramienta de apoyo para generar archivos de prueba especificos.
+    - En este caso, se utilizo ChatGPT como herramienta de apoyo para generar archivos de prueba especificos.
 
 - Beazley, D. (2024). PLY (Python Lex-Yacc) [Software]. https://www.dabeaz.com/ply/
 
