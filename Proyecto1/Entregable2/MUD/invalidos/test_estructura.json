@@ -1,13 +1,12 @@
 {
   "ietf-mud:mud": {
-    "mud-version": 1
+    "mud-version": 1,
     "mud-url": "htp:/mal-url",
     "last-update": "2025-99-99T99:99:99+99:99",
     "cache-validity": 100,
     "is-supported": true,
-    "systeminfo": "device-info",
-  }
-
+    "systeminfo": "device-info"
+  },
   "ietf-access-control-list:access-lists": {
     "acl": [
       {
@@ -20,9 +19,10 @@
             "destination-mac-address": "gg:gg:gg:gg:gg:gg",
             "ethertype": "0xZZZZ"
           },
-          "ietf-acldns:dst-dnsname": "bad_domain"
+          "ietf-acldns:dst-dnsname": "bad_domain",
+          "documentation": "htxtps://example.com/doc"
         }
       }
     ]
-  ]
+  }
 }
