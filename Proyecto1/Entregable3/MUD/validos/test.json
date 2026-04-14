@@ -1,0 +1,7 @@
+{
+  "ietf-mud:mud": {
+    "actions": {
+        "forwarding": "accept"
+    }
+  }
+}

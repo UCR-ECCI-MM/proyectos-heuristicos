@@ -1,5 +1,10 @@
 import os
+import parser  # tu archivo parser.py
 from lexer import lexer, reporte_lexico
+import ply.yacc as yacc
+
+# crear el parser
+parser_obj = yacc.yacc(module=parser)
 
 # elegir carpeta
 num = input("1 = validos, 2 = invalidos: ")
@@ -36,3 +41,6 @@ while True:
   print(tok)
 
 reporte_lexico()
+
+# parseamos el archivo con el parser
+parser_obj.parse(data)

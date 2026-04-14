@@ -1,0 +1,85 @@
+{
+  "ietf-mud:mud": {
+    "mud-version": 1,
+    "mud-url": "https://example.com/mud.json",
+    "mud-signature": "https://example.com/mud.p7s",
+    "last-update": "2025-04-01T17:53:34.611+11:00",
+    "cache-validity": 100,
+    "is-supported": true,
+    "systeminfo": "device-info",
+    "from-device-policy": {
+      "access-lists": {
+        "access-list": [
+          {
+            "name": "from-ipv4-device"
+          }
+        ]
+      }
+    },
+    "to-device-policy": {
+      "access-lists": {
+        "access-list": [
+          {
+            "name": "to-ipv4-device"
+          }
+        ]
+      }
+    }
+  },
+
+  "ietf-access-control-list:access-lists": {
+    "acl": [
+      {
+        "name": "from-ipv4-device",
+        "type": "ipv4-acl-type",
+        "aces": {
+          "ace": [
+            {
+              "name": "ace-1",
+              "matches": {
+                "ietf-mud:mud": {
+                  "controller": "urn:ietf:params:mud:dns",
+                  "same-manufacturer": null
+                },
+                "ipv4": {
+                  "protocol": 17,
+                  "destination-ipv4-network": "255.255.255.255/32"
+                },
+                "udp": {
+                  "destination-port": {
+                    "operator": "eq",
+                    "port": 53
+                  },
+                  "source-port": {
+                    "operator": "eq",
+                    "port": 67
+                  }
+                },
+                "eth": {
+                  "destination-mac-address": "ff:ff:ff:ff:ff:ff",
+                  "ethertype": "0x0800"
+                },
+                "tcp": {
+                  "ietf-mud:direction-initiated": "from-device"
+                },
+                "policy": {
+                  "extensions": {
+                    "documentation": "https://example.com/doc",
+                    "model-name": "model-x",
+                    "mfg-name": "maker-y"
+                  }
+                },
+                "ietf-acldns:dst-dnsname": "example.com",
+                "ietf-acldns:src-dnsname": "src.example.com",
+                "local-networks": [null]
+              },
+              "actions": {
+                "forwarding": "accept"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
