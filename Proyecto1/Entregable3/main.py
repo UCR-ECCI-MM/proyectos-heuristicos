@@ -1,6 +1,6 @@
 import os
 import parser
-from lexer import lexer, reporte_lexico
+from lexer import lexer, reporte_lexico, errores
 import ply.yacc as yacc
 
 # Construcción del parser
@@ -31,18 +31,31 @@ except FileNotFoundError:
   quit() # detener el programa
 
 # leemos el archivo y lo pasamos al lexer
+errores.clear()
+lexer.lineno = 1
+
 lexer.input(data)
- 
-# Impresión de tokens encontrados
+
 while True:
-  tok = lexer.token()
-  if not tok: 
-    break      
-  print(tok)
+    tok = lexer.token()
+    if not tok:
+        break
 
-reporte_lexico()
+if len(errores) > 0:
+    print("\nEl archivo contiene errores léxicos:")
+    reporte_lexico()
+    print("\nNo se ejecuta el parser porque primero deben corregirse los errores léxicos.")
+    quit()
 
-lexer.input(data) # el parser ocupa volver a tokenizar desde el principio
+print("\nAnálisis léxico completado sin errores.")
 
-# Ejecución del parser
-parser_obj.parse(data, lexer = lexer) # correccion
+lexer.lineno = 1
+lexer.input(data)
+
+try:
+    parser_obj.parse(data, lexer=lexer)
+    print("\nArchivo sintácticamente válido.")
+except parser.ParserValidationError as e:
+    print(f"\n{e}")
+except SyntaxError as e:
+    print(f"\n{e}")

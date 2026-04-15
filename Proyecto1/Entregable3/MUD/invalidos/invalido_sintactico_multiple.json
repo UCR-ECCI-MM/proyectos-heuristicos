@@ -1,0 +1,94 @@
+{
+    "ietf-mud:mud": {
+        "mud-version": 1,
+        "mud-url": "https://iotanalytics.unsw.edu.au/mud/blipcareBPmeterMud.json",
+        "mud-signature": "https://iotanalytics.unsw.edu.au/mud/blipcareBPmeterMud.p7s",
+        "last-update": "2025-04-01T17:56:56.205+11:00",
+        "cache-validity": 100,
+        "is-supported": true,
+        "systeminfo": "blipcareBPmeter",
+        "port": 80,
+        "from-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "from-ipv4-blipcarebpmeter"
+                    },
+                    {
+                        "name": "from-ipv4-blipcarebpmeter"
+                    }
+                ]
+            }
+        }
+    },
+    "ietf-access-control-list:access-lists": {
+        "acl": [
+            {
+                "name": "from-ipv4-blipcarebpmeter",
+                "type": "ipv4-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "from-ipv4-blipcarebpmeter-0",
+                            "type": "esto-no-deberia-ir-aqui",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "mud-url": "https://ejemplo.com/mud.json"
+                                },
+                                "ipv4": {
+                                    "protocol": 17
+                                },
+                                "eth": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 53
+                                    },
+                                    "ethertype": "0x0800"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "eq"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-blipcarebpmeter-0",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "tech.carematix.com"
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "accept",
+                                        "port": 8777
+                                    },
+                                    "ietf-mud:direction-initiated": "drop"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "name": "from-ipv4-blipcarebpmeter",
+                "type": "ipv4-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "otro-ace",
+                            "matches": {
+                                "destination-ipv4-network": "255.255.255.255/32"
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
