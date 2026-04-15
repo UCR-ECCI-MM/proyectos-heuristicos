@@ -371,9 +371,9 @@ def p_ethertype_value(p):
     'ethertype_value : ETHERTYPE'
     p[0] = p[1]
 
-# ERROR
+# Manejo de errores
 def p_error(p):
-    if p:
-        raise SyntaxError(f"Error en línea {p.lineno}: '{p.value}' no es válido en este contexto")
-    else:
-        raise SyntaxError("Error: fin inesperado del archivo")
+  if p:
+    print(f"Error sintáctico en token {p.type}, valor '{p.value}' no es válido en este contexto")
+  else:
+    print("Error sintáctico: fin de archivo inesperado")

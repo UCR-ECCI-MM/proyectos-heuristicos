@@ -3,7 +3,7 @@ import parser
 from lexer import lexer, reporte_lexico
 import ply.yacc as yacc
 
-# crear el parser
+# Construcción del parser
 parser_obj = yacc.yacc(module=parser)
 
 # elegir carpeta
@@ -42,5 +42,5 @@ while True:
 
 reporte_lexico()
 
-# parseamos el archivo con el parser
+# Ejecución del parser
 parser_obj.parse(data)
