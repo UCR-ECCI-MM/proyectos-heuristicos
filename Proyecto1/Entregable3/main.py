@@ -28,16 +28,16 @@ try:
     data = mudFile.read()
 except FileNotFoundError:
   print("Archivo no encontrado")
-  quit() # detener el programa para que no continue y haga un crash con la parte de abajo
+  quit() # detener el programa
 
 # leemos el archivo y lo pasamos al lexer
 lexer.input(data)
  
-# imprimimos los tokens encontrados
+# Impresión de tokens encontrados
 while True:
   tok = lexer.token()
   if not tok: 
-    break      # no mas tokens
+    break      
   print(tok)
 
 reporte_lexico()

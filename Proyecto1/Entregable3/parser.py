@@ -49,7 +49,8 @@ def p_mud_content_list(p):
         p[0] = {**p[1], **p[3]}
 
 # aqui justo en este lugar tenemos estos campos tanto opcionales como obligatorios
-# opcionales mud-signature, systeminfo, documentation, is-supported, mfg-name, model-name, extensions, controller, samemanufacturer, policy, 
+# opcionales mud-signature, systeminfo, documentation, is-supported, mfg-name, 
+# model-name, extensions, controller, samemanufacturer, policy, 
 # from-device-policy / to-device-policy, extensions
 
 def p_mud_content(p):
@@ -206,7 +207,9 @@ def p_matches_members(p):
                 raise SyntaxError(f"Campo duplicado en matches_members: {k}")
         p[0] = {**p[1], **p[3]}
 
-# puede tener solamente campos como IPV4_KEY, PROTOCOL_KEYS, IETF_MUD_DIRECTION_INITIATED, DNS_KEYS, DESTINATION_IPV4_NETWORK, DESTINATION_MAC_ADDRESS, ETHERTYPE_KEY, STRING o NULL_KEYS
+# puede tener solamente campos como:
+# IPV4_KEY, PROTOCOL_KEYS, IETF_MUD_DIRECTION_INITIATED, DNS_KEYS, 
+# DESTINATION_IPV4_NETWORK, DESTINATION_MAC_ADDRESS, ETHERTYPE_KEY, STRING o NULL_KEYS
 # ademas se dice que valor es el que puede tener
 def p_matches_member(p):
     '''matches_member : IPV4_KEY COLON ipv4_object
@@ -267,12 +270,12 @@ def p_policy_item(p):
     p[0] = {p[2]: p[4]}
 
 # objetos de ipv4 y protocolo
-#representa un bloque de condiciones para ipv4
+# representa un bloque de condiciones para ipv4
 def p_ipv4_object(p):
     'ipv4_object : LBRACE ipv4_members RBRACE'
     p[0] = p[2]
 
-#epresenta un bloquecon confi de protocolo TCP UDP
+# Representa un bloque con protocolo TCP UDP
 def p_protocol_object(p):
     'protocol_object : LBRACE protocol_members RBRACE'
     p[0] = p[2]
@@ -289,7 +292,7 @@ def p_protocol_members(p):
                 raise SyntaxError(f"Campo duplicado: {k}")
         p[0] = {**p[1], **p[3]}
 
-# Propiedad individual del protocolo puede ser puerto, operador o nmero
+# Propiedad individual del protocolo puede ser puerto, operador o numero
 def p_protocol_member(p):
     '''protocol_member : PORT_DIR_KEYS COLON port_value
                        | OPERATOR COLON RESERVED_VALUES
