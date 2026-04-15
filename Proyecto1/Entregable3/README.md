@@ -9,7 +9,7 @@
 
 ### Como ejecutar el programa
 
-1. Abrir una terminal en la carpeta del proyecto (ENTREGABLE2)
+1. Abrir una terminal en la carpeta del proyecto (ENTREGABLE3)
 
 2. Tener python instalado
 

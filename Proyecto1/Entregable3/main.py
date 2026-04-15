@@ -42,5 +42,7 @@ while True:
 
 reporte_lexico()
 
+lexer.input(data) # el parser ocupa volver a tokenizar desde el principio
+
 # Ejecución del parser
-parser_obj.parse(data)
+parser_obj.parse(data, lexer = lexer) # correccion

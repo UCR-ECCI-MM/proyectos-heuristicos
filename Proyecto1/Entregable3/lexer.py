@@ -27,8 +27,7 @@ reserved_values = {
     "reject" : "RESERVED_VALUES",  
 }
 
-number_keys = {"mud-version" : "NUMBER_KEYS", "cache-validity" : "NUMBER_KEYS",
-               "protocol" : "NUMBER_KEYS", "port" : "NUMBER_KEYS"}
+number_keys = {"mud-version" : "NUMBER_KEYS", "cache-validity" : "NUMBER_KEYS", "port" : "NUMBER_KEYS"}
 
 url_keys = {"mud-url" : "URL_KEYS", "mud-signature" : "URL_KEYS", 
             "documentation" : "URL_KEYS", "controller" : "URL_KEYS"}
@@ -55,6 +54,7 @@ unique_keys = {
     "extensions" : "EXTENSIONS", 
     "ietf-mud:mud" : "IETF_MUD_MUD",
     "ietf-access-control-list:access-lists" : "IETF_ACCESS_CONTROL_LIST_ACCESS_LISTS",
+    "ietf-access-control-list:acls": "IETF_ACCESS_CONTROL_LIST_ACCESS_LISTS",
     "access-lists" : "ACCESS_LISTS",
     "access-list" : "ACCESS_LIST",
     "acl" : "ACL",
@@ -63,12 +63,13 @@ unique_keys = {
     "matches" : "MATCHES",
     "actions" : "ACTIONS",
     "ipv4" : "IPV4_KEY",
-    "policy" : "POLICY"
+    "policy" : "POLICY",
+    "protocol" : "PROTOCOL"
 }
 
 reserved = { # desempaquetar diccionarios en un solo diccionario maestro para manipular
     **number_keys, **url_keys, **string_keys, **dns_keys, **policies_keys, **unique_keys,
-         **port_dir_keys, **null_keys, **reserved_values, **protocol_keys, "ietf-access-control-list:acls" : "IETF_ACCESS_CONTROL_LIST_ACCESS_LISTS"
+         **port_dir_keys, **null_keys, **reserved_values, **protocol_keys
 }
 
 # lista de tokens completa para ply
@@ -94,8 +95,13 @@ def t_DATETIME(t):
     t.value = t.value.strip('"')
     return t
 
-def t_DATETIME_ERROR(t):
+"""def t_DATETIME_ERROR(t):
     r'"[0-9]{4}-[0-9]{2}-[0-9]{2}T[^"]*"'
+    errores.append(f"Línea {t.lineno}: Fecha/hora inválida → {t.value}")
+    return None"""
+
+def t_DATETIME_ERROR(t):
+    r'"\d{4}-\d{2}-\d{2}T[^"]+"'
     errores.append(f"Línea {t.lineno}: Fecha/hora inválida → {t.value}")
     return None
 
@@ -105,8 +111,13 @@ def t_MAC_ADDRESS(t):
     t.value = t.value.strip('"')
     return t
 
-def t_MAC_ADDRESS_ERROR(t):
+"""def t_MAC_ADDRESS_ERROR(t):
     r'"[0-9A-Fa-f]{1,2}(:[0-9A-Fa-f]{1,2})+"'
+    errores.append(f"Línea {t.lineno}: MAC inválida → {t.value}")
+    return None"""
+
+def t_MAC_ADDRESS_ERROR(t):
+    r'"([0-9A-Fa-f]{1,2}:){1,}[0-9A-Fa-f]{1,2}"'
     errores.append(f"Línea {t.lineno}: MAC inválida → {t.value}")
     return None
 
@@ -117,7 +128,7 @@ def t_ETHERTYPE(t):
     return t
 
 def t_ETHERTYPE_ERROR(t):
-    r'"0x[0-9A-Fa-f]*"'
+    r'"0x[0-9A-Fa-f]+"'
     errores.append(f"Línea {t.lineno}: Ethertype inválido → {t.value}")
     return None
 
@@ -127,8 +138,13 @@ def t_IPV4(t):
     t.value = t.value.strip('"')
     return t
 
-def t_IPV4_ERROR(t):
+"""def t_IPV4_ERROR(t):
     r'"[0-9]{1,3}(\.[0-9]{1,3}){1,3}(/[0-9]{1,2})?"'
+    errores.append(f"Línea {t.lineno}: IPv4 inválida → {t.value}")
+    return None"""
+
+def t_IPV4_ERROR(t):
+    r'"\d{1,3}(\.\d{1,3}){1,3}(/\d{1,2})?"'
     errores.append(f"Línea {t.lineno}: IPv4 inválida → {t.value}")
     return None
 
@@ -138,8 +154,13 @@ def t_URL(t):
     t.value = t.value.strip('"')
     return t
 
-def t_URL_ERROR(t):
+"""def t_URL_ERROR(t):
     r'"(htt?p?s?:?/?/?[^"]*|urn:?[a-zA-Z0-9-]*:?[^"]*)"'
+    errores.append(f"Línea {t.lineno}: URL inválida → {t.value}")
+    return None"""
+
+def t_URL_ERROR(t):
+    r'"((https?[:/][^"]*)|(htp[:/][^"]*)|(urn:[^"]*)|(urn[^"]*))"'
     errores.append(f"Línea {t.lineno}: URL inválida → {t.value}")
     return None
 
@@ -149,8 +170,13 @@ def t_DNS(t):
     t.value = t.value.strip('"')
     return t
 
-def t_DNS_ERROR(t):
+"""def t_DNS_ERROR(t):
     r'"[a-zA-Z0-9][a-zA-Z0-9\-]*\.[^"]*"'
+    errores.append(f"Línea {t.lineno}: DNS inválido → {t.value}")
+    return None"""
+
+def t_DNS_ERROR(t):
+    r'"[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)+(\.[A-Za-z0-9-]*)?"'
     errores.append(f"Línea {t.lineno}: DNS inválido → {t.value}")
     return None
 
@@ -178,6 +204,8 @@ def t_STRING(t):
     #permite caracteres normales y tambien caracteres escapados como \" o \\
     r'"([^"\\]|\\.)*"'
     value = t.value.strip('"')
+    t.value = value # correccion 
+
     if value in reserved:
         t.type = reserved[value]
 
@@ -194,7 +222,8 @@ t_ignore = ' \t'
  
 # se agrega el error a la lista de errores y se salta el caracter ilegal
 def t_error(t):
-    print(f"Illegal character '{t.value[0]}'")
+    # print(f"Illegal character '{t.value[0]}'")
+    errores.append(f"Línea {t.lineno}: carácter ilegal '{t.value[0]}'")
     t.lexer.skip(1)
 
 #cant de errores encontrados y reporte de los mismos
@@ -207,3 +236,6 @@ def reporte_lexico():
 
 # creando el lexer
 lexer = lex.lex()
+
+def agregar_error(t, mensaje):
+    errores.append(f"Línea {t.lineno}: {mensaje} → {t.value}")

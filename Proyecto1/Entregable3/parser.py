@@ -61,8 +61,7 @@ def p_mud_content(p):
                    | IS_SUPPORTED COLON bool_value
                    | EXTENSIONS COLON extensions_array
                    | POLICIES_KEYS COLON policy_item
-                   | NULL_KEYS COLON null_array
-                   | FORWARDING COLON string_value'''
+                   | NULL_KEYS COLON null_array'''
     p[0] = {p[1]: p[3]}
 
 # TODO: agregar las reglas al resto
@@ -75,7 +74,8 @@ def p_extensions_array(p):
     if len(p) == 3:
         p[0] = [] 
     # sino se usa extension list 
-    else: p[2]
+    else: 
+        p[0] = p[2]
    
 def p_extensions_list(p):
     '''extensions_list : string_value
@@ -212,16 +212,34 @@ def p_matches_members(p):
 # DESTINATION_IPV4_NETWORK, DESTINATION_MAC_ADDRESS, ETHERTYPE_KEY, STRING o NULL_KEYS
 # ademas se dice que valor es el que puede tener
 def p_matches_member(p):
-    '''matches_member : IPV4_KEY COLON ipv4_object
+    '''matches_member : IETF_MUD_MUD COLON mud_match_object
+                      | IPV4_KEY COLON ipv4_object
                       | PROTOCOL_KEYS COLON protocol_object
-                      | IETF_MUD_DIRECTION_INITIATED COLON RESERVED_VALUES
                       | DNS_KEYS COLON dns_value
                       | DESTINATION_IPV4_NETWORK COLON ipv4_value
                       | DESTINATION_MAC_ADDRESS COLON mac_value
                       | ETHERTYPE_KEY COLON ethertype_value
-                      | STRING COLON bool_value
-                      | NULL_KEYS COLON null_array
-                      | IETF_MUD_MUD COLON mud_object'''
+                      | NULL_KEYS COLON null_array'''
+    p[0] = {p[1]: p[3]}
+
+def p_mud_match_object(p):
+    'mud_match_object : LBRACE mud_match_members RBRACE'
+    p[0] = p[2]
+
+def p_mud_match_members(p):
+    '''mud_match_members : mud_match_member
+                         | mud_match_members COMMA mud_match_member'''
+    if len(p) == 2:
+        p[0] = p[1]
+    else:
+        for k in p[3]:
+            if k in p[1]:
+                raise SyntaxError(f"campo duplicado en mud_match_members: {k}")
+        p[0] = {**p[1], **p[3]}
+
+def p_mud_match_member(p):
+    '''mud_match_member : URL_KEYS COLON url_value
+                        | NULL_KEYS COLON null_array'''
     p[0] = {p[1]: p[3]}
 
 def p_null_array(p):
@@ -257,16 +275,37 @@ def p_actions_members(p):
         p[0] = {**p[1], **p[3]}
 
 def p_actions_member(p):
-    '''actions_member : FORWARDING COLON RESERVED_VALUES
-                        | STRING_KEYS COLON bool_value'''
+    'actions_member : FORWARDING COLON RESERVED_VALUES'
     p[0] = {p[1]: p[3]}
 
-
+# es un objeto
 def p_policy_item(p):
-    '''policy_item : LBRACE POLICY COLON string_value RBRACE
-                   | LBRACE ACL COLON acl_list_array RBRACE
-                   | LBRACE ACCESS_LIST COLON acl_list_array RBRACE
-                   | LBRACE ACCESS_LISTS COLON acl_lists_wrapper RBRACE'''
+    'policy_item : LBRACE ACCESS_LISTS COLON access_lists_object RBRACE'
+    p[0] = {p[2]: p[4]}
+
+# deriva de policy item todo esto
+def p_access_lists_object(p): 
+    'access_lists_object : LBRACE ACCESS_LIST COLON name_list_array RBRACE'
+    p[0] = {p[2]: p[4]}
+
+def p_name_list_array(p):
+    'name_list_array : LBRACKET name_items RBRACKET'
+    p[0] = p[2]
+
+def p_name_items(p):
+    '''name_items : name_item
+                  | name_items COMMA name_item'''
+    if len(p) == 2:
+        p[0] = [p[1]]
+    else:
+        p[0] = p[1] + [p[3]]
+
+def p_name_item(p):
+    'name_item : LBRACE STRING_KEYS COLON string_value RBRACE'
+    
+    if p[2] != "name":
+        raise SyntaxError(f"Se esperaba 'name' y se encontro '{p[2]}'")
+    
     p[0] = {p[2]: p[4]}
 
 # objetos de ipv4 y protocolo
@@ -280,6 +319,13 @@ def p_protocol_object(p):
     'protocol_object : LBRACE protocol_members RBRACE'
     p[0] = p[2]
 
+def p_protocol_member(p):
+    '''protocol_member : PORT_DIR_KEYS COLON port_value
+                       | IETF_MUD_DIRECTION_INITIATED COLON RESERVED_VALUES
+                       | ETHERTYPE_KEY COLON ethertype_value
+                       | DESTINATION_MAC_ADDRESS COLON mac_value'''
+    p[0] = {p[1]: p[3]}
+
 #propiedades del protocolo
 def p_protocol_members(p):
     '''protocol_members : protocol_member
@@ -292,24 +338,20 @@ def p_protocol_members(p):
                 raise SyntaxError(f"Campo duplicado: {k}")
         p[0] = {**p[1], **p[3]}
 
-# Propiedad individual del protocolo puede ser puerto, operador o numero
-def p_protocol_member(p):
-    '''protocol_member : PORT_DIR_KEYS COLON port_value
-                       | OPERATOR COLON RESERVED_VALUES
-                       | NUMBER_KEYS COLON number_value
-                       | DESTINATION_MAC_ADDRESS COLON mac_value
-                       | ETHERTYPE_KEY COLON ethertype_value
-                       | IETF_MUD_DIRECTION_INITIATED COLON RESERVED_VALUES'''
+def p_ipv4_member(p):
+    '''ipv4_member : DNS_KEYS COLON dns_value
+                   | DESTINATION_IPV4_NETWORK COLON ipv4_value
+                   | PROTOCOL COLON number_value'''
     p[0] = {p[1]: p[3]}
 
 # Valor de puerto
 def p_port_value(p):
-    '''port_value : LBRACE NUMBER_KEYS COLON number_value RBRACE
-                  | LBRACE OPERATOR COLON RESERVED_VALUES COMMA NUMBER_KEYS COLON number_value RBRACE'''
-    if len(p) == 6:
-        p[0] = {p[2]: p[4]}
-    else:
-        p[0] = {p[2]: p[4], p[6]: p[8]}
+    'port_value : LBRACE OPERATOR COLON RESERVED_VALUES COMMA NUMBER_KEYS COLON number_value RBRACE'
+    
+    if p[6] != "port":
+        raise SyntaxError(f"Se esperaba 'port' y se encontró '{p[6]}'")
+    
+    p[0] = {p[2]: p[4], p[6]: p[8]}
 
 # Valor de protocolo
 def p_ipv4_members(p):
@@ -322,15 +364,6 @@ def p_ipv4_members(p):
             if k in p[1]:
                 raise SyntaxError(f"Campo duplicado: {k}")
         p[0] = {**p[1], **p[3]}
-
-# campos de ipv4 pueden ser DNS_KEYS, DESTINATION_IPV4_NETWORK, DESTINATION_MAC_ADDRESS, PROTOCOL_KEYS o NUMBER_KEYS
-def p_ipv4_member(p):
-    '''ipv4_member : DNS_KEYS COLON dns_value
-                   | DESTINATION_IPV4_NETWORK COLON ipv4_value
-                   | DESTINATION_MAC_ADDRESS COLON mac_value
-                   | PROTOCOL_KEYS COLON number_value
-                   | NUMBER_KEYS COLON number_value'''
-    p[0] = {p[1]: p[3]}
 
 # TIPOS
 
@@ -376,7 +409,8 @@ def p_ethertype_value(p):
 
 # Manejo de errores
 def p_error(p):
-  if p:
-    print(f"Error sintáctico en token {p.type}, valor '{p.value}' no es válido en este contexto")
-  else:
-    print("Error sintáctico: fin de archivo inesperado")
+    if p:
+        print(f"\n Error sintactico en la linea {p.lineno}: "
+              f"El token '{p.type}' con valor '{p.value}' no se esperaba en este lugar")
+    else:
+        print("\n Error sintactico: fin de archivo inesperado. Faltan llaves de cierre")
