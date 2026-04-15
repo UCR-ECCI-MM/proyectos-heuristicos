@@ -54,7 +54,6 @@ unique_keys = {
     "extensions" : "EXTENSIONS", 
     "ietf-mud:mud" : "IETF_MUD_MUD",
     "ietf-access-control-list:access-lists" : "IETF_ACCESS_CONTROL_LIST_ACCESS_LISTS",
-    #"ietf-access-control-list:acls": "IETF_ACCESS_CONTROL_LIST_ACCESS_LISTS",
     "access-lists" : "ACCESS_LISTS",
     "access-list" : "ACCESS_LIST",
     "acl" : "ACL",

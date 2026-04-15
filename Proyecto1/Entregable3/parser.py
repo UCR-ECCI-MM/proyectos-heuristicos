@@ -492,7 +492,7 @@ def p_ipv4_members(p):
 def p_action_value(p):
     'action_value : RESERVED_VALUES'
     
-    print("DEBUG action_value:", p[1])
+    #print("DEBUG action_value:", p[1])
 
     if p[1] not in ["accept", "drop", "reject"]:
         raise ParserValidationError(
