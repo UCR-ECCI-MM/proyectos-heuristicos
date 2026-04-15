@@ -199,14 +199,6 @@ def t_error(t):
     errores.append(f"Línea {t.lineno}: carácter ilegal '{t.value[0]}'")
     t.lexer.skip(1)
 
-#cant de errores encontrados y reporte de los mismos
-def reporte_lexico():
-    print(f"\n Errores encontrados: {len(errores)}")
-    if errores:
-        print("\n  ERRORES:")
-        for e in errores:
-            print(f"{e}")
-
 # creando el lexer
 lexer = lex.lex()
 

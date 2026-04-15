@@ -1,6 +1,6 @@
 import os
 import parser
-from lexer import lexer, reporte_lexico, errores
+from lexer import lexer, errores
 import ply.yacc as yacc
 
 # Construcción del parser
@@ -42,8 +42,6 @@ while True:
         break
 
 if len(errores) > 0:
-    print("\nEl archivo contiene errores léxicos:")
-    reporte_lexico()
     print("\nNo se ejecuta el parser porque primero deben corregirse los errores léxicos.")
     quit()
 
