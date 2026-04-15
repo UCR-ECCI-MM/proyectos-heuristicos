@@ -1,5 +1,5 @@
 import os
-import parser  # tu archivo parser.py
+import parser
 from lexer import lexer, reporte_lexico
 import ply.yacc as yacc
 

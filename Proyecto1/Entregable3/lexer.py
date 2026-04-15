@@ -22,7 +22,9 @@ null_keys = {
 
 reserved_values = {
     "eq" : "RESERVED_VALUES", "accept" : "RESERVED_VALUES",
-    "from-device": "RESERVED_VALUES", "to-device": "RESERVED_VALUES"
+    "from-device": "RESERVED_VALUES", "to-device": "RESERVED_VALUES",
+    "drop" : "RESERVED_VALUES",
+    "reject" : "RESERVED_VALUES",  
 }
 
 number_keys = {"mud-version" : "NUMBER_KEYS", "cache-validity" : "NUMBER_KEYS",
@@ -32,7 +34,7 @@ url_keys = {"mud-url" : "URL_KEYS", "mud-signature" : "URL_KEYS",
             "documentation" : "URL_KEYS", "controller" : "URL_KEYS"}
 
 string_keys = {"name" : "STRING_KEYS", "type" : "STRING_KEYS", "systeminfo" : "STRING_KEYS",
-               "mfg-name" : "STRING_KEYS", "model-name" : "STRING_KEYS"}
+               "mfg-name" : "STRING_KEYS", "model-name" : "STRING_KEYS","log": "STRING_KEYS"}
 
 dns_keys = {"ietf-acldns:dst-dnsname" : "DNS_KEYS", "ietf-acldns:src-dnsname": "DNS_KEYS"}
 
@@ -66,7 +68,7 @@ unique_keys = {
 
 reserved = { # desempaquetar diccionarios en un solo diccionario maestro para manipular
     **number_keys, **url_keys, **string_keys, **dns_keys, **policies_keys, **unique_keys,
-         **port_dir_keys, **null_keys, **reserved_values, **protocol_keys
+         **port_dir_keys, **null_keys, **reserved_values, **protocol_keys, "ietf-access-control-list:acls" : "IETF_ACCESS_CONTROL_LIST_ACCESS_LISTS"
 }
 
 # lista de tokens completa para ply
@@ -86,7 +88,7 @@ errores = []
 # Comprobar que last-update tenga formato correcto de fecha/hora.
 # "2026-03-07T12:00:00+00:00",
 # "2025-04-01T17:53:34.611+11:00",
-# ---- DATETIME ----
+# DATETIME
 def t_DATETIME(t):
     r'"[0-9]{4}-((0[1-9])|(1[0-2]))-((0[1-9])|([12][0-9])|(3[01]))T((0[0-9])|(1[0-9])|(2[0-3])):([0-5][0-9]):([0-5][0-9]\+|([0-5][0-9]\.[0-9]{3,5}\+))([0-9]{2}:[0-9]{2})"'
     t.value = t.value.strip('"')
@@ -97,7 +99,7 @@ def t_DATETIME_ERROR(t):
     errores.append(f"Línea {t.lineno}: Fecha/hora inválida → {t.value}")
     return None
 
-# ---- MAC ADDRESS ----
+# MAC ADDRESS
 def t_MAC_ADDRESS(t):
     r'"([0-9A-Fa-f]{2}:){5}[0-9A-Fa-f]{2}"'
     t.value = t.value.strip('"')
@@ -108,7 +110,7 @@ def t_MAC_ADDRESS_ERROR(t):
     errores.append(f"Línea {t.lineno}: MAC inválida → {t.value}")
     return None
 
-# ---- ETHERTYPE ----
+# ETHERTYPE
 def t_ETHERTYPE(t):
     r'"0x[0-9A-Fa-f]{4}"'
     t.value = t.value.strip('"')
@@ -119,7 +121,7 @@ def t_ETHERTYPE_ERROR(t):
     errores.append(f"Línea {t.lineno}: Ethertype inválido → {t.value}")
     return None
 
-# ---- IPV4 ----
+# IPV4
 def t_IPV4(t):
     r'"((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\/(3[0-2]|[1-2]?[0-9]|[0-9])"'
     t.value = t.value.strip('"')
@@ -130,18 +132,18 @@ def t_IPV4_ERROR(t):
     errores.append(f"Línea {t.lineno}: IPv4 inválida → {t.value}")
     return None
 
-# ---- URL ----
+# URL
 def t_URL(t):
     r'"(https?://[a-zA-Z0-9:/.?=&%\-_~#@!]+|urn:[a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?:[a-zA-Z0-9._~!$&()*+,;=@%/-]+(:[a-zA-Z0-9._~!$&()*+,;=@%/-]+)*)"'
     t.value = t.value.strip('"')
     return t
 
 def t_URL_ERROR(t):
-    r'"https?://[^"]*"'
+    r'"(htt?p?s?:?/?/?[^"]*|urn:?[a-zA-Z0-9-]*:?[^"]*)"'
     errores.append(f"Línea {t.lineno}: URL inválida → {t.value}")
     return None
 
-# ---- DNS ----
+# DNS
 def t_DNS(t):
     r'"([a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z]{2,24}"'
     t.value = t.value.strip('"')

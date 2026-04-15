@@ -188,9 +188,12 @@ def p_ace_member(p):
 # objeto de condiciones
 
 def p_matches_object(p):
-    'matches_object : LBRACE matches_members RBRACE'
-    p[0] = p[2]
-
+    '''matches_object : LBRACE matches_members RBRACE
+                      | LBRACE RBRACE'''
+    if len(p) == 3:
+        p[0] = {}
+    else:
+        p[0] = p[2]
 
 def p_matches_members(p):
     '''matches_members : matches_member
@@ -251,7 +254,8 @@ def p_actions_members(p):
         p[0] = {**p[1], **p[3]}
 
 def p_actions_member(p):
-    'actions_member : FORWARDING COLON RESERVED_VALUES'
+    '''actions_member : FORWARDING COLON RESERVED_VALUES
+                        | STRING_KEYS COLON bool_value'''
     p[0] = {p[1]: p[3]}
 
 
