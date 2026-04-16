@@ -1,0 +1,2121 @@
+Created by PLY version 3.11 (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> file
+Rule 1     file -> LBRACE mud_members RBRACE
+Rule 2     mud_members -> mud_member
+Rule 3     mud_members -> mud_members COMMA mud_member
+Rule 4     mud_member -> IETF_MUD_MUD COLON mud_object
+Rule 5     mud_member -> IETF_ACCESS_CONTROL_LIST_ACCESS_LISTS COLON acl_lists_wrapper
+Rule 6     mud_object -> LBRACE mud_content_list RBRACE
+Rule 7     mud_content_list -> mud_content
+Rule 8     mud_content_list -> mud_content_list COMMA mud_content
+Rule 9     mud_content -> STRING_KEYS COLON string_value
+Rule 10    mud_content -> URL_KEYS COLON url_value
+Rule 11    mud_content -> NUMBER_KEYS COLON number_value
+Rule 12    mud_content -> LAST_UPDATE COLON datetime_value
+Rule 13    mud_content -> IS_SUPPORTED COLON bool_value
+Rule 14    mud_content -> EXTENSIONS COLON extensions_array
+Rule 15    mud_content -> POLICIES_KEYS COLON policy_item
+Rule 16    extensions_array -> LBRACKET RBRACKET
+Rule 17    extensions_array -> LBRACKET extensions_list RBRACKET
+Rule 18    extensions_list -> string_value
+Rule 19    extensions_list -> extensions_list COMMA string_value
+Rule 20    acl_lists_wrapper -> LBRACE ACCESS_LIST COLON acl_list_array RBRACE
+Rule 21    acl_lists_wrapper -> LBRACE ACL COLON acl_list_array RBRACE
+Rule 22    acl_list_array -> LBRACKET acl_list_items RBRACKET
+Rule 23    acl_list_items -> acl_list_item
+Rule 24    acl_list_items -> acl_list_items COMMA acl_list_item
+Rule 25    acl_list_item -> LBRACE acl_list_members RBRACE
+Rule 26    acl_list_members -> acl_list_member
+Rule 27    acl_list_members -> acl_list_members COMMA acl_list_member
+Rule 28    acl_list_member -> STRING_KEYS COLON string_value
+Rule 29    acl_list_member -> ACES COLON ace_wrapper
+Rule 30    ace_wrapper -> LBRACE ace_inner RBRACE
+Rule 31    ace_inner -> ACE COLON ace_array
+Rule 32    ace_array -> LBRACKET ace_items RBRACKET
+Rule 33    ace_items -> ace_item
+Rule 34    ace_items -> ace_items COMMA ace_item
+Rule 35    ace_item -> LBRACE ace_members RBRACE
+Rule 36    ace_members -> ace_member
+Rule 37    ace_members -> ace_members COMMA ace_member
+Rule 38    ace_member -> STRING_KEYS COLON string_value
+Rule 39    ace_member -> MATCHES COLON matches_object
+Rule 40    ace_member -> ACTIONS COLON actions_object
+Rule 41    matches_object -> LBRACE matches_members RBRACE
+Rule 42    matches_object -> LBRACE RBRACE
+Rule 43    matches_members -> matches_member
+Rule 44    matches_members -> matches_members COMMA matches_member
+Rule 45    matches_member -> IETF_MUD_MUD COLON mud_match_object
+Rule 46    matches_member -> IPV4_KEY COLON ipv4_object
+Rule 47    matches_member -> PROTOCOL_KEYS COLON generic_protocol_object
+Rule 48    mud_match_object -> LBRACE mud_match_members RBRACE
+Rule 49    mud_match_members -> mud_match_member
+Rule 50    mud_match_members -> mud_match_members COMMA mud_match_member
+Rule 51    mud_match_member -> URL_KEYS COLON url_value
+Rule 52    mud_match_member -> NULL_KEYS COLON null_array
+Rule 53    null_array -> LBRACKET null_list RBRACKET
+Rule 54    null_list -> null_value
+Rule 55    null_list -> null_list COMMA null_value
+Rule 56    actions_object -> LBRACE actions_members RBRACE
+Rule 57    actions_members -> actions_member
+Rule 58    actions_members -> actions_members COMMA actions_member
+Rule 59    actions_member -> FORWARDING COLON action_value
+Rule 60    policy_item -> LBRACE ACCESS_LISTS COLON access_lists_object RBRACE
+Rule 61    access_lists_object -> LBRACE ACCESS_LIST COLON name_list_array RBRACE
+Rule 62    name_list_array -> LBRACKET name_items RBRACKET
+Rule 63    name_items -> name_item
+Rule 64    name_items -> name_items COMMA name_item
+Rule 65    name_item -> LBRACE STRING_KEYS COLON string_value RBRACE
+Rule 66    ipv4_object -> LBRACE ipv4_members RBRACE
+Rule 67    generic_protocol_object -> LBRACE generic_protocol_members RBRACE
+Rule 68    generic_protocol_members -> generic_protocol_member
+Rule 69    generic_protocol_members -> generic_protocol_members COMMA generic_protocol_member
+Rule 70    generic_protocol_member -> PORT_DIR_KEYS COLON port_value
+Rule 71    generic_protocol_member -> IETF_MUD_DIRECTION_INITIATED COLON direction_value
+Rule 72    generic_protocol_member -> ETHERTYPE_KEY COLON ethertype_value
+Rule 73    generic_protocol_member -> DESTINATION_MAC_ADDRESS COLON mac_value
+Rule 74    ipv4_member -> DNS_KEYS COLON dns_value
+Rule 75    ipv4_member -> DESTINATION_IPV4_NETWORK COLON ipv4_value
+Rule 76    ipv4_member -> PROTOCOL COLON number_value
+Rule 77    port_value -> LBRACE OPERATOR COLON operator_value COMMA NUMBER_KEYS COLON number_value RBRACE
+Rule 78    ipv4_members -> ipv4_member
+Rule 79    ipv4_members -> ipv4_members COMMA ipv4_member
+Rule 80    action_value -> RESERVED_VALUES
+Rule 81    operator_value -> RESERVED_VALUES
+Rule 82    direction_value -> RESERVED_VALUES
+Rule 83    string_value -> STRING
+Rule 84    number_value -> NUMBER
+Rule 85    bool_value -> BOOLEAN
+Rule 86    null_value -> NULL
+Rule 87    url_value -> URL
+Rule 88    dns_value -> DNS
+Rule 89    ipv4_value -> IPV4
+Rule 90    datetime_value -> DATETIME
+Rule 91    mac_value -> MAC_ADDRESS
+Rule 92    ethertype_value -> ETHERTYPE
+
+Terminals, with rules where they appear
+
+ACCESS_LIST          : 20 61
+ACCESS_LISTS         : 60
+ACE                  : 31
+ACES                 : 29
+ACL                  : 21
+ACTIONS              : 40
+BOOLEAN              : 85
+COLON                : 4 5 9 10 11 12 13 14 15 20 21 28 29 31 38 39 40 45 46 47 51 52 59 60 61 65 70 71 72 73 74 75 76 77 77
+COMMA                : 3 8 19 24 27 34 37 44 50 55 58 64 69 77 79
+DATETIME             : 90
+DESTINATION_IPV4_NETWORK : 75
+DESTINATION_MAC_ADDRESS : 73
+DNS                  : 88
+DNS_KEYS             : 74
+ETHERTYPE            : 92
+ETHERTYPE_KEY        : 72
+EXTENSIONS           : 14
+FORWARDING           : 59
+IETF_ACCESS_CONTROL_LIST_ACCESS_LISTS : 5
+IETF_MUD_DIRECTION_INITIATED : 71
+IETF_MUD_MUD         : 4 45
+IPV4                 : 89
+IPV4_KEY             : 46
+IS_SUPPORTED         : 13
+LAST_UPDATE          : 12
+LBRACE               : 1 6 20 21 25 30 35 41 42 48 56 60 61 65 66 67 77
+LBRACKET             : 16 17 22 32 53 62
+MAC_ADDRESS          : 91
+MATCHES              : 39
+NULL                 : 86
+NULL_KEYS            : 52
+NUMBER               : 84
+NUMBER_KEYS          : 11 77
+OPERATOR             : 77
+POLICIES_KEYS        : 15
+PORT_DIR_KEYS        : 70
+PROTOCOL             : 76
+PROTOCOL_KEYS        : 47
+RBRACE               : 1 6 20 21 25 30 35 41 42 48 56 60 61 65 66 67 77
+RBRACKET             : 16 17 22 32 53 62
+RESERVED_VALUES      : 80 81 82
+STRING               : 83
+STRING_KEYS          : 9 28 38 65
+URL                  : 87
+URL_KEYS             : 10 51
+error                : 
+
+Nonterminals, with rules where they appear
+
+access_lists_object  : 60
+ace_array            : 31
+ace_inner            : 30
+ace_item             : 33 34
+ace_items            : 32 34
+ace_member           : 36 37
+ace_members          : 35 37
+ace_wrapper          : 29
+acl_list_array       : 20 21
+acl_list_item        : 23 24
+acl_list_items       : 22 24
+acl_list_member      : 26 27
+acl_list_members     : 25 27
+acl_lists_wrapper    : 5
+action_value         : 59
+actions_member       : 57 58
+actions_members      : 56 58
+actions_object       : 40
+bool_value           : 13
+datetime_value       : 12
+direction_value      : 71
+dns_value            : 74
+ethertype_value      : 72
+extensions_array     : 14
+extensions_list      : 17 19
+file                 : 0
+generic_protocol_member : 68 69
+generic_protocol_members : 67 69
+generic_protocol_object : 47
+ipv4_member          : 78 79
+ipv4_members         : 66 79
+ipv4_object          : 46
+ipv4_value           : 75
+mac_value            : 73
+matches_member       : 43 44
+matches_members      : 41 44
+matches_object       : 39
+mud_content          : 7 8
+mud_content_list     : 6 8
+mud_match_member     : 49 50
+mud_match_members    : 48 50
+mud_match_object     : 45
+mud_member           : 2 3
+mud_members          : 1 3
+mud_object           : 4
+name_item            : 63 64
+name_items           : 62 64
+name_list_array      : 61
+null_array           : 52
+null_list            : 53 55
+null_value           : 54 55
+number_value         : 11 76 77
+operator_value       : 77
+policy_item          : 15
+port_value           : 70
+string_value         : 9 18 19 28 38 65
+url_value            : 10 51
+
+Parsing method: LALR
+
+state 0
+
+    (0) S' -> . file
+    (1) file -> . LBRACE mud_members RBRACE
+
+    LBRACE          shift and go to state 2
+
+    file                           shift and go to state 1
+
+state 1
+
+    (0) S' -> file .
+
+
+
+state 2
+
+    (1) file -> LBRACE . mud_members RBRACE
+    (2) mud_members -> . mud_member
+    (3) mud_members -> . mud_members COMMA mud_member
+    (4) mud_member -> . IETF_MUD_MUD COLON mud_object
+    (5) mud_member -> . IETF_ACCESS_CONTROL_LIST_ACCESS_LISTS COLON acl_lists_wrapper
+
+    IETF_MUD_MUD    shift and go to state 5
+    IETF_ACCESS_CONTROL_LIST_ACCESS_LISTS shift and go to state 6
+
+    mud_members                    shift and go to state 3
+    mud_member                     shift and go to state 4
+
+state 3
+
+    (1) file -> LBRACE mud_members . RBRACE
+    (3) mud_members -> mud_members . COMMA mud_member
+
+    RBRACE          shift and go to state 7
+    COMMA           shift and go to state 8
+
+
+state 4
+
+    (2) mud_members -> mud_member .
+
+    RBRACE          reduce using rule 2 (mud_members -> mud_member .)
+    COMMA           reduce using rule 2 (mud_members -> mud_member .)
+
+
+state 5
+
+    (4) mud_member -> IETF_MUD_MUD . COLON mud_object
+
+    COLON           shift and go to state 9
+
+
+state 6
+
+    (5) mud_member -> IETF_ACCESS_CONTROL_LIST_ACCESS_LISTS . COLON acl_lists_wrapper
+
+    COLON           shift and go to state 10
+
+
+state 7
+
+    (1) file -> LBRACE mud_members RBRACE .
+
+    $end            reduce using rule 1 (file -> LBRACE mud_members RBRACE .)
+
+
+state 8
+
+    (3) mud_members -> mud_members COMMA . mud_member
+    (4) mud_member -> . IETF_MUD_MUD COLON mud_object
+    (5) mud_member -> . IETF_ACCESS_CONTROL_LIST_ACCESS_LISTS COLON acl_lists_wrapper
+
+    IETF_MUD_MUD    shift and go to state 5
+    IETF_ACCESS_CONTROL_LIST_ACCESS_LISTS shift and go to state 6
+
+    mud_member                     shift and go to state 11
+
+state 9
+
+    (4) mud_member -> IETF_MUD_MUD COLON . mud_object
+    (6) mud_object -> . LBRACE mud_content_list RBRACE
+
+    LBRACE          shift and go to state 13
+
+    mud_object                     shift and go to state 12
+
+state 10
+
+    (5) mud_member -> IETF_ACCESS_CONTROL_LIST_ACCESS_LISTS COLON . acl_lists_wrapper
+    (20) acl_lists_wrapper -> . LBRACE ACCESS_LIST COLON acl_list_array RBRACE
+    (21) acl_lists_wrapper -> . LBRACE ACL COLON acl_list_array RBRACE
+
+    LBRACE          shift and go to state 15
+
+    acl_lists_wrapper              shift and go to state 14
+
+state 11
+
+    (3) mud_members -> mud_members COMMA mud_member .
+
+    RBRACE          reduce using rule 3 (mud_members -> mud_members COMMA mud_member .)
+    COMMA           reduce using rule 3 (mud_members -> mud_members COMMA mud_member .)
+
+
+state 12
+
+    (4) mud_member -> IETF_MUD_MUD COLON mud_object .
+
+    RBRACE          reduce using rule 4 (mud_member -> IETF_MUD_MUD COLON mud_object .)
+    COMMA           reduce using rule 4 (mud_member -> IETF_MUD_MUD COLON mud_object .)
+
+
+state 13
+
+    (6) mud_object -> LBRACE . mud_content_list RBRACE
+    (7) mud_content_list -> . mud_content
+    (8) mud_content_list -> . mud_content_list COMMA mud_content
+    (9) mud_content -> . STRING_KEYS COLON string_value
+    (10) mud_content -> . URL_KEYS COLON url_value
+    (11) mud_content -> . NUMBER_KEYS COLON number_value
+    (12) mud_content -> . LAST_UPDATE COLON datetime_value
+    (13) mud_content -> . IS_SUPPORTED COLON bool_value
+    (14) mud_content -> . EXTENSIONS COLON extensions_array
+    (15) mud_content -> . POLICIES_KEYS COLON policy_item
+
+    STRING_KEYS     shift and go to state 18
+    URL_KEYS        shift and go to state 19
+    NUMBER_KEYS     shift and go to state 20
+    LAST_UPDATE     shift and go to state 21
+    IS_SUPPORTED    shift and go to state 22
+    EXTENSIONS      shift and go to state 23
+    POLICIES_KEYS   shift and go to state 24
+
+    mud_content_list               shift and go to state 16
+    mud_content                    shift and go to state 17
+
+state 14
+
+    (5) mud_member -> IETF_ACCESS_CONTROL_LIST_ACCESS_LISTS COLON acl_lists_wrapper .
+
+    RBRACE          reduce using rule 5 (mud_member -> IETF_ACCESS_CONTROL_LIST_ACCESS_LISTS COLON acl_lists_wrapper .)
+    COMMA           reduce using rule 5 (mud_member -> IETF_ACCESS_CONTROL_LIST_ACCESS_LISTS COLON acl_lists_wrapper .)
+
+
+state 15
+
+    (20) acl_lists_wrapper -> LBRACE . ACCESS_LIST COLON acl_list_array RBRACE
+    (21) acl_lists_wrapper -> LBRACE . ACL COLON acl_list_array RBRACE
+
+    ACCESS_LIST     shift and go to state 25
+    ACL             shift and go to state 26
+
+
+state 16
+
+    (6) mud_object -> LBRACE mud_content_list . RBRACE
+    (8) mud_content_list -> mud_content_list . COMMA mud_content
+
+    RBRACE          shift and go to state 27
+    COMMA           shift and go to state 28
+
+
+state 17
+
+    (7) mud_content_list -> mud_content .
+
+    RBRACE          reduce using rule 7 (mud_content_list -> mud_content .)
+    COMMA           reduce using rule 7 (mud_content_list -> mud_content .)
+
+
+state 18
+
+    (9) mud_content -> STRING_KEYS . COLON string_value
+
+    COLON           shift and go to state 29
+
+
+state 19
+
+    (10) mud_content -> URL_KEYS . COLON url_value
+
+    COLON           shift and go to state 30
+
+
+state 20
+
+    (11) mud_content -> NUMBER_KEYS . COLON number_value
+
+    COLON           shift and go to state 31
+
+
+state 21
+
+    (12) mud_content -> LAST_UPDATE . COLON datetime_value
+
+    COLON           shift and go to state 32
+
+
+state 22
+
+    (13) mud_content -> IS_SUPPORTED . COLON bool_value
+
+    COLON           shift and go to state 33
+
+
+state 23
+
+    (14) mud_content -> EXTENSIONS . COLON extensions_array
+
+    COLON           shift and go to state 34
+
+
+state 24
+
+    (15) mud_content -> POLICIES_KEYS . COLON policy_item
+
+    COLON           shift and go to state 35
+
+
+state 25
+
+    (20) acl_lists_wrapper -> LBRACE ACCESS_LIST . COLON acl_list_array RBRACE
+
+    COLON           shift and go to state 36
+
+
+state 26
+
+    (21) acl_lists_wrapper -> LBRACE ACL . COLON acl_list_array RBRACE
+
+    COLON           shift and go to state 37
+
+
+state 27
+
+    (6) mud_object -> LBRACE mud_content_list RBRACE .
+
+    RBRACE          reduce using rule 6 (mud_object -> LBRACE mud_content_list RBRACE .)
+    COMMA           reduce using rule 6 (mud_object -> LBRACE mud_content_list RBRACE .)
+
+
+state 28
+
+    (8) mud_content_list -> mud_content_list COMMA . mud_content
+    (9) mud_content -> . STRING_KEYS COLON string_value
+    (10) mud_content -> . URL_KEYS COLON url_value
+    (11) mud_content -> . NUMBER_KEYS COLON number_value
+    (12) mud_content -> . LAST_UPDATE COLON datetime_value
+    (13) mud_content -> . IS_SUPPORTED COLON bool_value
+    (14) mud_content -> . EXTENSIONS COLON extensions_array
+    (15) mud_content -> . POLICIES_KEYS COLON policy_item
+
+    STRING_KEYS     shift and go to state 18
+    URL_KEYS        shift and go to state 19
+    NUMBER_KEYS     shift and go to state 20
+    LAST_UPDATE     shift and go to state 21
+    IS_SUPPORTED    shift and go to state 22
+    EXTENSIONS      shift and go to state 23
+    POLICIES_KEYS   shift and go to state 24
+
+    mud_content                    shift and go to state 38
+
+state 29
+
+    (9) mud_content -> STRING_KEYS COLON . string_value
+    (83) string_value -> . STRING
+
+    STRING          shift and go to state 40
+
+    string_value                   shift and go to state 39
+
+state 30
+
+    (10) mud_content -> URL_KEYS COLON . url_value
+    (87) url_value -> . URL
+
+    URL             shift and go to state 42
+
+    url_value                      shift and go to state 41
+
+state 31
+
+    (11) mud_content -> NUMBER_KEYS COLON . number_value
+    (84) number_value -> . NUMBER
+
+    NUMBER          shift and go to state 44
+
+    number_value                   shift and go to state 43
+
+state 32
+
+    (12) mud_content -> LAST_UPDATE COLON . datetime_value
+    (90) datetime_value -> . DATETIME
+
+    DATETIME        shift and go to state 46
+
+    datetime_value                 shift and go to state 45
+
+state 33
+
+    (13) mud_content -> IS_SUPPORTED COLON . bool_value
+    (85) bool_value -> . BOOLEAN
+
+    BOOLEAN         shift and go to state 48
+
+    bool_value                     shift and go to state 47
+
+state 34
+
+    (14) mud_content -> EXTENSIONS COLON . extensions_array
+    (16) extensions_array -> . LBRACKET RBRACKET
+    (17) extensions_array -> . LBRACKET extensions_list RBRACKET
+
+    LBRACKET        shift and go to state 50
+
+    extensions_array               shift and go to state 49
+
+state 35
+
+    (15) mud_content -> POLICIES_KEYS COLON . policy_item
+    (60) policy_item -> . LBRACE ACCESS_LISTS COLON access_lists_object RBRACE
+
+    LBRACE          shift and go to state 52
+
+    policy_item                    shift and go to state 51
+
+state 36
+
+    (20) acl_lists_wrapper -> LBRACE ACCESS_LIST COLON . acl_list_array RBRACE
+    (22) acl_list_array -> . LBRACKET acl_list_items RBRACKET
+
+    LBRACKET        shift and go to state 54
+
+    acl_list_array                 shift and go to state 53
+
+state 37
+
+    (21) acl_lists_wrapper -> LBRACE ACL COLON . acl_list_array RBRACE
+    (22) acl_list_array -> . LBRACKET acl_list_items RBRACKET
+
+    LBRACKET        shift and go to state 54
+
+    acl_list_array                 shift and go to state 55
+
+state 38
+
+    (8) mud_content_list -> mud_content_list COMMA mud_content .
+
+    RBRACE          reduce using rule 8 (mud_content_list -> mud_content_list COMMA mud_content .)
+    COMMA           reduce using rule 8 (mud_content_list -> mud_content_list COMMA mud_content .)
+
+
+state 39
+
+    (9) mud_content -> STRING_KEYS COLON string_value .
+
+    RBRACE          reduce using rule 9 (mud_content -> STRING_KEYS COLON string_value .)
+    COMMA           reduce using rule 9 (mud_content -> STRING_KEYS COLON string_value .)
+
+
+state 40
+
+    (83) string_value -> STRING .
+
+    RBRACE          reduce using rule 83 (string_value -> STRING .)
+    COMMA           reduce using rule 83 (string_value -> STRING .)
+    RBRACKET        reduce using rule 83 (string_value -> STRING .)
+
+
+state 41
+
+    (10) mud_content -> URL_KEYS COLON url_value .
+
+    RBRACE          reduce using rule 10 (mud_content -> URL_KEYS COLON url_value .)
+    COMMA           reduce using rule 10 (mud_content -> URL_KEYS COLON url_value .)
+
+
+state 42
+
+    (87) url_value -> URL .
+
+    RBRACE          reduce using rule 87 (url_value -> URL .)
+    COMMA           reduce using rule 87 (url_value -> URL .)
+
+
+state 43
+
+    (11) mud_content -> NUMBER_KEYS COLON number_value .
+
+    RBRACE          reduce using rule 11 (mud_content -> NUMBER_KEYS COLON number_value .)
+    COMMA           reduce using rule 11 (mud_content -> NUMBER_KEYS COLON number_value .)
+
+
+state 44
+
+    (84) number_value -> NUMBER .
+
+    RBRACE          reduce using rule 84 (number_value -> NUMBER .)
+    COMMA           reduce using rule 84 (number_value -> NUMBER .)
+
+
+state 45
+
+    (12) mud_content -> LAST_UPDATE COLON datetime_value .
+
+    RBRACE          reduce using rule 12 (mud_content -> LAST_UPDATE COLON datetime_value .)
+    COMMA           reduce using rule 12 (mud_content -> LAST_UPDATE COLON datetime_value .)
+
+
+state 46
+
+    (90) datetime_value -> DATETIME .
+
+    RBRACE          reduce using rule 90 (datetime_value -> DATETIME .)
+    COMMA           reduce using rule 90 (datetime_value -> DATETIME .)
+
+
+state 47
+
+    (13) mud_content -> IS_SUPPORTED COLON bool_value .
+
+    RBRACE          reduce using rule 13 (mud_content -> IS_SUPPORTED COLON bool_value .)
+    COMMA           reduce using rule 13 (mud_content -> IS_SUPPORTED COLON bool_value .)
+
+
+state 48
+
+    (85) bool_value -> BOOLEAN .
+
+    RBRACE          reduce using rule 85 (bool_value -> BOOLEAN .)
+    COMMA           reduce using rule 85 (bool_value -> BOOLEAN .)
+
+
+state 49
+
+    (14) mud_content -> EXTENSIONS COLON extensions_array .
+
+    RBRACE          reduce using rule 14 (mud_content -> EXTENSIONS COLON extensions_array .)
+    COMMA           reduce using rule 14 (mud_content -> EXTENSIONS COLON extensions_array .)
+
+
+state 50
+
+    (16) extensions_array -> LBRACKET . RBRACKET
+    (17) extensions_array -> LBRACKET . extensions_list RBRACKET
+    (18) extensions_list -> . string_value
+    (19) extensions_list -> . extensions_list COMMA string_value
+    (83) string_value -> . STRING
+
+    RBRACKET        shift and go to state 56
+    STRING          shift and go to state 40
+
+    extensions_list                shift and go to state 57
+    string_value                   shift and go to state 58
+
+state 51
+
+    (15) mud_content -> POLICIES_KEYS COLON policy_item .
+
+    RBRACE          reduce using rule 15 (mud_content -> POLICIES_KEYS COLON policy_item .)
+    COMMA           reduce using rule 15 (mud_content -> POLICIES_KEYS COLON policy_item .)
+
+
+state 52
+
+    (60) policy_item -> LBRACE . ACCESS_LISTS COLON access_lists_object RBRACE
+
+    ACCESS_LISTS    shift and go to state 59
+
+
+state 53
+
+    (20) acl_lists_wrapper -> LBRACE ACCESS_LIST COLON acl_list_array . RBRACE
+
+    RBRACE          shift and go to state 60
+
+
+state 54
+
+    (22) acl_list_array -> LBRACKET . acl_list_items RBRACKET
+    (23) acl_list_items -> . acl_list_item
+    (24) acl_list_items -> . acl_list_items COMMA acl_list_item
+    (25) acl_list_item -> . LBRACE acl_list_members RBRACE
+
+    LBRACE          shift and go to state 63
+
+    acl_list_items                 shift and go to state 61
+    acl_list_item                  shift and go to state 62
+
+state 55
+
+    (21) acl_lists_wrapper -> LBRACE ACL COLON acl_list_array . RBRACE
+
+    RBRACE          shift and go to state 64
+
+
+state 56
+
+    (16) extensions_array -> LBRACKET RBRACKET .
+
+    RBRACE          reduce using rule 16 (extensions_array -> LBRACKET RBRACKET .)
+    COMMA           reduce using rule 16 (extensions_array -> LBRACKET RBRACKET .)
+
+
+state 57
+
+    (17) extensions_array -> LBRACKET extensions_list . RBRACKET
+    (19) extensions_list -> extensions_list . COMMA string_value
+
+    RBRACKET        shift and go to state 65
+    COMMA           shift and go to state 66
+
+
+state 58
+
+    (18) extensions_list -> string_value .
+
+    RBRACKET        reduce using rule 18 (extensions_list -> string_value .)
+    COMMA           reduce using rule 18 (extensions_list -> string_value .)
+
+
+state 59
+
+    (60) policy_item -> LBRACE ACCESS_LISTS . COLON access_lists_object RBRACE
+
+    COLON           shift and go to state 67
+
+
+state 60
+
+    (20) acl_lists_wrapper -> LBRACE ACCESS_LIST COLON acl_list_array RBRACE .
+
+    RBRACE          reduce using rule 20 (acl_lists_wrapper -> LBRACE ACCESS_LIST COLON acl_list_array RBRACE .)
+    COMMA           reduce using rule 20 (acl_lists_wrapper -> LBRACE ACCESS_LIST COLON acl_list_array RBRACE .)
+
+
+state 61
+
+    (22) acl_list_array -> LBRACKET acl_list_items . RBRACKET
+    (24) acl_list_items -> acl_list_items . COMMA acl_list_item
+
+    RBRACKET        shift and go to state 68
+    COMMA           shift and go to state 69
+
+
+state 62
+
+    (23) acl_list_items -> acl_list_item .
+
+    RBRACKET        reduce using rule 23 (acl_list_items -> acl_list_item .)
+    COMMA           reduce using rule 23 (acl_list_items -> acl_list_item .)
+
+
+state 63
+
+    (25) acl_list_item -> LBRACE . acl_list_members RBRACE
+    (26) acl_list_members -> . acl_list_member
+    (27) acl_list_members -> . acl_list_members COMMA acl_list_member
+    (28) acl_list_member -> . STRING_KEYS COLON string_value
+    (29) acl_list_member -> . ACES COLON ace_wrapper
+
+    STRING_KEYS     shift and go to state 72
+    ACES            shift and go to state 73
+
+    acl_list_members               shift and go to state 70
+    acl_list_member                shift and go to state 71
+
+state 64
+
+    (21) acl_lists_wrapper -> LBRACE ACL COLON acl_list_array RBRACE .
+
+    RBRACE          reduce using rule 21 (acl_lists_wrapper -> LBRACE ACL COLON acl_list_array RBRACE .)
+    COMMA           reduce using rule 21 (acl_lists_wrapper -> LBRACE ACL COLON acl_list_array RBRACE .)
+
+
+state 65
+
+    (17) extensions_array -> LBRACKET extensions_list RBRACKET .
+
+    RBRACE          reduce using rule 17 (extensions_array -> LBRACKET extensions_list RBRACKET .)
+    COMMA           reduce using rule 17 (extensions_array -> LBRACKET extensions_list RBRACKET .)
+
+
+state 66
+
+    (19) extensions_list -> extensions_list COMMA . string_value
+    (83) string_value -> . STRING
+
+    STRING          shift and go to state 40
+
+    string_value                   shift and go to state 74
+
+state 67
+
+    (60) policy_item -> LBRACE ACCESS_LISTS COLON . access_lists_object RBRACE
+    (61) access_lists_object -> . LBRACE ACCESS_LIST COLON name_list_array RBRACE
+
+    LBRACE          shift and go to state 75
+
+    access_lists_object            shift and go to state 76
+
+state 68
+
+    (22) acl_list_array -> LBRACKET acl_list_items RBRACKET .
+
+    RBRACE          reduce using rule 22 (acl_list_array -> LBRACKET acl_list_items RBRACKET .)
+
+
+state 69
+
+    (24) acl_list_items -> acl_list_items COMMA . acl_list_item
+    (25) acl_list_item -> . LBRACE acl_list_members RBRACE
+
+    LBRACE          shift and go to state 63
+
+    acl_list_item                  shift and go to state 77
+
+state 70
+
+    (25) acl_list_item -> LBRACE acl_list_members . RBRACE
+    (27) acl_list_members -> acl_list_members . COMMA acl_list_member
+
+    RBRACE          shift and go to state 78
+    COMMA           shift and go to state 79
+
+
+state 71
+
+    (26) acl_list_members -> acl_list_member .
+
+    RBRACE          reduce using rule 26 (acl_list_members -> acl_list_member .)
+    COMMA           reduce using rule 26 (acl_list_members -> acl_list_member .)
+
+
+state 72
+
+    (28) acl_list_member -> STRING_KEYS . COLON string_value
+
+    COLON           shift and go to state 80
+
+
+state 73
+
+    (29) acl_list_member -> ACES . COLON ace_wrapper
+
+    COLON           shift and go to state 81
+
+
+state 74
+
+    (19) extensions_list -> extensions_list COMMA string_value .
+
+    RBRACKET        reduce using rule 19 (extensions_list -> extensions_list COMMA string_value .)
+    COMMA           reduce using rule 19 (extensions_list -> extensions_list COMMA string_value .)
+
+
+state 75
+
+    (61) access_lists_object -> LBRACE . ACCESS_LIST COLON name_list_array RBRACE
+
+    ACCESS_LIST     shift and go to state 82
+
+
+state 76
+
+    (60) policy_item -> LBRACE ACCESS_LISTS COLON access_lists_object . RBRACE
+
+    RBRACE          shift and go to state 83
+
+
+state 77
+
+    (24) acl_list_items -> acl_list_items COMMA acl_list_item .
+
+    RBRACKET        reduce using rule 24 (acl_list_items -> acl_list_items COMMA acl_list_item .)
+    COMMA           reduce using rule 24 (acl_list_items -> acl_list_items COMMA acl_list_item .)
+
+
+state 78
+
+    (25) acl_list_item -> LBRACE acl_list_members RBRACE .
+
+    RBRACKET        reduce using rule 25 (acl_list_item -> LBRACE acl_list_members RBRACE .)
+    COMMA           reduce using rule 25 (acl_list_item -> LBRACE acl_list_members RBRACE .)
+
+
+state 79
+
+    (27) acl_list_members -> acl_list_members COMMA . acl_list_member
+    (28) acl_list_member -> . STRING_KEYS COLON string_value
+    (29) acl_list_member -> . ACES COLON ace_wrapper
+
+    STRING_KEYS     shift and go to state 72
+    ACES            shift and go to state 73
+
+    acl_list_member                shift and go to state 84
+
+state 80
+
+    (28) acl_list_member -> STRING_KEYS COLON . string_value
+    (83) string_value -> . STRING
+
+    STRING          shift and go to state 40
+
+    string_value                   shift and go to state 85
+
+state 81
+
+    (29) acl_list_member -> ACES COLON . ace_wrapper
+    (30) ace_wrapper -> . LBRACE ace_inner RBRACE
+
+    LBRACE          shift and go to state 87
+
+    ace_wrapper                    shift and go to state 86
+
+state 82
+
+    (61) access_lists_object -> LBRACE ACCESS_LIST . COLON name_list_array RBRACE
+
+    COLON           shift and go to state 88
+
+
+state 83
+
+    (60) policy_item -> LBRACE ACCESS_LISTS COLON access_lists_object RBRACE .
+
+    RBRACE          reduce using rule 60 (policy_item -> LBRACE ACCESS_LISTS COLON access_lists_object RBRACE .)
+    COMMA           reduce using rule 60 (policy_item -> LBRACE ACCESS_LISTS COLON access_lists_object RBRACE .)
+
+
+state 84
+
+    (27) acl_list_members -> acl_list_members COMMA acl_list_member .
+
+    RBRACE          reduce using rule 27 (acl_list_members -> acl_list_members COMMA acl_list_member .)
+    COMMA           reduce using rule 27 (acl_list_members -> acl_list_members COMMA acl_list_member .)
+
+
+state 85
+
+    (28) acl_list_member -> STRING_KEYS COLON string_value .
+
+    RBRACE          reduce using rule 28 (acl_list_member -> STRING_KEYS COLON string_value .)
+    COMMA           reduce using rule 28 (acl_list_member -> STRING_KEYS COLON string_value .)
+
+
+state 86
+
+    (29) acl_list_member -> ACES COLON ace_wrapper .
+
+    RBRACE          reduce using rule 29 (acl_list_member -> ACES COLON ace_wrapper .)
+    COMMA           reduce using rule 29 (acl_list_member -> ACES COLON ace_wrapper .)
+
+
+state 87
+
+    (30) ace_wrapper -> LBRACE . ace_inner RBRACE
+    (31) ace_inner -> . ACE COLON ace_array
+
+    ACE             shift and go to state 90
+
+    ace_inner                      shift and go to state 89
+
+state 88
+
+    (61) access_lists_object -> LBRACE ACCESS_LIST COLON . name_list_array RBRACE
+    (62) name_list_array -> . LBRACKET name_items RBRACKET
+
+    LBRACKET        shift and go to state 92
+
+    name_list_array                shift and go to state 91
+
+state 89
+
+    (30) ace_wrapper -> LBRACE ace_inner . RBRACE
+
+    RBRACE          shift and go to state 93
+
+
+state 90
+
+    (31) ace_inner -> ACE . COLON ace_array
+
+    COLON           shift and go to state 94
+
+
+state 91
+
+    (61) access_lists_object -> LBRACE ACCESS_LIST COLON name_list_array . RBRACE
+
+    RBRACE          shift and go to state 95
+
+
+state 92
+
+    (62) name_list_array -> LBRACKET . name_items RBRACKET
+    (63) name_items -> . name_item
+    (64) name_items -> . name_items COMMA name_item
+    (65) name_item -> . LBRACE STRING_KEYS COLON string_value RBRACE
+
+    LBRACE          shift and go to state 98
+
+    name_items                     shift and go to state 96
+    name_item                      shift and go to state 97
+
+state 93
+
+    (30) ace_wrapper -> LBRACE ace_inner RBRACE .
+
+    RBRACE          reduce using rule 30 (ace_wrapper -> LBRACE ace_inner RBRACE .)
+    COMMA           reduce using rule 30 (ace_wrapper -> LBRACE ace_inner RBRACE .)
+
+
+state 94
+
+    (31) ace_inner -> ACE COLON . ace_array
+    (32) ace_array -> . LBRACKET ace_items RBRACKET
+
+    LBRACKET        shift and go to state 100
+
+    ace_array                      shift and go to state 99
+
+state 95
+
+    (61) access_lists_object -> LBRACE ACCESS_LIST COLON name_list_array RBRACE .
+
+    RBRACE          reduce using rule 61 (access_lists_object -> LBRACE ACCESS_LIST COLON name_list_array RBRACE .)
+
+
+state 96
+
+    (62) name_list_array -> LBRACKET name_items . RBRACKET
+    (64) name_items -> name_items . COMMA name_item
+
+    RBRACKET        shift and go to state 101
+    COMMA           shift and go to state 102
+
+
+state 97
+
+    (63) name_items -> name_item .
+
+    RBRACKET        reduce using rule 63 (name_items -> name_item .)
+    COMMA           reduce using rule 63 (name_items -> name_item .)
+
+
+state 98
+
+    (65) name_item -> LBRACE . STRING_KEYS COLON string_value RBRACE
+
+    STRING_KEYS     shift and go to state 103
+
+
+state 99
+
+    (31) ace_inner -> ACE COLON ace_array .
+
+    RBRACE          reduce using rule 31 (ace_inner -> ACE COLON ace_array .)
+
+
+state 100
+
+    (32) ace_array -> LBRACKET . ace_items RBRACKET
+    (33) ace_items -> . ace_item
+    (34) ace_items -> . ace_items COMMA ace_item
+    (35) ace_item -> . LBRACE ace_members RBRACE
+
+    LBRACE          shift and go to state 106
+
+    ace_items                      shift and go to state 104
+    ace_item                       shift and go to state 105
+
+state 101
+
+    (62) name_list_array -> LBRACKET name_items RBRACKET .
+
+    RBRACE          reduce using rule 62 (name_list_array -> LBRACKET name_items RBRACKET .)
+
+
+state 102
+
+    (64) name_items -> name_items COMMA . name_item
+    (65) name_item -> . LBRACE STRING_KEYS COLON string_value RBRACE
+
+    LBRACE          shift and go to state 98
+
+    name_item                      shift and go to state 107
+
+state 103
+
+    (65) name_item -> LBRACE STRING_KEYS . COLON string_value RBRACE
+
+    COLON           shift and go to state 108
+
+
+state 104
+
+    (32) ace_array -> LBRACKET ace_items . RBRACKET
+    (34) ace_items -> ace_items . COMMA ace_item
+
+    RBRACKET        shift and go to state 109
+    COMMA           shift and go to state 110
+
+
+state 105
+
+    (33) ace_items -> ace_item .
+
+    RBRACKET        reduce using rule 33 (ace_items -> ace_item .)
+    COMMA           reduce using rule 33 (ace_items -> ace_item .)
+
+
+state 106
+
+    (35) ace_item -> LBRACE . ace_members RBRACE
+    (36) ace_members -> . ace_member
+    (37) ace_members -> . ace_members COMMA ace_member
+    (38) ace_member -> . STRING_KEYS COLON string_value
+    (39) ace_member -> . MATCHES COLON matches_object
+    (40) ace_member -> . ACTIONS COLON actions_object
+
+    STRING_KEYS     shift and go to state 113
+    MATCHES         shift and go to state 114
+    ACTIONS         shift and go to state 115
+
+    ace_members                    shift and go to state 111
+    ace_member                     shift and go to state 112
+
+state 107
+
+    (64) name_items -> name_items COMMA name_item .
+
+    RBRACKET        reduce using rule 64 (name_items -> name_items COMMA name_item .)
+    COMMA           reduce using rule 64 (name_items -> name_items COMMA name_item .)
+
+
+state 108
+
+    (65) name_item -> LBRACE STRING_KEYS COLON . string_value RBRACE
+    (83) string_value -> . STRING
+
+    STRING          shift and go to state 40
+
+    string_value                   shift and go to state 116
+
+state 109
+
+    (32) ace_array -> LBRACKET ace_items RBRACKET .
+
+    RBRACE          reduce using rule 32 (ace_array -> LBRACKET ace_items RBRACKET .)
+
+
+state 110
+
+    (34) ace_items -> ace_items COMMA . ace_item
+    (35) ace_item -> . LBRACE ace_members RBRACE
+
+    LBRACE          shift and go to state 106
+
+    ace_item                       shift and go to state 117
+
+state 111
+
+    (35) ace_item -> LBRACE ace_members . RBRACE
+    (37) ace_members -> ace_members . COMMA ace_member
+
+    RBRACE          shift and go to state 118
+    COMMA           shift and go to state 119
+
+
+state 112
+
+    (36) ace_members -> ace_member .
+
+    RBRACE          reduce using rule 36 (ace_members -> ace_member .)
+    COMMA           reduce using rule 36 (ace_members -> ace_member .)
+
+
+state 113
+
+    (38) ace_member -> STRING_KEYS . COLON string_value
+
+    COLON           shift and go to state 120
+
+
+state 114
+
+    (39) ace_member -> MATCHES . COLON matches_object
+
+    COLON           shift and go to state 121
+
+
+state 115
+
+    (40) ace_member -> ACTIONS . COLON actions_object
+
+    COLON           shift and go to state 122
+
+
+state 116
+
+    (65) name_item -> LBRACE STRING_KEYS COLON string_value . RBRACE
+
+    RBRACE          shift and go to state 123
+
+
+state 117
+
+    (34) ace_items -> ace_items COMMA ace_item .
+
+    RBRACKET        reduce using rule 34 (ace_items -> ace_items COMMA ace_item .)
+    COMMA           reduce using rule 34 (ace_items -> ace_items COMMA ace_item .)
+
+
+state 118
+
+    (35) ace_item -> LBRACE ace_members RBRACE .
+
+    RBRACKET        reduce using rule 35 (ace_item -> LBRACE ace_members RBRACE .)
+    COMMA           reduce using rule 35 (ace_item -> LBRACE ace_members RBRACE .)
+
+
+state 119
+
+    (37) ace_members -> ace_members COMMA . ace_member
+    (38) ace_member -> . STRING_KEYS COLON string_value
+    (39) ace_member -> . MATCHES COLON matches_object
+    (40) ace_member -> . ACTIONS COLON actions_object
+
+    STRING_KEYS     shift and go to state 113
+    MATCHES         shift and go to state 114
+    ACTIONS         shift and go to state 115
+
+    ace_member                     shift and go to state 124
+
+state 120
+
+    (38) ace_member -> STRING_KEYS COLON . string_value
+    (83) string_value -> . STRING
+
+    STRING          shift and go to state 40
+
+    string_value                   shift and go to state 125
+
+state 121
+
+    (39) ace_member -> MATCHES COLON . matches_object
+    (41) matches_object -> . LBRACE matches_members RBRACE
+    (42) matches_object -> . LBRACE RBRACE
+
+    LBRACE          shift and go to state 127
+
+    matches_object                 shift and go to state 126
+
+state 122
+
+    (40) ace_member -> ACTIONS COLON . actions_object
+    (56) actions_object -> . LBRACE actions_members RBRACE
+
+    LBRACE          shift and go to state 129
+
+    actions_object                 shift and go to state 128
+
+state 123
+
+    (65) name_item -> LBRACE STRING_KEYS COLON string_value RBRACE .
+
+    RBRACKET        reduce using rule 65 (name_item -> LBRACE STRING_KEYS COLON string_value RBRACE .)
+    COMMA           reduce using rule 65 (name_item -> LBRACE STRING_KEYS COLON string_value RBRACE .)
+
+
+state 124
+
+    (37) ace_members -> ace_members COMMA ace_member .
+
+    RBRACE          reduce using rule 37 (ace_members -> ace_members COMMA ace_member .)
+    COMMA           reduce using rule 37 (ace_members -> ace_members COMMA ace_member .)
+
+
+state 125
+
+    (38) ace_member -> STRING_KEYS COLON string_value .
+
+    RBRACE          reduce using rule 38 (ace_member -> STRING_KEYS COLON string_value .)
+    COMMA           reduce using rule 38 (ace_member -> STRING_KEYS COLON string_value .)
+
+
+state 126
+
+    (39) ace_member -> MATCHES COLON matches_object .
+
+    RBRACE          reduce using rule 39 (ace_member -> MATCHES COLON matches_object .)
+    COMMA           reduce using rule 39 (ace_member -> MATCHES COLON matches_object .)
+
+
+state 127
+
+    (41) matches_object -> LBRACE . matches_members RBRACE
+    (42) matches_object -> LBRACE . RBRACE
+    (43) matches_members -> . matches_member
+    (44) matches_members -> . matches_members COMMA matches_member
+    (45) matches_member -> . IETF_MUD_MUD COLON mud_match_object
+    (46) matches_member -> . IPV4_KEY COLON ipv4_object
+    (47) matches_member -> . PROTOCOL_KEYS COLON generic_protocol_object
+
+    RBRACE          shift and go to state 131
+    IETF_MUD_MUD    shift and go to state 133
+    IPV4_KEY        shift and go to state 134
+    PROTOCOL_KEYS   shift and go to state 135
+
+    matches_members                shift and go to state 130
+    matches_member                 shift and go to state 132
+
+state 128
+
+    (40) ace_member -> ACTIONS COLON actions_object .
+
+    RBRACE          reduce using rule 40 (ace_member -> ACTIONS COLON actions_object .)
+    COMMA           reduce using rule 40 (ace_member -> ACTIONS COLON actions_object .)
+
+
+state 129
+
+    (56) actions_object -> LBRACE . actions_members RBRACE
+    (57) actions_members -> . actions_member
+    (58) actions_members -> . actions_members COMMA actions_member
+    (59) actions_member -> . FORWARDING COLON action_value
+
+    FORWARDING      shift and go to state 138
+
+    actions_members                shift and go to state 136
+    actions_member                 shift and go to state 137
+
+state 130
+
+    (41) matches_object -> LBRACE matches_members . RBRACE
+    (44) matches_members -> matches_members . COMMA matches_member
+
+    RBRACE          shift and go to state 139
+    COMMA           shift and go to state 140
+
+
+state 131
+
+    (42) matches_object -> LBRACE RBRACE .
+
+    RBRACE          reduce using rule 42 (matches_object -> LBRACE RBRACE .)
+    COMMA           reduce using rule 42 (matches_object -> LBRACE RBRACE .)
+
+
+state 132
+
+    (43) matches_members -> matches_member .
+
+    RBRACE          reduce using rule 43 (matches_members -> matches_member .)
+    COMMA           reduce using rule 43 (matches_members -> matches_member .)
+
+
+state 133
+
+    (45) matches_member -> IETF_MUD_MUD . COLON mud_match_object
+
+    COLON           shift and go to state 141
+
+
+state 134
+
+    (46) matches_member -> IPV4_KEY . COLON ipv4_object
+
+    COLON           shift and go to state 142
+
+
+state 135
+
+    (47) matches_member -> PROTOCOL_KEYS . COLON generic_protocol_object
+
+    COLON           shift and go to state 143
+
+
+state 136
+
+    (56) actions_object -> LBRACE actions_members . RBRACE
+    (58) actions_members -> actions_members . COMMA actions_member
+
+    RBRACE          shift and go to state 144
+    COMMA           shift and go to state 145
+
+
+state 137
+
+    (57) actions_members -> actions_member .
+
+    RBRACE          reduce using rule 57 (actions_members -> actions_member .)
+    COMMA           reduce using rule 57 (actions_members -> actions_member .)
+
+
+state 138
+
+    (59) actions_member -> FORWARDING . COLON action_value
+
+    COLON           shift and go to state 146
+
+
+state 139
+
+    (41) matches_object -> LBRACE matches_members RBRACE .
+
+    RBRACE          reduce using rule 41 (matches_object -> LBRACE matches_members RBRACE .)
+    COMMA           reduce using rule 41 (matches_object -> LBRACE matches_members RBRACE .)
+
+
+state 140
+
+    (44) matches_members -> matches_members COMMA . matches_member
+    (45) matches_member -> . IETF_MUD_MUD COLON mud_match_object
+    (46) matches_member -> . IPV4_KEY COLON ipv4_object
+    (47) matches_member -> . PROTOCOL_KEYS COLON generic_protocol_object
+
+    IETF_MUD_MUD    shift and go to state 133
+    IPV4_KEY        shift and go to state 134
+    PROTOCOL_KEYS   shift and go to state 135
+
+    matches_member                 shift and go to state 147
+
+state 141
+
+    (45) matches_member -> IETF_MUD_MUD COLON . mud_match_object
+    (48) mud_match_object -> . LBRACE mud_match_members RBRACE
+
+    LBRACE          shift and go to state 149
+
+    mud_match_object               shift and go to state 148
+
+state 142
+
+    (46) matches_member -> IPV4_KEY COLON . ipv4_object
+    (66) ipv4_object -> . LBRACE ipv4_members RBRACE
+
+    LBRACE          shift and go to state 151
+
+    ipv4_object                    shift and go to state 150
+
+state 143
+
+    (47) matches_member -> PROTOCOL_KEYS COLON . generic_protocol_object
+    (67) generic_protocol_object -> . LBRACE generic_protocol_members RBRACE
+
+    LBRACE          shift and go to state 153
+
+    generic_protocol_object        shift and go to state 152
+
+state 144
+
+    (56) actions_object -> LBRACE actions_members RBRACE .
+
+    RBRACE          reduce using rule 56 (actions_object -> LBRACE actions_members RBRACE .)
+    COMMA           reduce using rule 56 (actions_object -> LBRACE actions_members RBRACE .)
+
+
+state 145
+
+    (58) actions_members -> actions_members COMMA . actions_member
+    (59) actions_member -> . FORWARDING COLON action_value
+
+    FORWARDING      shift and go to state 138
+
+    actions_member                 shift and go to state 154
+
+state 146
+
+    (59) actions_member -> FORWARDING COLON . action_value
+    (80) action_value -> . RESERVED_VALUES
+
+    RESERVED_VALUES shift and go to state 156
+
+    action_value                   shift and go to state 155
+
+state 147
+
+    (44) matches_members -> matches_members COMMA matches_member .
+
+    RBRACE          reduce using rule 44 (matches_members -> matches_members COMMA matches_member .)
+    COMMA           reduce using rule 44 (matches_members -> matches_members COMMA matches_member .)
+
+
+state 148
+
+    (45) matches_member -> IETF_MUD_MUD COLON mud_match_object .
+
+    RBRACE          reduce using rule 45 (matches_member -> IETF_MUD_MUD COLON mud_match_object .)
+    COMMA           reduce using rule 45 (matches_member -> IETF_MUD_MUD COLON mud_match_object .)
+
+
+state 149
+
+    (48) mud_match_object -> LBRACE . mud_match_members RBRACE
+    (49) mud_match_members -> . mud_match_member
+    (50) mud_match_members -> . mud_match_members COMMA mud_match_member
+    (51) mud_match_member -> . URL_KEYS COLON url_value
+    (52) mud_match_member -> . NULL_KEYS COLON null_array
+
+    URL_KEYS        shift and go to state 159
+    NULL_KEYS       shift and go to state 160
+
+    mud_match_members              shift and go to state 157
+    mud_match_member               shift and go to state 158
+
+state 150
+
+    (46) matches_member -> IPV4_KEY COLON ipv4_object .
+
+    RBRACE          reduce using rule 46 (matches_member -> IPV4_KEY COLON ipv4_object .)
+    COMMA           reduce using rule 46 (matches_member -> IPV4_KEY COLON ipv4_object .)
+
+
+state 151
+
+    (66) ipv4_object -> LBRACE . ipv4_members RBRACE
+    (78) ipv4_members -> . ipv4_member
+    (79) ipv4_members -> . ipv4_members COMMA ipv4_member
+    (74) ipv4_member -> . DNS_KEYS COLON dns_value
+    (75) ipv4_member -> . DESTINATION_IPV4_NETWORK COLON ipv4_value
+    (76) ipv4_member -> . PROTOCOL COLON number_value
+
+    DNS_KEYS        shift and go to state 163
+    DESTINATION_IPV4_NETWORK shift and go to state 164
+    PROTOCOL        shift and go to state 165
+
+    ipv4_members                   shift and go to state 161
+    ipv4_member                    shift and go to state 162
+
+state 152
+
+    (47) matches_member -> PROTOCOL_KEYS COLON generic_protocol_object .
+
+    RBRACE          reduce using rule 47 (matches_member -> PROTOCOL_KEYS COLON generic_protocol_object .)
+    COMMA           reduce using rule 47 (matches_member -> PROTOCOL_KEYS COLON generic_protocol_object .)
+
+
+state 153
+
+    (67) generic_protocol_object -> LBRACE . generic_protocol_members RBRACE
+    (68) generic_protocol_members -> . generic_protocol_member
+    (69) generic_protocol_members -> . generic_protocol_members COMMA generic_protocol_member
+    (70) generic_protocol_member -> . PORT_DIR_KEYS COLON port_value
+    (71) generic_protocol_member -> . IETF_MUD_DIRECTION_INITIATED COLON direction_value
+    (72) generic_protocol_member -> . ETHERTYPE_KEY COLON ethertype_value
+    (73) generic_protocol_member -> . DESTINATION_MAC_ADDRESS COLON mac_value
+
+    PORT_DIR_KEYS   shift and go to state 168
+    IETF_MUD_DIRECTION_INITIATED shift and go to state 169
+    ETHERTYPE_KEY   shift and go to state 170
+    DESTINATION_MAC_ADDRESS shift and go to state 171
+
+    generic_protocol_members       shift and go to state 166
+    generic_protocol_member        shift and go to state 167
+
+state 154
+
+    (58) actions_members -> actions_members COMMA actions_member .
+
+    RBRACE          reduce using rule 58 (actions_members -> actions_members COMMA actions_member .)
+    COMMA           reduce using rule 58 (actions_members -> actions_members COMMA actions_member .)
+
+
+state 155
+
+    (59) actions_member -> FORWARDING COLON action_value .
+
+    RBRACE          reduce using rule 59 (actions_member -> FORWARDING COLON action_value .)
+    COMMA           reduce using rule 59 (actions_member -> FORWARDING COLON action_value .)
+
+
+state 156
+
+    (80) action_value -> RESERVED_VALUES .
+
+    RBRACE          reduce using rule 80 (action_value -> RESERVED_VALUES .)
+    COMMA           reduce using rule 80 (action_value -> RESERVED_VALUES .)
+
+
+state 157
+
+    (48) mud_match_object -> LBRACE mud_match_members . RBRACE
+    (50) mud_match_members -> mud_match_members . COMMA mud_match_member
+
+    RBRACE          shift and go to state 172
+    COMMA           shift and go to state 173
+
+
+state 158
+
+    (49) mud_match_members -> mud_match_member .
+
+    RBRACE          reduce using rule 49 (mud_match_members -> mud_match_member .)
+    COMMA           reduce using rule 49 (mud_match_members -> mud_match_member .)
+
+
+state 159
+
+    (51) mud_match_member -> URL_KEYS . COLON url_value
+
+    COLON           shift and go to state 174
+
+
+state 160
+
+    (52) mud_match_member -> NULL_KEYS . COLON null_array
+
+    COLON           shift and go to state 175
+
+
+state 161
+
+    (66) ipv4_object -> LBRACE ipv4_members . RBRACE
+    (79) ipv4_members -> ipv4_members . COMMA ipv4_member
+
+    RBRACE          shift and go to state 176
+    COMMA           shift and go to state 177
+
+
+state 162
+
+    (78) ipv4_members -> ipv4_member .
+
+    RBRACE          reduce using rule 78 (ipv4_members -> ipv4_member .)
+    COMMA           reduce using rule 78 (ipv4_members -> ipv4_member .)
+
+
+state 163
+
+    (74) ipv4_member -> DNS_KEYS . COLON dns_value
+
+    COLON           shift and go to state 178
+
+
+state 164
+
+    (75) ipv4_member -> DESTINATION_IPV4_NETWORK . COLON ipv4_value
+
+    COLON           shift and go to state 179
+
+
+state 165
+
+    (76) ipv4_member -> PROTOCOL . COLON number_value
+
+    COLON           shift and go to state 180
+
+
+state 166
+
+    (67) generic_protocol_object -> LBRACE generic_protocol_members . RBRACE
+    (69) generic_protocol_members -> generic_protocol_members . COMMA generic_protocol_member
+
+    RBRACE          shift and go to state 181
+    COMMA           shift and go to state 182
+
+
+state 167
+
+    (68) generic_protocol_members -> generic_protocol_member .
+
+    RBRACE          reduce using rule 68 (generic_protocol_members -> generic_protocol_member .)
+    COMMA           reduce using rule 68 (generic_protocol_members -> generic_protocol_member .)
+
+
+state 168
+
+    (70) generic_protocol_member -> PORT_DIR_KEYS . COLON port_value
+
+    COLON           shift and go to state 183
+
+
+state 169
+
+    (71) generic_protocol_member -> IETF_MUD_DIRECTION_INITIATED . COLON direction_value
+
+    COLON           shift and go to state 184
+
+
+state 170
+
+    (72) generic_protocol_member -> ETHERTYPE_KEY . COLON ethertype_value
+
+    COLON           shift and go to state 185
+
+
+state 171
+
+    (73) generic_protocol_member -> DESTINATION_MAC_ADDRESS . COLON mac_value
+
+    COLON           shift and go to state 186
+
+
+state 172
+
+    (48) mud_match_object -> LBRACE mud_match_members RBRACE .
+
+    RBRACE          reduce using rule 48 (mud_match_object -> LBRACE mud_match_members RBRACE .)
+    COMMA           reduce using rule 48 (mud_match_object -> LBRACE mud_match_members RBRACE .)
+
+
+state 173
+
+    (50) mud_match_members -> mud_match_members COMMA . mud_match_member
+    (51) mud_match_member -> . URL_KEYS COLON url_value
+    (52) mud_match_member -> . NULL_KEYS COLON null_array
+
+    URL_KEYS        shift and go to state 159
+    NULL_KEYS       shift and go to state 160
+
+    mud_match_member               shift and go to state 187
+
+state 174
+
+    (51) mud_match_member -> URL_KEYS COLON . url_value
+    (87) url_value -> . URL
+
+    URL             shift and go to state 42
+
+    url_value                      shift and go to state 188
+
+state 175
+
+    (52) mud_match_member -> NULL_KEYS COLON . null_array
+    (53) null_array -> . LBRACKET null_list RBRACKET
+
+    LBRACKET        shift and go to state 190
+
+    null_array                     shift and go to state 189
+
+state 176
+
+    (66) ipv4_object -> LBRACE ipv4_members RBRACE .
+
+    RBRACE          reduce using rule 66 (ipv4_object -> LBRACE ipv4_members RBRACE .)
+    COMMA           reduce using rule 66 (ipv4_object -> LBRACE ipv4_members RBRACE .)
+
+
+state 177
+
+    (79) ipv4_members -> ipv4_members COMMA . ipv4_member
+    (74) ipv4_member -> . DNS_KEYS COLON dns_value
+    (75) ipv4_member -> . DESTINATION_IPV4_NETWORK COLON ipv4_value
+    (76) ipv4_member -> . PROTOCOL COLON number_value
+
+    DNS_KEYS        shift and go to state 163
+    DESTINATION_IPV4_NETWORK shift and go to state 164
+    PROTOCOL        shift and go to state 165
+
+    ipv4_member                    shift and go to state 191
+
+state 178
+
+    (74) ipv4_member -> DNS_KEYS COLON . dns_value
+    (88) dns_value -> . DNS
+
+    DNS             shift and go to state 193
+
+    dns_value                      shift and go to state 192
+
+state 179
+
+    (75) ipv4_member -> DESTINATION_IPV4_NETWORK COLON . ipv4_value
+    (89) ipv4_value -> . IPV4
+
+    IPV4            shift and go to state 195
+
+    ipv4_value                     shift and go to state 194
+
+state 180
+
+    (76) ipv4_member -> PROTOCOL COLON . number_value
+    (84) number_value -> . NUMBER
+
+    NUMBER          shift and go to state 44
+
+    number_value                   shift and go to state 196
+
+state 181
+
+    (67) generic_protocol_object -> LBRACE generic_protocol_members RBRACE .
+
+    RBRACE          reduce using rule 67 (generic_protocol_object -> LBRACE generic_protocol_members RBRACE .)
+    COMMA           reduce using rule 67 (generic_protocol_object -> LBRACE generic_protocol_members RBRACE .)
+
+
+state 182
+
+    (69) generic_protocol_members -> generic_protocol_members COMMA . generic_protocol_member
+    (70) generic_protocol_member -> . PORT_DIR_KEYS COLON port_value
+    (71) generic_protocol_member -> . IETF_MUD_DIRECTION_INITIATED COLON direction_value
+    (72) generic_protocol_member -> . ETHERTYPE_KEY COLON ethertype_value
+    (73) generic_protocol_member -> . DESTINATION_MAC_ADDRESS COLON mac_value
+
+    PORT_DIR_KEYS   shift and go to state 168
+    IETF_MUD_DIRECTION_INITIATED shift and go to state 169
+    ETHERTYPE_KEY   shift and go to state 170
+    DESTINATION_MAC_ADDRESS shift and go to state 171
+
+    generic_protocol_member        shift and go to state 197
+
+state 183
+
+    (70) generic_protocol_member -> PORT_DIR_KEYS COLON . port_value
+    (77) port_value -> . LBRACE OPERATOR COLON operator_value COMMA NUMBER_KEYS COLON number_value RBRACE
+
+    LBRACE          shift and go to state 199
+
+    port_value                     shift and go to state 198
+
+state 184
+
+    (71) generic_protocol_member -> IETF_MUD_DIRECTION_INITIATED COLON . direction_value
+    (82) direction_value -> . RESERVED_VALUES
+
+    RESERVED_VALUES shift and go to state 201
+
+    direction_value                shift and go to state 200
+
+state 185
+
+    (72) generic_protocol_member -> ETHERTYPE_KEY COLON . ethertype_value
+    (92) ethertype_value -> . ETHERTYPE
+
+    ETHERTYPE       shift and go to state 203
+
+    ethertype_value                shift and go to state 202
+
+state 186
+
+    (73) generic_protocol_member -> DESTINATION_MAC_ADDRESS COLON . mac_value
+    (91) mac_value -> . MAC_ADDRESS
+
+    MAC_ADDRESS     shift and go to state 205
+
+    mac_value                      shift and go to state 204
+
+state 187
+
+    (50) mud_match_members -> mud_match_members COMMA mud_match_member .
+
+    RBRACE          reduce using rule 50 (mud_match_members -> mud_match_members COMMA mud_match_member .)
+    COMMA           reduce using rule 50 (mud_match_members -> mud_match_members COMMA mud_match_member .)
+
+
+state 188
+
+    (51) mud_match_member -> URL_KEYS COLON url_value .
+
+    RBRACE          reduce using rule 51 (mud_match_member -> URL_KEYS COLON url_value .)
+    COMMA           reduce using rule 51 (mud_match_member -> URL_KEYS COLON url_value .)
+
+
+state 189
+
+    (52) mud_match_member -> NULL_KEYS COLON null_array .
+
+    RBRACE          reduce using rule 52 (mud_match_member -> NULL_KEYS COLON null_array .)
+    COMMA           reduce using rule 52 (mud_match_member -> NULL_KEYS COLON null_array .)
+
+
+state 190
+
+    (53) null_array -> LBRACKET . null_list RBRACKET
+    (54) null_list -> . null_value
+    (55) null_list -> . null_list COMMA null_value
+    (86) null_value -> . NULL
+
+    NULL            shift and go to state 208
+
+    null_list                      shift and go to state 206
+    null_value                     shift and go to state 207
+
+state 191
+
+    (79) ipv4_members -> ipv4_members COMMA ipv4_member .
+
+    RBRACE          reduce using rule 79 (ipv4_members -> ipv4_members COMMA ipv4_member .)
+    COMMA           reduce using rule 79 (ipv4_members -> ipv4_members COMMA ipv4_member .)
+
+
+state 192
+
+    (74) ipv4_member -> DNS_KEYS COLON dns_value .
+
+    RBRACE          reduce using rule 74 (ipv4_member -> DNS_KEYS COLON dns_value .)
+    COMMA           reduce using rule 74 (ipv4_member -> DNS_KEYS COLON dns_value .)
+
+
+state 193
+
+    (88) dns_value -> DNS .
+
+    RBRACE          reduce using rule 88 (dns_value -> DNS .)
+    COMMA           reduce using rule 88 (dns_value -> DNS .)
+
+
+state 194
+
+    (75) ipv4_member -> DESTINATION_IPV4_NETWORK COLON ipv4_value .
+
+    RBRACE          reduce using rule 75 (ipv4_member -> DESTINATION_IPV4_NETWORK COLON ipv4_value .)
+    COMMA           reduce using rule 75 (ipv4_member -> DESTINATION_IPV4_NETWORK COLON ipv4_value .)
+
+
+state 195
+
+    (89) ipv4_value -> IPV4 .
+
+    RBRACE          reduce using rule 89 (ipv4_value -> IPV4 .)
+    COMMA           reduce using rule 89 (ipv4_value -> IPV4 .)
+
+
+state 196
+
+    (76) ipv4_member -> PROTOCOL COLON number_value .
+
+    RBRACE          reduce using rule 76 (ipv4_member -> PROTOCOL COLON number_value .)
+    COMMA           reduce using rule 76 (ipv4_member -> PROTOCOL COLON number_value .)
+
+
+state 197
+
+    (69) generic_protocol_members -> generic_protocol_members COMMA generic_protocol_member .
+
+    RBRACE          reduce using rule 69 (generic_protocol_members -> generic_protocol_members COMMA generic_protocol_member .)
+    COMMA           reduce using rule 69 (generic_protocol_members -> generic_protocol_members COMMA generic_protocol_member .)
+
+
+state 198
+
+    (70) generic_protocol_member -> PORT_DIR_KEYS COLON port_value .
+
+    RBRACE          reduce using rule 70 (generic_protocol_member -> PORT_DIR_KEYS COLON port_value .)
+    COMMA           reduce using rule 70 (generic_protocol_member -> PORT_DIR_KEYS COLON port_value .)
+
+
+state 199
+
+    (77) port_value -> LBRACE . OPERATOR COLON operator_value COMMA NUMBER_KEYS COLON number_value RBRACE
+
+    OPERATOR        shift and go to state 209
+
+
+state 200
+
+    (71) generic_protocol_member -> IETF_MUD_DIRECTION_INITIATED COLON direction_value .
+
+    RBRACE          reduce using rule 71 (generic_protocol_member -> IETF_MUD_DIRECTION_INITIATED COLON direction_value .)
+    COMMA           reduce using rule 71 (generic_protocol_member -> IETF_MUD_DIRECTION_INITIATED COLON direction_value .)
+
+
+state 201
+
+    (82) direction_value -> RESERVED_VALUES .
+
+    RBRACE          reduce using rule 82 (direction_value -> RESERVED_VALUES .)
+    COMMA           reduce using rule 82 (direction_value -> RESERVED_VALUES .)
+
+
+state 202
+
+    (72) generic_protocol_member -> ETHERTYPE_KEY COLON ethertype_value .
+
+    RBRACE          reduce using rule 72 (generic_protocol_member -> ETHERTYPE_KEY COLON ethertype_value .)
+    COMMA           reduce using rule 72 (generic_protocol_member -> ETHERTYPE_KEY COLON ethertype_value .)
+
+
+state 203
+
+    (92) ethertype_value -> ETHERTYPE .
+
+    RBRACE          reduce using rule 92 (ethertype_value -> ETHERTYPE .)
+    COMMA           reduce using rule 92 (ethertype_value -> ETHERTYPE .)
+
+
+state 204
+
+    (73) generic_protocol_member -> DESTINATION_MAC_ADDRESS COLON mac_value .
+
+    RBRACE          reduce using rule 73 (generic_protocol_member -> DESTINATION_MAC_ADDRESS COLON mac_value .)
+    COMMA           reduce using rule 73 (generic_protocol_member -> DESTINATION_MAC_ADDRESS COLON mac_value .)
+
+
+state 205
+
+    (91) mac_value -> MAC_ADDRESS .
+
+    RBRACE          reduce using rule 91 (mac_value -> MAC_ADDRESS .)
+    COMMA           reduce using rule 91 (mac_value -> MAC_ADDRESS .)
+
+
+state 206
+
+    (53) null_array -> LBRACKET null_list . RBRACKET
+    (55) null_list -> null_list . COMMA null_value
+
+    RBRACKET        shift and go to state 210
+    COMMA           shift and go to state 211
+
+
+state 207
+
+    (54) null_list -> null_value .
+
+    RBRACKET        reduce using rule 54 (null_list -> null_value .)
+    COMMA           reduce using rule 54 (null_list -> null_value .)
+
+
+state 208
+
+    (86) null_value -> NULL .
+
+    RBRACKET        reduce using rule 86 (null_value -> NULL .)
+    COMMA           reduce using rule 86 (null_value -> NULL .)
+
+
+state 209
+
+    (77) port_value -> LBRACE OPERATOR . COLON operator_value COMMA NUMBER_KEYS COLON number_value RBRACE
+
+    COLON           shift and go to state 212
+
+
+state 210
+
+    (53) null_array -> LBRACKET null_list RBRACKET .
+
+    RBRACE          reduce using rule 53 (null_array -> LBRACKET null_list RBRACKET .)
+    COMMA           reduce using rule 53 (null_array -> LBRACKET null_list RBRACKET .)
+
+
+state 211
+
+    (55) null_list -> null_list COMMA . null_value
+    (86) null_value -> . NULL
+
+    NULL            shift and go to state 208
+
+    null_value                     shift and go to state 213
+
+state 212
+
+    (77) port_value -> LBRACE OPERATOR COLON . operator_value COMMA NUMBER_KEYS COLON number_value RBRACE
+    (81) operator_value -> . RESERVED_VALUES
+
+    RESERVED_VALUES shift and go to state 215
+
+    operator_value                 shift and go to state 214
+
+state 213
+
+    (55) null_list -> null_list COMMA null_value .
+
+    RBRACKET        reduce using rule 55 (null_list -> null_list COMMA null_value .)
+    COMMA           reduce using rule 55 (null_list -> null_list COMMA null_value .)
+
+
+state 214
+
+    (77) port_value -> LBRACE OPERATOR COLON operator_value . COMMA NUMBER_KEYS COLON number_value RBRACE
+
+    COMMA           shift and go to state 216
+
+
+state 215
+
+    (81) operator_value -> RESERVED_VALUES .
+
+    COMMA           reduce using rule 81 (operator_value -> RESERVED_VALUES .)
+
+
+state 216
+
+    (77) port_value -> LBRACE OPERATOR COLON operator_value COMMA . NUMBER_KEYS COLON number_value RBRACE
+
+    NUMBER_KEYS     shift and go to state 217
+
+
+state 217
+
+    (77) port_value -> LBRACE OPERATOR COLON operator_value COMMA NUMBER_KEYS . COLON number_value RBRACE
+
+    COLON           shift and go to state 218
+
+
+state 218
+
+    (77) port_value -> LBRACE OPERATOR COLON operator_value COMMA NUMBER_KEYS COLON . number_value RBRACE
+    (84) number_value -> . NUMBER
+
+    NUMBER          shift and go to state 44
+
+    number_value                   shift and go to state 219
+
+state 219
+
+    (77) port_value -> LBRACE OPERATOR COLON operator_value COMMA NUMBER_KEYS COLON number_value . RBRACE
+
+    RBRACE          shift and go to state 220
+
+
+state 220
+
+    (77) port_value -> LBRACE OPERATOR COLON operator_value COMMA NUMBER_KEYS COLON number_value RBRACE .
+
+    RBRACE          reduce using rule 77 (port_value -> LBRACE OPERATOR COLON operator_value COMMA NUMBER_KEYS COLON number_value RBRACE .)
+    COMMA           reduce using rule 77 (port_value -> LBRACE OPERATOR COLON operator_value COMMA NUMBER_KEYS COLON number_value RBRACE .)
+
