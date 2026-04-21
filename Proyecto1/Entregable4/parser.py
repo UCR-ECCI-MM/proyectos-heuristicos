@@ -1,6 +1,6 @@
 import ply.yacc as yacc
 from lexer import tokens
-
+from objects import MudFile
 class ParserValidationError(Exception):
     pass
 
@@ -8,7 +8,14 @@ class ParserValidationError(Exception):
 # raiz:
 def p_file(p):
     'file : LBRACE mud_members RBRACE'
-    p[0] = p[2]
+    data = p[2]
+    # todo el bloque mud
+    mud = data.get("ietf-mud:mud")
+    # de aqui se obtiene la parte de los ACLs y si no existe devuelve un diccionario vacío {}
+    acl_wrapper = data.get("ietf-access-control-list:access-lists", {})
+    # de acl_wrapper se obtiene la lista de ACLs, si no existe devuelve una lista vacía []
+    acl_lists = acl_wrapper.get("access-list") or acl_wrapper.get("acl") or []
+    p[0] = MudFile(mud, acl_lists)
 
 def p_mud_members(p):
     '''mud_members : mud_member
