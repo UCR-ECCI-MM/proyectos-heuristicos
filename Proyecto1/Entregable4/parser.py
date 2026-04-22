@@ -1,6 +1,8 @@
 import ply.yacc as yacc
 from lexer import tokens
 from objects import MudFile
+from objects import Mud
+
 class ParserValidationError(Exception):
     pass
 
@@ -66,8 +68,23 @@ def p_mud_object(p):
         raise ParserValidationError(
             "Faltan campos obligatorios en ietf-mud:mud: " + ", ".join(faltantes)
         )
-
-    p[0] = contenido
+    version = contenido.get("mud-version")
+    url = contenido.get("mud-url")
+    last_update = contenido.get("last-update")
+    cache_validity = contenido.get("cache-validity")
+    from_policy = contenido.get("from-device-policy")
+    to_policy = contenido.get("to-device-policy")
+    opcionales = {}
+    # nos da la clave y el valor de cada campo  
+    for key, valor in contenido.items():
+        # si la clave no esta aqui es opcional y se agrega al diccionario de opcionales
+        if key not in campos_obligatorios and key not in {
+            "from-device-policy",
+            "to-device-policy"
+        }: opcionales[key] = valor
+    # se crea el objeto Mud con los campos obligatorios y opcionales
+    p[0] = Mud(version, url, last_update, cache_validity, from_policy, to_policy, opcionales)
+    #p[0] = contenido
 
 def p_mud_content_list(p):
     '''mud_content_list : mud_content

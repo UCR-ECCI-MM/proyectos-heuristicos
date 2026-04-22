@@ -51,8 +51,9 @@ lexer.lineno = 1
 lexer.input(data)
 
 try:
-    parser_obj.parse(data, lexer=lexer)
+    resultado = parser_obj.parse(data, lexer=lexer)
     print("\nArchivo sintácticamente válido.")
+    print(resultado)
 except parser.ParserValidationError as e:
     print(f"\n{e}")
 except SyntaxError as e:
