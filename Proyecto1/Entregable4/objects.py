@@ -38,3 +38,12 @@ class Mud:
                 f"last_update={self.last_update}, cache_validity={self.cache_validity}, "
                 f"from_policy={self.from_policy}, to_policy={self.to_policy})"
             )
+        
+class ACE:
+    def __init__(self, name, matches, actions):
+        self.name = name
+        self.matches = matches
+        self.actions = actions
+
+    def __repr__(self): # para debug
+        return f"ACE(name={self.name}, matches={self.matches}, actions={self.actions})"

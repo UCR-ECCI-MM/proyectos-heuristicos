@@ -2,9 +2,22 @@ import os
 import parser
 from lexer import lexer, errores
 import ply.yacc as yacc
+from objects import MudFile, Mud, ACE # validaciones
 
 # Construcción del parser
 parser_obj = yacc.yacc(module=parser)
+
+# validaciones
+def validar_tipos(resultado):
+    print("\nVALIDACION DE TIPOS !!")
+    print("Resultado es MudFile:", isinstance(resultado, MudFile))
+    print("mud es Mud:", isinstance(resultado.mud, Mud))
+    print("acl_lists es lista:", isinstance(resultado.acl_lists, list))
+
+    for acl in resultado.acl_lists:
+        if "aces" in acl and "ace" in acl["aces"]:
+            for ace in acl["aces"]["ace"]:
+                print("Tipo de ACE:", type(ace).__name__, "-", isinstance(ace, ACE))
 
 # elegir carpeta
 num = input("1 = validos, 2 = invalidos: ")
@@ -54,6 +67,8 @@ try:
     resultado = parser_obj.parse(data, lexer=lexer)
     print("\nArchivo sintácticamente válido.")
     print(resultado)
+
+    validar_tipos(resultado)
 except parser.ParserValidationError as e:
     print(f"\n{e}")
 except SyntaxError as e:

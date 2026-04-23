@@ -2,6 +2,7 @@ import ply.yacc as yacc
 from lexer import tokens
 from objects import MudFile
 from objects import Mud
+from objects import ACE
 
 class ParserValidationError(Exception):
     pass
@@ -223,26 +224,39 @@ def p_ace_array(p):
     'ace_array : LBRACKET ace_items RBRACKET'
     p[0] = p[2]
 
+# implementando clases y objetos
 def p_ace_items(p):
     '''ace_items : ace_item
                  | ace_items COMMA ace_item'''
     if len(p) == 2:
         p[0] = [p[1]]
     else:
-        if "name" in p[3]:
-            nombre_nuevo = p[3]["name"]
+        nombre_nuevo = p[3].name
 
-            for item in p[1]:
-                if "name" in item and item["name"] == nombre_nuevo:
-                    raise ParserValidationError(
-                        f"ACE duplicado con name: '{nombre_nuevo}'"
-                    )
+        for item in p[1]:
+            if item.name == nombre_nuevo:
+                raise ParserValidationError(
+                    f"ACE duplicado con name: '{nombre_nuevo}'"
+                )
 
         p[0] = p[1] + [p[3]]
 
+# implementando clases y objetos
 def p_ace_item(p):
     'ace_item : LBRACE ace_members RBRACE'
-    p[0] = p[2]
+    
+    datos = p[2]
+
+    if "name" not in datos:
+        raise ParserValidationError(
+            "El ACE no contiene el campo obligatorio 'name'"
+        )
+
+    name = datos["name"]
+    matches = datos.get("matches", {}) # busca matches y si no lo encuentra devuelve diccionario vacio por defecto
+    actions = datos.get("actions", {})
+
+    p[0] = ACE(name, matches, actions)
 
 def p_ace_members(p):
     '''ace_members : ace_member
