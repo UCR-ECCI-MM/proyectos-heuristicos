@@ -3,6 +3,7 @@ from lexer import tokens
 from objects import MudFile
 from objects import Mud
 from objects import ACE
+from objects import Policy, ACL
 
 class ParserValidationError(Exception):
     pass
@@ -394,8 +395,8 @@ def p_policy_item(p):
         raise ParserValidationError(
             f"Se esperaba 'access-lists' dentro de policy y se encontro '{p[2]}'"
         )
-    p[0] = {p[2]: p[4]}
-
+    p[0] = Policy(p[4])
+    
 # deriva de policy item todo esto
 def p_access_lists_object(p): 
     'access_lists_object : LBRACE ACCESS_LIST COLON name_list_array RBRACE'

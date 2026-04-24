@@ -47,3 +47,18 @@ class ACE:
 
     def __repr__(self): # para debug
         return f"ACE(name={self.name}, matches={self.matches}, actions={self.actions})"
+
+class Policy:
+    def __init__(self, acl_lists):
+        self.acl_lists = acl_lists
+    def __repr__(self):
+        return f"Policy(acl_lists={len(self.acl_lists)} ACLs)"
+
+class ACL:
+    def __init__(self, name, type, aces):
+        self.name = name
+        self.type = type
+        self.aces = aces  # lista de objetos ACE
+    def __repr__(self):
+        return f"ACL(name={self.name}, type={self.type}, aces={len(self.aces)} ACEs)"
+

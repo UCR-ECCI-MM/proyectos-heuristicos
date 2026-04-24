@@ -2,7 +2,7 @@ import os
 import parser
 from lexer import lexer, errores
 import ply.yacc as yacc
-from objects import MudFile, Mud, ACE # validaciones
+from objects import MudFile, Mud, ACE, ACL, Policy # validaciones
 
 # Construcción del parser
 parser_obj = yacc.yacc(module=parser)
@@ -13,6 +13,10 @@ def validar_tipos(resultado):
     print("Resultado es MudFile:", isinstance(resultado, MudFile))
     print("mud es Mud:", isinstance(resultado.mud, Mud))
     print("acl_lists es lista:", isinstance(resultado.acl_lists, list))
+
+    # Validar policies dentro de Mud
+    print("from_policy es Policy:", isinstance(resultado.mud.from_policy, Policy))
+    print("to_policy es Policy:", isinstance(resultado.mud.to_policy, Policy))
 
     for acl in resultado.acl_lists:
         if "aces" in acl and "ace" in acl["aces"]:
