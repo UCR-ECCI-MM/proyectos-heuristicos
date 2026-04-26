@@ -87,35 +87,35 @@ isinstance(objeto, Clase)
 
 Esta función retorna:
 
-    - `True` si el objeto pertenece a la clase indicada.
-    - `False` si no pertenece.
+- `True` si el objeto pertenece a la clase indicada.
+- `False` si no pertenece.
 
 Se usa para validar que:
 
-    - El resultado principal es un objeto `MudFile`.
-    - El atributo mud es un objeto `Mud`.
-    - Las listas contienen objetos `ACL` y `ACE`, no diccionarios.
-    - Las políticas (from_policy, to_policy) son objetos `Policy`.
+- El resultado principal es un objeto `MudFile`.
+- El atributo mud es un objeto `Mud`.
+- Las listas contienen objetos `ACL` y `ACE`, no diccionarios.
+- Las políticas (from_policy, to_policy) son objetos `Policy`.
 
 ## Descripción del entregable
 En este entregable se trabajó sobre la base del parser ya construido anteriormente, enfocándose en mejorar la estructura de salida y agregar validaciones adicionales, a partir de creación dinámica de objetos.
 
 Se dejó de usar diccionarios como resultado final y se implementaron clases:
 
-    - `MudFile`
-    - `Mud`
-    - `Policy`
-    - `ACL`
-    - `ACE`
+- `MudFile`
+- `Mud`
+- `Policy`
+- `ACL`
+- `ACE`
 
 Se modificaron las reglas para que:
 
-    - Las listas (ACL, ACE) contengan objetos, no diccionarios.
-    - La estructura final represente correctamente la jerarquía del archivo.
+- Las listas (ACL, ACE) contengan objetos, no diccionarios.
+- La estructura final represente correctamente la jerarquía del archivo.
 
 Se implementó una verificación final en main.py usando isinstance para confirmar que:
 
-    - El resultado es un MudFile
-    - Los ACL son objetos ACL
-    - Los ACE son objetos ACE
+- El resultado es un MudFile
+- Los ACL son objetos ACL
+- Los ACE son objetos ACE
 
