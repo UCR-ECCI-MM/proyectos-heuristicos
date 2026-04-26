@@ -3,7 +3,8 @@ from lexer import tokens
 from objects import MudFile
 from objects import Mud
 from objects import ACE
-from objects import Policy, ACL
+from objects import Policy
+from objects import ACL
 
 class ParserValidationError(Exception):
     pass
@@ -171,20 +172,18 @@ def p_acl_list_items(p):
     if len(p) == 2:
         p[0] = [p[1]]
     else:
-        if "name" in p[3]:
-            nombre_nuevo = p[3]["name"]
-
-            for item in p[1]:
-                if "name" in item and item["name"] == nombre_nuevo:
-                    raise ParserValidationError(
-                        f"ACL duplicada con name: '{nombre_nuevo}'"
-                    )
-
-        p[0] = p[1] + [p[3]]
+        nuevo_acl = p[3]  # objeto ACL
+        # validación de duplicados por nombre
+        if any(acl.name == nuevo_acl.name for acl in p[1]):
+            raise ParserValidationError(
+                f"ACL duplicada con name: '{nuevo_acl.name}'"
+            )
+        p[0] = p[1] + [nuevo_acl]
 
 def p_acl_list_item(p):
     'acl_list_item : LBRACE acl_list_members RBRACE'
-    p[0] = p[2]
+    data = p[2]  # diccionario con name, type, aces
+    p[0] = ACL(data['name'], data['type'], data['aces'])
 
 def p_acl_list_members(p):
     '''acl_list_members : acl_list_member
@@ -197,6 +196,7 @@ def p_acl_list_members(p):
                 raise ParserValidationError(f"Campo duplicado en acl_list_members: {k}")
         # si no hay duplicados, combinamos los diccionarios
         p[0] = {**p[1], **p[3]}
+
 
 def p_acl_list_member(p):
     '''acl_list_member : STRING_KEYS COLON string_value

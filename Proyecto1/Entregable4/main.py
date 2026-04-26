@@ -19,8 +19,9 @@ def validar_tipos(resultado):
     print("to_policy es Policy:", isinstance(resultado.mud.to_policy, Policy))
 
     for acl in resultado.acl_lists:
-        if "aces" in acl and "ace" in acl["aces"]:
-            for ace in acl["aces"]["ace"]:
+        print("ACL es objeto ACL:", isinstance(acl, ACL))
+        if isinstance(acl.aces, list):
+            for ace in acl.aces:
                 print("Tipo de ACE:", type(ace).__name__, "-", isinstance(ace, ACE))
 
 # elegir carpeta
