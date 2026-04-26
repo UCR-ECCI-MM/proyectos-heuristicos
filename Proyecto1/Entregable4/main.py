@@ -9,14 +9,21 @@ parser_obj = yacc.yacc(module=parser)
 
 # validaciones
 def validar_tipos(resultado):
-    print("\nVALIDACION DE TIPOS !!")
+    print("\nVALIDACION DE TIPOS")
     print("Resultado es MudFile:", isinstance(resultado, MudFile))
     print("mud es Mud:", isinstance(resultado.mud, Mud))
     print("acl_lists es lista:", isinstance(resultado.acl_lists, list))
 
     # Validar policies dentro de Mud
-    print("from_policy es Policy:", isinstance(resultado.mud.from_policy, Policy))
-    print("to_policy es Policy:", isinstance(resultado.mud.to_policy, Policy))
+    if resultado.mud.from_policy is not None:
+        print("from_policy es Policy:", isinstance(resultado.mud.from_policy, Policy))
+    else:
+        print("from_policy no esta presente")
+
+    if resultado.mud.to_policy is not None:
+        print("to_policy es Policy:", isinstance(resultado.mud.to_policy, Policy))
+    else:
+        print("to_policy no esta presente")
 
     for acl in resultado.acl_lists:
         print("ACL es objeto ACL:", isinstance(acl, ACL))
@@ -60,9 +67,14 @@ while True:
         break
 
 if len(errores) > 0:
+    print("\nErrores léxicos encontrados:")
+
+    for error in errores:
+        print(error)
+
     print("\nNo se ejecuta el parser porque primero deben corregirse los errores léxicos.")
     quit()
-
+    
 print("\nAnálisis léxico completado sin errores.")
 
 lexer.lineno = 1

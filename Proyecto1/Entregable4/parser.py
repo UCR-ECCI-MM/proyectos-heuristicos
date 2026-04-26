@@ -180,10 +180,25 @@ def p_acl_list_items(p):
             )
         p[0] = p[1] + [nuevo_acl]
 
+
 def p_acl_list_item(p):
     'acl_list_item : LBRACE acl_list_members RBRACE'
-    data = p[2]  # diccionario con name, type, aces
-    p[0] = ACL(data['name'], data['type'], data['aces'])
+
+    data = p[2]
+
+    if "name" not in data:
+        raise ParserValidationError("El ACL no contiene el campo obligatorio 'name'")
+
+    if "type" not in data:
+        raise ParserValidationError("El ACL no contiene el campo obligatorio 'type'")
+
+    if "aces" not in data:
+        raise ParserValidationError("El ACL no contiene el campo obligatorio 'aces'")
+
+    bloque_aces = data["aces"]
+    lista_aces = bloque_aces.get("ace", [])
+
+    p[0] = ACL(data["name"], data["type"], lista_aces)
 
 def p_acl_list_members(p):
     '''acl_list_members : acl_list_member
@@ -387,7 +402,7 @@ def p_actions_member(p):
     'actions_member : FORWARDING COLON action_value'
     p[0] = {p[1]: p[3]}
 
-# es un objeto
+# es un objeto  
 def p_policy_item(p):
     'policy_item : LBRACE ACCESS_LISTS COLON access_lists_object RBRACE'
     
@@ -395,8 +410,14 @@ def p_policy_item(p):
         raise ParserValidationError(
             f"Se esperaba 'access-lists' dentro de policy y se encontro '{p[2]}'"
         )
-    p[0] = Policy(p[4])
-    
+
+    nombres_acl = []
+
+    for item in p[4]["access-list"]:
+        nombres_acl.append(item["name"])
+
+    p[0] = Policy(nombres_acl)
+
 # deriva de policy item todo esto
 def p_access_lists_object(p): 
     'access_lists_object : LBRACE ACCESS_LIST COLON name_list_array RBRACE'
