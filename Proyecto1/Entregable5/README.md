@@ -1,4 +1,4 @@
-# Creación dinámica de los objetos o las estructuras de datos (Entregable 4, Proyecto 1)
+# Creación dinámica de los objetos o las estructuras de datos (Entregable 5, Proyecto 1)
 ## Computabilidad y Complejidad
 ## Equipo: Heurísticos
 ### Estudiantes:
@@ -33,89 +33,143 @@ Luego se mostrará una lista de archivos disponibles, debe seleccionar el númer
 ## Salida esperada en la terminal
 
 ### 1. Caso válido:
-```text
-Análisis léxico completado sin errores.
 
-Archivo sintácticamente válido.
-MudFile(mud=..., acl_lists=2 ACLs)
+Al ejecutar el archivo válido de blipcareBPmeterMud.json
 
-VALIDACION DE TIPOS
-Resultado es MudFile: True
-mud es Mud: True
-acl_lists es lista: True
-from_policy es Policy: True
-to_policy no está presente
+Se obtiene la siguiente salida:
 
-ACL es objeto ACL: True
-Tipo de ACE: ACE - True
-Tipo de ACE: ACE - True
+```
+Sentido                             | Direccion            | Protocolo    | Puerto   | Accion    
+-------------------------------------------------------------------------------------------------
+from-ipv4-blipcarebpmeter           | ipv4-acl-type        | 2            | —        | accept    
+from-ipv4-blipcarebpmeter           | ipv4-acl-type        | 6            | 8777     | accept    
+from-ipv4-blipcarebpmeter           | ipv4-acl-type        | 17           | 53       | accept    
+from-ipv4-blipcarebpmeter           | ipv4-acl-type        | 17           | 67       | accept    
+from-ethernet-blipcarebpmeter       | ethernet-acl-type    | —            | —        | accept    
+from-ethernet-blipcarebpmeter       | ethernet-acl-type    | —            | —        | accept    
+to-ipv4-blipcarebpmeter             | ipv4-acl-type        | 17           | 53       | accept    
+to-ipv4-blipcarebpmeter             | ipv4-acl-type        | 6            | 8777     | accept    
+to-ipv4-blipcarebpmeter             | ipv4-acl-type        | 17           | 67       | accept    
+
+Reporte: No se encontraron errores.
 ```
 
-### 2. Caso error léxico:
-```text
-Errores léxicos encontrados:
-Línea X: IPv4 inválida → "999.999.999.999"
+Al revisar la salida obtenida, y el archivo, en primera instancia, se comprueba de que el archivo y la salida tengan la misma cantidad de acciones, en este caso, si se cumplió.
 
-No se ejecuta el parser porque primero deben corregirse los errores léxicos.
+Posterior a ello, al probar el contenido de la columna del Sentido se confirma que se obtiene el resultado esperado
+
+Por ejemplo en la salida de:
+```
+from-ipv4-blipcarebpmeter           | ipv4-acl-type        | 2            | —        | accept    
+from-ipv4-blipcarebpmeter           | ipv4-acl-type        | 6            | 8777     | accept    
 ```
 
-### 3. Caso error sintáctico:
-```text
-Error sintáctico en la linea X: el token 'TOKEN' con valor '...' no se esperaba en este lugar
+Se revisa conforme al archivo, y se comprueba tanto que se asocia al protocolo 2, como que el siguiente tiene asociado el protocolo 6, y el puerto 8777
+
+```
+            {
+                "name": "from-ipv4-blipcarebpmeter",
+                "type": "ipv4-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "from-ipv4-blipcarebpmeter-0",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "local-networks": [
+                                        null
+                                    ]
+                                },
+                                "ipv4": {
+                                    "protocol": 2,
+                                    "destination-ipv4-network": "224.0.0.1/32"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ipv4-blipcarebpmeter-1",
+                            "matches": {
+                                "ipv4": {
+                                    "protocol": 6,
+                                    "ietf-acldns:dst-dnsname": "tech.carematix.com"
+                                },
+                                "tcp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 8777
+                                    },
+                                    "ietf-mud:direction-initiated": "from-device"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
 ```
 
-### 4. Caso error con validación semántica:
-```text
-Faltan campos obligatorios en ietf-mud:mud: mud-version, mud-url
+Asimismo, si se revisa el archivo, al buscar el from-ethernet-blipcarebpmeter se comprueba que no tiene puerto ni protocolo asociado.
+
+Salida:
+
+```
+from-ethernet-blipcarebpmeter       | ethernet-acl-type    | —            | —        | accept    
+from-ethernet-blipcarebpmeter       | ethernet-acl-type    | —            | —        | accept    
 ```
 
-- El parser no se ejecuta si existen errores léxicos.
-- El resultado final se convierte en objetos:
+Posterior a ello, se revisa que no tenga un puerto y protocolo asociado, lo cual se cumple. 
 
-    - MudFile
-    - Mud
-    - Policy
-    - ACL
-    - ACE
-
-### Validación de tipos con isinstance
-
-Para verificar que el parser construyó correctamente los objetos, se utiliza la función isinstance:
-```python
-isinstance(objeto, Clase)
 ```
-
-Esta función retorna:
-
-- `True` si el objeto pertenece a la clase indicada.
-- `False` si no pertenece.
-
-Se usa para validar que:
-
-- El resultado principal es un objeto `MudFile`.
-- El atributo mud es un objeto `Mud`.
-- Las listas contienen objetos `ACL` y `ACE`, no diccionarios.
-- Las políticas (from_policy, to_policy) son objetos `Policy`.
+{
+                "name": "from-ethernet-blipcarebpmeter",
+                "type": "ethernet-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "from-ethernet-blipcarebpmeter-0",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "local-networks": [
+                                        null
+                                    ]
+                                },
+                                "eth": {
+                                    "ethertype": "0x888e"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        },
+                        {
+                            "name": "from-ethernet-blipcarebpmeter-1",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "local-networks": [
+                                        null
+                                    ]
+                                },
+                                "eth": {
+                                    "ethertype": "0x0006"
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "accept"
+                            }
+                        }
+                    ]
+                }
+            }
+```
+### 2. Caso inválido:
 
 ## Descripción del entregable
-En este entregable se trabajó sobre la base del parser ya construido anteriormente, enfocándose en mejorar la estructura de salida y agregar validaciones adicionales, a partir de creación dinámica de objetos.
 
-Se dejó de usar diccionarios como resultado final y se implementaron clases:
+Implementación de la aplicación completa, con su respectiva funcionalidad
 
-- `MudFile`
-- `Mud`
-- `Policy`
-- `ACL`
-- `ACE`
+### Descripción de los módulos nuevos
 
-Se modificaron las reglas para que:
-
-- Las listas (ACL, ACE) contengan objetos, no diccionarios.
-- La estructura final represente correctamente la jerarquía del archivo.
-
-Se implementó una verificación final en main.py usando isinstance para confirmar que:
-
-- El resultado es un MudFile
-- Los ACL son objetos ACL
-- Los ACE son objetos ACE
+### Explicación del flujo final de la aplicación
 
