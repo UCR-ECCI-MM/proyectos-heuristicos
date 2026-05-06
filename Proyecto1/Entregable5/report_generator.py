@@ -25,7 +25,7 @@ class ReportGenerator:
     # method to check if there are any errors that should stop the program
     # that errors are lexical and syntactic errors
     def hay_errores_graves(self):
-        return len(self.lexicos) > 0 or len(self.sintacticos) > 0
+        return len(self.lexicos) > 0 or len(self.sintacticos) > 0  or len(self.estructura) > 0
 
     def imprimir_reporte(self):
         print("\n Reporte: ")
