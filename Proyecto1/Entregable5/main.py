@@ -49,7 +49,7 @@ if reporte.hay_errores_graves():
     reporte.imprimir_reporte()
     quit()
 
-print("El analisis lexico se ha completado sin errores.")
+#print("El analisis lexico se ha completado sin errores.")
 
 #Parser
 
@@ -59,7 +59,7 @@ lexer.input(data)
 resultado = None
 try:
     resultado = parser_obj.parse(data, lexer=lexer)
-    print("El analisis sintactico se ha completado sin errores.")
+    #print("El analisis sintactico se ha completado sin errores.")
 except parser.ParserValidationError as e:
     # si hay un error de validacion el parser nos  da y lo agregamos al reporte como error de estructura
     reporte.agregar_estructura(e)

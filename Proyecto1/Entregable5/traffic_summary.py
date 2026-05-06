@@ -14,15 +14,38 @@ def construir_resumen_trafico(mud_file):
                 if acl_obj:
                     # Recorrer los ACE dentro de cada ACL
                     for ace in acl_obj.aces:
-                        accion = "N/A"
+                        accion = "-"
                         if isinstance(ace.actions, dict):
-                            accion = ace.actions.get("forwarding", "N/A")
+                            accion = ace.actions.get("forwarding", "-")
+                        
+                        # Protocolo y puerto
+                        protocolo = "—" # seria por si no hay, mostrar un -, en vez de N/A
+                        puerto = "—"
+
+                        # Si hay bloque ipv4 con protocolo
+                        if "ipv4" in ace.matches:
+                            protocolo = ace.matches["ipv4"].get("protocol", "—")
+
+                        if "tcp" in ace.matches:
+                            tcp_match = ace.matches["tcp"]
+                            if "destination-port" in tcp_match:
+                                puerto = tcp_match["destination-port"].get("port", "—")
+                            else:
+                                puerto = tcp_match.get("source-port", {}).get("port", "—")
+
+                        elif "udp" in ace.matches:
+                            udp_match = ace.matches["udp"]
+                            if "destination-port" in udp_match:
+                                puerto = udp_match["destination-port"].get("port", "—")
+                            else:
+                                puerto = udp_match.get("source-port", {}).get("port", "—")
+
 
                         fila = {
                             "sentido": acl_obj.name,
                             "direccion": acl_obj.type,
-                            "protocolo": "N/A",
-                            "puerto": "N/A",
+                            "protocolo": protocolo,
+                            "puerto": puerto,
                             "accion": accion
                         }
                         resumen.append(fila)
@@ -32,9 +55,6 @@ def construir_resumen_trafico(mud_file):
     recorrido_acl_politicas(mud_file.mud.to_policy)
 
     return resumen
-    # TO DO: 
-    # Extraer de cada ACE:
-        # sentido, dirección, protocolo, puerto, acción
 
 
 def imprimir_tabla_trafico(resumen):
