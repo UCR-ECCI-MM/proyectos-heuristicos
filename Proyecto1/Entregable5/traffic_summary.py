@@ -1,22 +1,40 @@
 def construir_resumen_trafico(mud_file):
-    print("\n Resumen de trafico")
     resumen = []
 
-    for acl in mud_file.acl_lists:
-        for ace in acl.aces:
-            accion = "N/A"
-            if isinstance(ace.actions, dict):
-                accion = ace.actions.get("forwarding", "N/A")
+    # Función para recorrer las ACL referenciadas por una política
+    def recorrido_acl_politicas(policy):
+        if policy:
+            for acl_referenciada in policy.acl_lists:
+                # Buscar las ACL dentro de mud_file.acl_lists
+                acl_obj = None
+                for acl in mud_file.acl_lists:
+                    if acl.name == acl_referenciada:
+                        acl_obj = acl
+                        break
+                if acl_obj:
+                    # Recorrer los ACE dentro de cada ACL
+                    for ace in acl_obj.aces:
+                        accion = "N/A"
+                        if isinstance(ace.actions, dict):
+                            accion = ace.actions.get("forwarding", "N/A")
 
-            fila = {
-                "sentido": acl.name,
-                "direccion": acl.type,
-                "protocolo": "N/A",
-                "puerto": "N/A",
-                "accion": accion
-            }
-            resumen.append(fila)
+                        fila = {
+                            "sentido": acl_obj.name,
+                            "direccion": acl_obj.type,
+                            "protocolo": "N/A",
+                            "puerto": "N/A",
+                            "accion": accion
+                        }
+                        resumen.append(fila)
+
+    # Recorrer ACLs referenciadas por from_policy y to_policy
+    recorrido_acl_politicas(mud_file.mud.from_policy)
+    recorrido_acl_politicas(mud_file.mud.to_policy)
+
     return resumen
+    # TO DO: 
+    # Extraer de cada ACE:
+        # sentido, dirección, protocolo, puerto, acción
 
 
 def imprimir_tabla_trafico(resumen):
