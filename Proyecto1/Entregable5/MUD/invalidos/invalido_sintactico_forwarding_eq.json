@@ -1,0 +1,52 @@
+{
+    "ietf-mud:mud": {
+        "mud-version": 1,
+        "mud-url": "https://iotanalytics.unsw.edu.au/mud/blipcareBPmeterMud.json",
+        "mud-signature": "https://iotanalytics.unsw.edu.au/mud/blipcareBPmeterMud.p7s",
+        "last-update": "2025-04-01T17:56:56.205+11:00",
+        "cache-validity": 100,
+        "is-supported": true,
+        "systeminfo": "blipcareBPmeter",
+        "from-device-policy": {
+            "access-lists": {
+                "access-list": [
+                    {
+                        "name": "from-ipv4-blipcarebpmeter"
+                    }
+                ]
+            }
+        }
+    },
+    "ietf-access-control-list:access-lists": {
+        "acl": [
+            {
+                "name": "from-ipv4-blipcarebpmeter",
+                "type": "ipv4-acl-type",
+                "aces": {
+                    "ace": [
+                        {
+                            "name": "from-ipv4-blipcarebpmeter-0",
+                            "matches": {
+                                "ietf-mud:mud": {
+                                    "controller": "urn:ietf:params:mud:dns"
+                                },
+                                "ipv4": {
+                                    "protocol": 17
+                                },
+                                "udp": {
+                                    "destination-port": {
+                                        "operator": "eq",
+                                        "port": 53
+                                    }
+                                }
+                            },
+                            "actions": {
+                                "forwarding": "eq"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
