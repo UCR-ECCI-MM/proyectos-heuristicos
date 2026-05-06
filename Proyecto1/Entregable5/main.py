@@ -5,8 +5,10 @@ import ply.yacc as yacc
 from objects import MudFile, Mud, ACE, ACL, Policy # validaciones
 
 from report_generator import ReportGenerator
-from validator import validar_objetos, validar_consistencia
 from traffic_summary import construir_resumen_trafico, imprimir_tabla_trafico
+
+from object_validator import validar_objetos
+from consistency_validator import validar_consistencia
 
 # Construcción del parser
 parser_obj = yacc.yacc(module=parser)
@@ -71,20 +73,24 @@ if resultado is None:
     reporte.imprimir_reporte()
     quit()
 
-# Validaciones
-errores_obj = validar_objetos(resultado)
+# Validaciones de objetos
+errores_obj, advertencias_obj = validar_objetos(resultado)
+
 for e in errores_obj:
-    # si hay errores en los objetos los agregamos al reporte como errores de estructura
     reporte.agregar_estructura(e)
 
-errores_cons, advertencias = validar_consistencia(resultado)
+for a in advertencias_obj:
+    reporte.agregar_advertencia(a)
+
+# Validaciones de consistencia
+errores_cons, advertencias_cons = validar_consistencia(resultado)
 
 for e in errores_cons:
     reporte.agregar_consistencia(e)
 
-for a in advertencias:
+for a in advertencias_cons:
     reporte.agregar_advertencia(a)
-
+    
 # si no hay errores graves, construimos el resumen de trafico y lo imprimimos
 if not reporte.hay_errores_graves():
     resumen = construir_resumen_trafico(resultado)
