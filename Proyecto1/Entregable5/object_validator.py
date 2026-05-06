@@ -12,7 +12,7 @@ def validar_objetos(mud_file): # mud file es resultado final del parser
 
     validar_mud_file(mud_file, errores, advertencias)
     validar_mud(mud_file.mud, errores, advertencias)
-    # aqui falta una funcion de acl
+    validar_lista_acl(mud_file.acl_lists, errores, advertencias)
 
     return errores, advertencias
 
@@ -72,3 +72,63 @@ def validar_policy(policy, nombre_policy, errores, advertencias):
         errores.append(f"{nombre_policy}.acl_lists no es una lista")
     elif len(policy.acl_lists) == 0:
         advertencias.append(f"{nombre_policy} no referencia ninguna ACL")
+
+
+def validar_lista_acl(lista_acl, errores, advertencias):
+    if lista_acl is None:
+        return
+
+    if not isinstance(lista_acl, list): # si no es lista no la recorre para no causar error
+        return
+
+    for acl in lista_acl: # por cada acl revisada llama a validar acl
+        validar_acl(acl, errores, advertencias)
+
+# revisa cada objeto acl con campos como name, aces etc
+def validar_acl(acl, errores, advertencias):
+    if not isinstance(acl, ACL):
+        errores.append("Se encontro un elemento en acl_lists que no es objeto ACL")
+        return
+
+    if acl.name is None or acl.name == "":
+        errores.append("Se encontro un ACL sin name")
+
+    if acl.type is None or acl.type == "":
+        errores.append(f"El ACL '{acl.name}' no tiene type")
+
+    if acl.aces is None:
+        errores.append(f"El ACL '{acl.name}' no contiene lista de ACE")
+        return
+
+    if not isinstance(acl.aces, list):
+        errores.append(f"El atributo aces del ACL '{acl.name}' no es una lista")
+        return
+
+    if len(acl.aces) == 0: # si no tiene advetencia se toma como sospechoso
+        advertencias.append(f"El ACL '{acl.name}' no contiene reglas ACE")
+
+    for ace in acl.aces:
+        validar_ace(ace, acl.name, errores, advertencias)
+
+
+def validar_ace(ace, nombre_acl, errores, advertencias):
+    if not isinstance(ace, ACE):
+        errores.append(f"Se encontro un elemento en el ACL '{nombre_acl}' que no es objeto ACE")
+        return
+
+    if ace.name is None or ace.name == "":
+        errores.append(f"Se encontro un ACE sin name dentro del ACL '{nombre_acl}'")
+
+    if ace.matches is None:
+        errores.append(f"El ACE '{ace.name}' no contiene matches")
+    elif not isinstance(ace.matches, dict):
+        errores.append(f"El atributo matches del ACE '{ace.name}' no es un diccionario")
+    elif len(ace.matches) == 0:
+        advertencias.append(f"El ACE '{ace.name}' tiene matches vacio")
+
+    if ace.actions is None:
+        errores.append(f"El ACE '{ace.name}' no contiene actions")
+    elif not isinstance(ace.actions, dict):
+        errores.append(f"El atributo actions del ACE '{ace.name}' no es un diccionario")
+    elif len(ace.actions) == 0:
+        errores.append(f"El ACE '{ace.name}' tiene actions vacio")
