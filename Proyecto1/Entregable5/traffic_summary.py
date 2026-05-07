@@ -116,7 +116,7 @@ def imprimir_tabla_trafico(resumen):
     encabezados = ["Sentido", "Direccion", "Protocolo", "Puerto", "Accion"]
 
     # ancho por columna (esto con la finalidad de tener un mayor orden visual)
-    ancho_columnas = [35, 20, 12, 8, 10]
+    ancho_columnas = [35, 35, 12, 8, 10]
 
     # Construir el contenido a imprimir
     columnas_principales = [] # Sentido | Direccion | Protocolo | Puerto | Accion
