@@ -3,7 +3,6 @@
 
 # function to validate that the objects are correct 
 def validar_objetos(resultado):
-    
     errores = []
 
     if resultado.mud is None:
