@@ -119,11 +119,9 @@ def graficar_tiempo_promedio(filas, carpeta_salida):
     plt.close()
 
 
-def graficar_mejor_peor(filas, carpeta_salida):
-    """
-    Grafica el mejor y el peor costo encontrado
-    para cada configuración.
-    """
+def graficar_mejor_peor(filas, carpeta_salida, archivo_filtro=None):
+    if archivo_filtro:
+        filas = [f for f in filas if f["archivo"] == archivo_filtro]
 
     datos = {}
 
@@ -165,7 +163,7 @@ def graficar_mejor_peor(filas, carpeta_salida):
 
     plt.savefig(os.path.join(
         carpeta_salida,
-        "mejor_peor.png"
+        f"mejor_peor_{archivo_filtro}.png"
     ))
 
     plt.close()
@@ -295,10 +293,8 @@ def main():
         carpeta_graficos
     )
 
-    graficar_mejor_peor(
-        filas,
-        carpeta_graficos
-    )
+    graficar_mejor_peor(filas, carpeta_graficos, "small_01.txt")
+    graficar_mejor_peor(filas, carpeta_graficos, "small_02.txt")
 
     graficar_por_tamano(
         filas,
