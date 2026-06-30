@@ -2,7 +2,6 @@ import csv
 import os
 import matplotlib.pyplot as plt
 
-
 def leer_resultados(ruta_csv):
     """
     Lee el archivo CSV y devuelve todas las filas.
@@ -261,6 +260,9 @@ def mostrar_mejor_configuracion(filas):
     print(f"Tiempo promedio: {mejor_tiempo:.2f} ms")
 
 def main():
+    #TIPO_PRUEBA = "small"
+    TIPO_PRUEBA = "medium"
+    # TIPO_PRUEBA = "large"
     carpeta_raiz = os.path.join(
         os.path.dirname(__file__),
         "..",
@@ -270,13 +272,15 @@ def main():
     ruta_csv = os.path.join(
         carpeta_raiz,
         "results",
-        "resultados_sa.csv"
+        f"resultados_sa_{TIPO_PRUEBA}.csv"
     )
 
     carpeta_graficos = os.path.join(
         carpeta_raiz,
         "results",
-        "graficos"
+        "graficos",
+        "meta",
+        TIPO_PRUEBA
     )
 
     os.makedirs(carpeta_graficos, exist_ok=True)
@@ -293,13 +297,19 @@ def main():
         carpeta_graficos
     )
 
-    graficar_mejor_peor(filas, carpeta_graficos, "small_01.txt")
-    graficar_mejor_peor(filas, carpeta_graficos, "small_02.txt")
+    archivos = sorted(set(fila["archivo"] for fila in filas))
 
-    graficar_por_tamano(
-        filas,
-        carpeta_graficos
-    )
+    for archivo in archivos:
+        graficar_mejor_peor(
+            filas,
+            carpeta_graficos,
+            archivo
+        )
+
+        graficar_por_tamano(
+            filas,
+            carpeta_graficos
+        )
     mostrar_mejor_configuracion(filas)
     print("Gráficos generados correctamente.")
 

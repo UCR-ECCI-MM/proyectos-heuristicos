@@ -50,23 +50,32 @@ CORRIDAS_POR_CONFIGURACION = 10
 # Semillas fijas para reproducibilidad
 SEMILLAS = [42, 7, 13, 99, 1234, 555, 321, 808, 777, 2024]
 
-def obtener_archivos_prueba(carpeta_data):
-    """Retorna lista de rutas de archivos .txt en la carpeta data."""
+def obtener_archivos_prueba(carpeta_data, tipo_prueba):
     archivos = []
+
     for nombre in sorted(os.listdir(carpeta_data)):
-        if nombre.endswith('.txt'):
+        if (
+            nombre.endswith(".txt")
+            and nombre.startswith(tipo_prueba)
+        ):
             archivos.append(os.path.join(carpeta_data, nombre))
+
     return archivos
 
+
+
 #total 27 configuraciones
-def ejecutar_experimentos(carpeta_data, ruta_salida):
+def ejecutar_experimentos(carpeta_data, ruta_salida, tipo_prueba):
     """
     Ejecuta SA con todas las combinaciones de parámetros
     sobre todos los archivos de prueba.
 
     Guarda resultados en ruta_salida (CSV).
     """
-    archivos = obtener_archivos_prueba(carpeta_data)
+    archivos = obtener_archivos_prueba(
+        carpeta_data,
+        tipo_prueba
+    )
 
     if not archivos:
         print(f"No se encontraron archivos de prueba en: {carpeta_data}")
@@ -152,5 +161,9 @@ def ejecutar_experimentos(carpeta_data, ruta_salida):
 if __name__ == "__main__":
     carpeta_raiz = os.path.join(os.path.dirname(__file__), '..', '..')
     carpeta_data = os.path.join(carpeta_raiz, 'data')
-    ruta_salida = os.path.join(carpeta_raiz, 'results', 'resultados_sa.csv')
-    ejecutar_experimentos(carpeta_data, ruta_salida)
+    ruta_salida = os.path.join(carpeta_raiz,"results",f"resultados_sa_{TIPO_PRUEBA}.csv")
+    ejecutar_experimentos(
+        carpeta_data,
+        ruta_salida,
+        TIPO_PRUEBA
+    )
