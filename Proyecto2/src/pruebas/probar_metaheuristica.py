@@ -5,40 +5,7 @@ import itertools
 
 from src.core.modelos import Instancia, Perro
 from src.algoritmos.simulated_annealing import simulated_annealing
-
-# TODO: Cuando lector.py esté disponible
-# from lector import leer_instancia
-
-def leer_instancia(ruta_archivo):
-    with open(ruta_archivo, 'r') as f:
-        lineas = [l.strip() for l in f if l.strip()]
-
-    if len(lineas) == 0:
-        raise ValueError(f"Archivo vacío: {ruta_archivo}")
-
-    primera = lineas[0].split()
-
-    if len(primera) < 2:
-        raise ValueError(f"Formato inválido en primera línea: {lineas[0]}")
-
-    n = int(primera[0])
-    p = int(primera[1])
-
-    perros = []
-
-    if len(lineas[1:]) < p:
-        raise ValueError("No hay suficientes perros en el archivo")
-
-    for linea in lineas[1:p + 1]:
-        partes = linea.split()
-        id_perro = partes[0]
-        sexo = partes[1]
-        celo = int(partes[2]) == 1
-        enfermo = int(partes[3]) == 1
-        perros.append(Perro(id_perro, sexo, celo, enfermo))
-
-    return Instancia(n, perros)
-
+from src.core.lector import leer_instancia
 
 # Configuraciones a probar
 TEMPERATURAS_INICIALES = [50, 100, 200]
@@ -112,7 +79,7 @@ def ejecutar_experimentos(carpeta_data, ruta_salida, tipo_prueba):
             try:
                 instancia = leer_instancia(ruta_archivo)
             except Exception as e:
-                print(f"  Error leyendo {nombre_archivo}: {e}")
+                print(f"  Error leyendo {nombre_archivo}. {e}\n")
                 continue
 
             combinaciones = list(itertools.product(
