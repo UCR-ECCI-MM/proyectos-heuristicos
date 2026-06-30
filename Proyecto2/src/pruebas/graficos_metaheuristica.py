@@ -167,47 +167,70 @@ def graficar_mejor_peor(filas, carpeta_salida, archivo_filtro=None):
 
     plt.close()
 
-
 def graficar_por_tamano(filas, carpeta_salida):
     """
-    Grafica el costo promedio según el tamaño N.
+    Grafica el mejor costo promedio obtenido
+    para cada tamaño N.
     """
 
     datos = {}
 
+    # Agrupar costos por tamaño y configuración
     for fila in filas:
 
         n = fila["N"]
+        config = fila["configuracion"]
 
         if n not in datos:
-            datos[n] = []
+            datos[n] = {}
 
-        datos[n].append(fila["costoFinal"])
+        if config not in datos[n]:
+            datos[n][config] = []
+
+        datos[n][config].append(fila["costoFinal"])
 
     tamanos = []
-    costos = []
+    mejores_costos = []
 
     for n in sorted(datos.keys()):
 
+        mejor_costo = None
+
+        for config in datos[n]:
+
+            costo_promedio = promedio(datos[n][config])
+
+            if (
+                mejor_costo is None
+                or costo_promedio < mejor_costo
+            ):
+                mejor_costo = costo_promedio
+
         tamanos.append(n)
-        costos.append(promedio(datos[n]))
+        mejores_costos.append(mejor_costo)
 
     plt.figure(figsize=(7,5))
 
-    plt.plot(tamanos, costos, marker="o")
+    plt.scatter(
+        tamanos,
+        mejores_costos,
+        s=80
+    )
 
-    plt.xlabel("N")
+    plt.xticks(tamanos)
 
-    plt.ylabel("Costo promedio")
-
-    plt.title("Costo promedio por tamaño")
+    plt.xlabel("Tamaño N")
+    plt.ylabel("Mejor costo promedio")
+    plt.title("Mejor costo promedio por tamaño")
 
     plt.tight_layout()
 
-    plt.savefig(os.path.join(
-        carpeta_salida,
-        "tamano.png"
-    ))
+    plt.savefig(
+        os.path.join(
+            carpeta_salida,
+            "tamano.png"
+        )
+    )
 
     plt.close()
 
@@ -306,10 +329,10 @@ def main():
             archivo
         )
 
-        graficar_por_tamano(
-            filas,
-            carpeta_graficos
-        )
+    graficar_por_tamano(
+        filas,
+        carpeta_graficos
+    )
     mostrar_mejor_configuracion(filas)
     print("Gráficos generados correctamente.")
 
