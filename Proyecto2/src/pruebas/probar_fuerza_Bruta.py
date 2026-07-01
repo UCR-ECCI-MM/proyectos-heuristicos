@@ -20,6 +20,7 @@ def ejecutar_fuerza_bruta(carpeta_data, ruta_salida, tipo_prueba):
     columnas = [
         "algoritmo", "archivo", "N", "P",
         "costoFinal",
+        "solucion",
         "conflictosMachoMacho",
         "conflictosMachoHembraCelo",
         "enfermosFueraPrimeraFila",
@@ -55,6 +56,7 @@ def ejecutar_fuerza_bruta(carpeta_data, ruta_salida, tipo_prueba):
                 "N": instancia.n,
                 "P": instancia.p,
                 "costoFinal": resultado["costo"],
+                "solucion": resultado["solucion"].posiciones,
                 "conflictosMachoMacho": resultado["conflictosMachoMacho"],
                 "conflictosMachoHembraCelo": resultado["conflictosMachoHembraCelo"],
                 "enfermosFueraPrimeraFila": resultado["enfermosFueraPrimeraFila"],
