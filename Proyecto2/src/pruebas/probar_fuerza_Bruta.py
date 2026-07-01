@@ -8,7 +8,7 @@ from src.algoritmos.fuerza_Bruta import fuerza_bruta
 from src.core.getTestFiles import obtener_archivos_prueba
 
 # Número de ejecuciones por archivo
-CORRIDAS_POR_ARCHIVO = 10
+#CORRIDAS_POR_ARCHIVO = 10
 
 def ejecutar_fuerza_bruta(carpeta_data, ruta_salida, tipo_prueba):
     archivos = obtener_archivos_prueba(carpeta_data, tipo_prueba)
@@ -20,6 +20,7 @@ def ejecutar_fuerza_bruta(carpeta_data, ruta_salida, tipo_prueba):
     columnas = [
         "algoritmo", "archivo", "N", "P",
         "costoFinal",
+        "solucion",
         "conflictosMachoMacho",
         "conflictosMachoHembraCelo",
         "enfermosFueraPrimeraFila",
@@ -43,9 +44,11 @@ def ejecutar_fuerza_bruta(carpeta_data, ruta_salida, tipo_prueba):
                 print(f"  Error leyendo {nombre_archivo}: {e}")
                 continue
 
-            for corrida in range(1, CORRIDAS_POR_ARCHIVO + 1):
-                print(f"  Corrida {corrida}/10 de fuerza bruta.")
-                resultado = fuerza_bruta(instancia)
+            resultado = fuerza_bruta(instancia)            
+
+            #for corrida in range(1, CORRIDAS_POR_ARCHIVO + 1):
+            #    print(f"  Corrida {corrida}/10 de fuerza bruta.")
+            #    resultado = fuerza_bruta(instancia)
 
             fila = {
                 "algoritmo": "FuerzaBruta",
@@ -53,6 +56,7 @@ def ejecutar_fuerza_bruta(carpeta_data, ruta_salida, tipo_prueba):
                 "N": instancia.n,
                 "P": instancia.p,
                 "costoFinal": resultado["costo"],
+                "solucion": resultado["solucion"].posiciones,
                 "conflictosMachoMacho": resultado["conflictosMachoMacho"],
                 "conflictosMachoHembraCelo": resultado["conflictosMachoHembraCelo"],
                 "enfermosFueraPrimeraFila": resultado["enfermosFueraPrimeraFila"],

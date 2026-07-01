@@ -8,6 +8,7 @@ def fuerza_bruta(instancia):
 
     mejor_costo = None
     mejor_solucion = None
+    mejor_resultado = None
     evaluaciones = 0
 
     # Generar todas las permutaciones de posiciones posibles
@@ -22,16 +23,18 @@ def fuerza_bruta(instancia):
 
         if mejor_costo is None or resultado["costo"] < mejor_costo:
             mejor_costo = resultado["costo"]
-            mejor_solucion = resultado
+            mejor_solucion = solucion # guarda el objeto Solucion para poder exportar .posiciones
+            mejor_resultado = resultado 
 
     fin = time.perf_counter()
     tiempo_ms = (fin - inicio) * 1000
 
     return {
         "costo": mejor_costo,
-        "conflictosMachoMacho": mejor_solucion["conflictosMachoMacho"],
-        "conflictosMachoHembraCelo": mejor_solucion["conflictosMachoHembraCelo"],
-        "enfermosFueraPrimeraFila": mejor_solucion["enfermosFueraPrimeraFila"],
+        "solucion": mejor_solucion,
+        "conflictosMachoMacho": mejor_resultado["conflictosMachoMacho"],
+        "conflictosMachoHembraCelo": mejor_resultado["conflictosMachoHembraCelo"],
+        "enfermosFueraPrimeraFila": mejor_resultado["enfermosFueraPrimeraFila"],
         "tiempoMs": tiempo_ms,
         "evaluaciones": evaluaciones
     }
