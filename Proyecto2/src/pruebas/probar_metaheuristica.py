@@ -6,6 +6,7 @@ import itertools
 from src.core.modelos import Instancia, Perro
 from src.algoritmos.simulated_annealing import simulated_annealing
 from src.core.lector import leer_instancia
+from src.core.getTestFiles import obtener_archivos_prueba
 
 # Configuraciones a probar
 TEMPERATURAS_INICIALES = [50, 100, 200]
@@ -19,20 +20,6 @@ CORRIDAS_POR_CONFIGURACION = 10
 
 # Semillas fijas para reproducibilidad
 SEMILLAS = [42, 7, 13, 99, 1234, 555, 321, 808, 777, 2024]
-
-def obtener_archivos_prueba(carpeta_data, tipo_prueba):
-    archivos = []
-
-    for nombre in sorted(os.listdir(carpeta_data)):
-        if (
-            nombre.endswith(".txt")
-            and nombre.startswith(tipo_prueba)
-        ):
-            archivos.append(os.path.join(carpeta_data, nombre))
-
-    return archivos
-
-
 
 #total 27 configuraciones
 def ejecutar_experimentos(carpeta_data, ruta_salida, tipo_prueba):

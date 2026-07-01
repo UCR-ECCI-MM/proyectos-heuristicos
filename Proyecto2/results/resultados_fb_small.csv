@@ -1,0 +1,3 @@
+algoritmo,archivo,N,P,costoFinal,conflictosMachoMacho,conflictosMachoHembraCelo,enfermosFueraPrimeraFila,tiempoMs,solucionesEvaluadas
+FuerzaBruta,small_01.txt,3,8,0,0,0,0,9688.709283000208,362880
+FuerzaBruta,small_02.txt,3,8,30,3,0,0,9548.197380001511,362880
