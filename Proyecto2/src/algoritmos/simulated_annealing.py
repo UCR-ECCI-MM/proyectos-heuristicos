@@ -54,7 +54,7 @@ def simulated_annealing(
 
     while temperatura > temperatura_minima:
 
-        for _ in range(iteraciones_por_temperatura):
+        for i in range(iteraciones_por_temperatura):
 
             solucion_candidata = generar_vecino(
                 instancia,

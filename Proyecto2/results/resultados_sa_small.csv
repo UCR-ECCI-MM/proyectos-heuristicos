@@ -1,541 +1,541 @@
-algoritmo,configuracion,archivo,N,P,corrida,semilla,costoFinal,conflictosMachoMacho,conflictosMachoHembraCelo,enfermosFueraPrimeraFila,tiempoMs,solucionesEvaluadas,temperatura_inicial,temperatura_minima,alpha,iteraciones_por_temperatura
-SimulatedAnnealing,T50_a0.5_i2,small_01.txt,3,8,1,42,0,0,0,0,0.47,27,50,0.01,0.5,2
-SimulatedAnnealing,T50_a0.5_i2,small_01.txt,3,8,2,7,0,0,0,0,0.381,27,50,0.01,0.5,2
-SimulatedAnnealing,T50_a0.5_i2,small_01.txt,3,8,3,13,40,2,0,1,0.378,27,50,0.01,0.5,2
-SimulatedAnnealing,T50_a0.5_i2,small_01.txt,3,8,4,99,20,2,0,0,0.374,27,50,0.01,0.5,2
-SimulatedAnnealing,T50_a0.5_i2,small_01.txt,3,8,5,1234,30,3,0,0,0.419,27,50,0.01,0.5,2
-SimulatedAnnealing,T50_a0.5_i2,small_01.txt,3,8,6,555,0,0,0,0,0.383,27,50,0.01,0.5,2
-SimulatedAnnealing,T50_a0.5_i2,small_01.txt,3,8,7,321,20,2,0,0,0.372,27,50,0.01,0.5,2
-SimulatedAnnealing,T50_a0.5_i2,small_01.txt,3,8,8,808,20,2,0,0,0.369,27,50,0.01,0.5,2
-SimulatedAnnealing,T50_a0.5_i2,small_01.txt,3,8,9,777,40,2,0,1,0.424,27,50,0.01,0.5,2
-SimulatedAnnealing,T50_a0.5_i2,small_01.txt,3,8,10,2024,20,2,0,0,0.381,27,50,0.01,0.5,2
-SimulatedAnnealing,T50_a0.5_i3,small_01.txt,3,8,1,42,20,2,0,0,0.669,40,50,0.01,0.5,3
-SimulatedAnnealing,T50_a0.5_i3,small_01.txt,3,8,2,7,0,0,0,0,0.546,40,50,0.01,0.5,3
-SimulatedAnnealing,T50_a0.5_i3,small_01.txt,3,8,3,13,40,2,0,1,0.582,40,50,0.01,0.5,3
-SimulatedAnnealing,T50_a0.5_i3,small_01.txt,3,8,4,99,20,2,0,0,0.553,40,50,0.01,0.5,3
-SimulatedAnnealing,T50_a0.5_i3,small_01.txt,3,8,5,1234,20,2,0,0,0.547,40,50,0.01,0.5,3
-SimulatedAnnealing,T50_a0.5_i3,small_01.txt,3,8,6,555,0,0,0,0,0.553,40,50,0.01,0.5,3
-SimulatedAnnealing,T50_a0.5_i3,small_01.txt,3,8,7,321,20,2,0,0,0.543,40,50,0.01,0.5,3
-SimulatedAnnealing,T50_a0.5_i3,small_01.txt,3,8,8,808,20,2,0,0,0.54,40,50,0.01,0.5,3
-SimulatedAnnealing,T50_a0.5_i3,small_01.txt,3,8,9,777,30,3,0,0,0.539,40,50,0.01,0.5,3
-SimulatedAnnealing,T50_a0.5_i3,small_01.txt,3,8,10,2024,40,4,0,0,0.544,40,50,0.01,0.5,3
-SimulatedAnnealing,T50_a0.5_i5,small_01.txt,3,8,1,42,20,2,0,0,0.927,66,50,0.01,0.5,5
-SimulatedAnnealing,T50_a0.5_i5,small_01.txt,3,8,2,7,20,2,0,0,1.02,66,50,0.01,0.5,5
-SimulatedAnnealing,T50_a0.5_i5,small_01.txt,3,8,3,13,0,0,0,0,1.066,66,50,0.01,0.5,5
-SimulatedAnnealing,T50_a0.5_i5,small_01.txt,3,8,4,99,20,2,0,0,0.901,66,50,0.01,0.5,5
-SimulatedAnnealing,T50_a0.5_i5,small_01.txt,3,8,5,1234,20,2,0,0,0.997,66,50,0.01,0.5,5
-SimulatedAnnealing,T50_a0.5_i5,small_01.txt,3,8,6,555,0,0,0,0,0.892,66,50,0.01,0.5,5
-SimulatedAnnealing,T50_a0.5_i5,small_01.txt,3,8,7,321,0,0,0,0,0.889,66,50,0.01,0.5,5
-SimulatedAnnealing,T50_a0.5_i5,small_01.txt,3,8,8,808,20,2,0,0,0.89,66,50,0.01,0.5,5
-SimulatedAnnealing,T50_a0.5_i5,small_01.txt,3,8,9,777,20,2,0,0,0.87,66,50,0.01,0.5,5
-SimulatedAnnealing,T50_a0.5_i5,small_01.txt,3,8,10,2024,30,3,0,0,0.909,66,50,0.01,0.5,5
-SimulatedAnnealing,T50_a0.7_i2,small_01.txt,3,8,1,42,20,2,0,0,0.739,49,50,0.01,0.7,2
-SimulatedAnnealing,T50_a0.7_i2,small_01.txt,3,8,2,7,0,0,0,0,0.668,49,50,0.01,0.7,2
-SimulatedAnnealing,T50_a0.7_i2,small_01.txt,3,8,3,13,0,0,0,0,0.729,49,50,0.01,0.7,2
-SimulatedAnnealing,T50_a0.7_i2,small_01.txt,3,8,4,99,20,2,0,0,0.851,49,50,0.01,0.7,2
-SimulatedAnnealing,T50_a0.7_i2,small_01.txt,3,8,5,1234,20,0,0,1,0.702,49,50,0.01,0.7,2
-SimulatedAnnealing,T50_a0.7_i2,small_01.txt,3,8,6,555,0,0,0,0,0.667,49,50,0.01,0.7,2
-SimulatedAnnealing,T50_a0.7_i2,small_01.txt,3,8,7,321,20,2,0,0,0.665,49,50,0.01,0.7,2
-SimulatedAnnealing,T50_a0.7_i2,small_01.txt,3,8,8,808,20,2,0,0,0.666,49,50,0.01,0.7,2
-SimulatedAnnealing,T50_a0.7_i2,small_01.txt,3,8,9,777,20,2,0,0,0.663,49,50,0.01,0.7,2
-SimulatedAnnealing,T50_a0.7_i2,small_01.txt,3,8,10,2024,30,3,0,0,0.665,49,50,0.01,0.7,2
-SimulatedAnnealing,T50_a0.7_i3,small_01.txt,3,8,1,42,20,2,0,0,1.228,73,50,0.01,0.7,3
-SimulatedAnnealing,T50_a0.7_i3,small_01.txt,3,8,2,7,20,2,0,0,0.996,73,50,0.01,0.7,3
-SimulatedAnnealing,T50_a0.7_i3,small_01.txt,3,8,3,13,0,0,0,0,0.975,73,50,0.01,0.7,3
-SimulatedAnnealing,T50_a0.7_i3,small_01.txt,3,8,4,99,20,2,0,0,1.145,73,50,0.01,0.7,3
-SimulatedAnnealing,T50_a0.7_i3,small_01.txt,3,8,5,1234,20,2,0,0,1.105,73,50,0.01,0.7,3
-SimulatedAnnealing,T50_a0.7_i3,small_01.txt,3,8,6,555,0,0,0,0,0.978,73,50,0.01,0.7,3
-SimulatedAnnealing,T50_a0.7_i3,small_01.txt,3,8,7,321,0,0,0,0,0.985,73,50,0.01,0.7,3
-SimulatedAnnealing,T50_a0.7_i3,small_01.txt,3,8,8,808,20,2,0,0,1.005,73,50,0.01,0.7,3
-SimulatedAnnealing,T50_a0.7_i3,small_01.txt,3,8,9,777,20,2,0,0,1.018,73,50,0.01,0.7,3
-SimulatedAnnealing,T50_a0.7_i3,small_01.txt,3,8,10,2024,30,3,0,0,0.972,73,50,0.01,0.7,3
-SimulatedAnnealing,T50_a0.7_i5,small_01.txt,3,8,1,42,30,3,0,0,1.914,121,50,0.01,0.7,5
-SimulatedAnnealing,T50_a0.7_i5,small_01.txt,3,8,2,7,0,0,0,0,1.633,121,50,0.01,0.7,5
-SimulatedAnnealing,T50_a0.7_i5,small_01.txt,3,8,3,13,0,0,0,0,1.62,121,50,0.01,0.7,5
-SimulatedAnnealing,T50_a0.7_i5,small_01.txt,3,8,4,99,0,0,0,0,1.612,121,50,0.01,0.7,5
-SimulatedAnnealing,T50_a0.7_i5,small_01.txt,3,8,5,1234,0,0,0,0,1.615,121,50,0.01,0.7,5
-SimulatedAnnealing,T50_a0.7_i5,small_01.txt,3,8,6,555,20,2,0,0,1.61,121,50,0.01,0.7,5
-SimulatedAnnealing,T50_a0.7_i5,small_01.txt,3,8,7,321,20,2,0,0,1.734,121,50,0.01,0.7,5
-SimulatedAnnealing,T50_a0.7_i5,small_01.txt,3,8,8,808,20,2,0,0,1.649,121,50,0.01,0.7,5
-SimulatedAnnealing,T50_a0.7_i5,small_01.txt,3,8,9,777,20,2,0,0,1.652,121,50,0.01,0.7,5
-SimulatedAnnealing,T50_a0.7_i5,small_01.txt,3,8,10,2024,20,2,0,0,1.649,121,50,0.01,0.7,5
-SimulatedAnnealing,T50_a0.9_i2,small_01.txt,3,8,1,42,0,0,0,0,2.572,163,50,0.01,0.9,2
-SimulatedAnnealing,T50_a0.9_i2,small_01.txt,3,8,2,7,0,0,0,0,2.168,163,50,0.01,0.9,2
-SimulatedAnnealing,T50_a0.9_i2,small_01.txt,3,8,3,13,0,0,0,0,2.161,163,50,0.01,0.9,2
-SimulatedAnnealing,T50_a0.9_i2,small_01.txt,3,8,4,99,0,0,0,0,2.165,163,50,0.01,0.9,2
-SimulatedAnnealing,T50_a0.9_i2,small_01.txt,3,8,5,1234,0,0,0,0,2.749,163,50,0.01,0.9,2
-SimulatedAnnealing,T50_a0.9_i2,small_01.txt,3,8,6,555,0,0,0,0,2.166,163,50,0.01,0.9,2
-SimulatedAnnealing,T50_a0.9_i2,small_01.txt,3,8,7,321,0,0,0,0,2.799,163,50,0.01,0.9,2
-SimulatedAnnealing,T50_a0.9_i2,small_01.txt,3,8,8,808,0,0,0,0,2.557,163,50,0.01,0.9,2
-SimulatedAnnealing,T50_a0.9_i2,small_01.txt,3,8,9,777,0,0,0,0,2.359,163,50,0.01,0.9,2
-SimulatedAnnealing,T50_a0.9_i2,small_01.txt,3,8,10,2024,20,2,0,0,2.158,163,50,0.01,0.9,2
-SimulatedAnnealing,T50_a0.9_i3,small_01.txt,3,8,1,42,20,2,0,0,3.627,244,50,0.01,0.9,3
-SimulatedAnnealing,T50_a0.9_i3,small_01.txt,3,8,2,7,20,2,0,0,3.629,244,50,0.01,0.9,3
-SimulatedAnnealing,T50_a0.9_i3,small_01.txt,3,8,3,13,0,0,0,0,3.776,244,50,0.01,0.9,3
-SimulatedAnnealing,T50_a0.9_i3,small_01.txt,3,8,4,99,0,0,0,0,3.679,244,50,0.01,0.9,3
-SimulatedAnnealing,T50_a0.9_i3,small_01.txt,3,8,5,1234,0,0,0,0,3.773,244,50,0.01,0.9,3
-SimulatedAnnealing,T50_a0.9_i3,small_01.txt,3,8,6,555,0,0,0,0,3.941,244,50,0.01,0.9,3
-SimulatedAnnealing,T50_a0.9_i3,small_01.txt,3,8,7,321,20,2,0,0,3.929,244,50,0.01,0.9,3
-SimulatedAnnealing,T50_a0.9_i3,small_01.txt,3,8,8,808,0,0,0,0,3.752,244,50,0.01,0.9,3
-SimulatedAnnealing,T50_a0.9_i3,small_01.txt,3,8,9,777,20,2,0,0,3.801,244,50,0.01,0.9,3
-SimulatedAnnealing,T50_a0.9_i3,small_01.txt,3,8,10,2024,0,0,0,0,3.995,244,50,0.01,0.9,3
-SimulatedAnnealing,T50_a0.9_i5,small_01.txt,3,8,1,42,0,0,0,0,6.255,406,50,0.01,0.9,5
-SimulatedAnnealing,T50_a0.9_i5,small_01.txt,3,8,2,7,0,0,0,0,6.073,406,50,0.01,0.9,5
-SimulatedAnnealing,T50_a0.9_i5,small_01.txt,3,8,3,13,0,0,0,0,8.648,406,50,0.01,0.9,5
-SimulatedAnnealing,T50_a0.9_i5,small_01.txt,3,8,4,99,0,0,0,0,6.089,406,50,0.01,0.9,5
-SimulatedAnnealing,T50_a0.9_i5,small_01.txt,3,8,5,1234,0,0,0,0,6.421,406,50,0.01,0.9,5
-SimulatedAnnealing,T50_a0.9_i5,small_01.txt,3,8,6,555,0,0,0,0,6.39,406,50,0.01,0.9,5
-SimulatedAnnealing,T50_a0.9_i5,small_01.txt,3,8,7,321,0,0,0,0,6.26,406,50,0.01,0.9,5
-SimulatedAnnealing,T50_a0.9_i5,small_01.txt,3,8,8,808,0,0,0,0,6.226,406,50,0.01,0.9,5
-SimulatedAnnealing,T50_a0.9_i5,small_01.txt,3,8,9,777,0,0,0,0,6.203,406,50,0.01,0.9,5
-SimulatedAnnealing,T50_a0.9_i5,small_01.txt,3,8,10,2024,0,0,0,0,6.328,406,50,0.01,0.9,5
-SimulatedAnnealing,T100_a0.5_i2,small_01.txt,3,8,1,42,20,2,0,0,0.429,29,100,0.01,0.5,2
-SimulatedAnnealing,T100_a0.5_i2,small_01.txt,3,8,2,7,0,0,0,0,0.406,29,100,0.01,0.5,2
-SimulatedAnnealing,T100_a0.5_i2,small_01.txt,3,8,3,13,40,2,0,1,0.405,29,100,0.01,0.5,2
-SimulatedAnnealing,T100_a0.5_i2,small_01.txt,3,8,4,99,20,2,0,0,0.394,29,100,0.01,0.5,2
-SimulatedAnnealing,T100_a0.5_i2,small_01.txt,3,8,5,1234,30,3,0,0,0.493,29,100,0.01,0.5,2
-SimulatedAnnealing,T100_a0.5_i2,small_01.txt,3,8,6,555,0,0,0,0,0.448,29,100,0.01,0.5,2
-SimulatedAnnealing,T100_a0.5_i2,small_01.txt,3,8,7,321,20,2,0,0,0.429,29,100,0.01,0.5,2
-SimulatedAnnealing,T100_a0.5_i2,small_01.txt,3,8,8,808,20,2,0,0,0.46,29,100,0.01,0.5,2
-SimulatedAnnealing,T100_a0.5_i2,small_01.txt,3,8,9,777,20,2,0,0,0.449,29,100,0.01,0.5,2
-SimulatedAnnealing,T100_a0.5_i2,small_01.txt,3,8,10,2024,40,4,0,0,0.441,29,100,0.01,0.5,2
-SimulatedAnnealing,T100_a0.5_i3,small_01.txt,3,8,1,42,20,2,0,0,0.78,43,100,0.01,0.5,3
-SimulatedAnnealing,T100_a0.5_i3,small_01.txt,3,8,2,7,0,0,0,0,0.697,43,100,0.01,0.5,3
-SimulatedAnnealing,T100_a0.5_i3,small_01.txt,3,8,3,13,40,2,0,1,0.599,43,100,0.01,0.5,3
-SimulatedAnnealing,T100_a0.5_i3,small_01.txt,3,8,4,99,20,2,0,0,0.582,43,100,0.01,0.5,3
-SimulatedAnnealing,T100_a0.5_i3,small_01.txt,3,8,5,1234,30,3,0,0,0.585,43,100,0.01,0.5,3
-SimulatedAnnealing,T100_a0.5_i3,small_01.txt,3,8,6,555,0,0,0,0,0.651,43,100,0.01,0.5,3
-SimulatedAnnealing,T100_a0.5_i3,small_01.txt,3,8,7,321,20,2,0,0,0.689,43,100,0.01,0.5,3
-SimulatedAnnealing,T100_a0.5_i3,small_01.txt,3,8,8,808,20,2,0,0,0.658,43,100,0.01,0.5,3
-SimulatedAnnealing,T100_a0.5_i3,small_01.txt,3,8,9,777,0,0,0,0,0.662,43,100,0.01,0.5,3
-SimulatedAnnealing,T100_a0.5_i3,small_01.txt,3,8,10,2024,40,4,0,0,0.639,43,100,0.01,0.5,3
-SimulatedAnnealing,T100_a0.5_i5,small_01.txt,3,8,1,42,20,2,0,0,1.121,71,100,0.01,0.5,5
-SimulatedAnnealing,T100_a0.5_i5,small_01.txt,3,8,2,7,20,2,0,0,1.119,71,100,0.01,0.5,5
-SimulatedAnnealing,T100_a0.5_i5,small_01.txt,3,8,3,13,20,2,0,0,1.056,71,100,0.01,0.5,5
-SimulatedAnnealing,T100_a0.5_i5,small_01.txt,3,8,4,99,20,2,0,0,1.136,71,100,0.01,0.5,5
-SimulatedAnnealing,T100_a0.5_i5,small_01.txt,3,8,5,1234,20,2,0,0,1.275,71,100,0.01,0.5,5
-SimulatedAnnealing,T100_a0.5_i5,small_01.txt,3,8,6,555,0,0,0,0,1.153,71,100,0.01,0.5,5
-SimulatedAnnealing,T100_a0.5_i5,small_01.txt,3,8,7,321,20,2,0,0,1.19,71,100,0.01,0.5,5
-SimulatedAnnealing,T100_a0.5_i5,small_01.txt,3,8,8,808,20,2,0,0,1.244,71,100,0.01,0.5,5
-SimulatedAnnealing,T100_a0.5_i5,small_01.txt,3,8,9,777,0,0,0,0,1.236,71,100,0.01,0.5,5
-SimulatedAnnealing,T100_a0.5_i5,small_01.txt,3,8,10,2024,20,2,0,0,1.073,71,100,0.01,0.5,5
-SimulatedAnnealing,T100_a0.7_i2,small_01.txt,3,8,1,42,20,2,0,0,0.923,53,100,0.01,0.7,2
-SimulatedAnnealing,T100_a0.7_i2,small_01.txt,3,8,2,7,20,2,0,0,0.801,53,100,0.01,0.7,2
-SimulatedAnnealing,T100_a0.7_i2,small_01.txt,3,8,3,13,0,0,0,0,0.791,53,100,0.01,0.7,2
-SimulatedAnnealing,T100_a0.7_i2,small_01.txt,3,8,4,99,20,2,0,0,0.902,53,100,0.01,0.7,2
-SimulatedAnnealing,T100_a0.7_i2,small_01.txt,3,8,5,1234,20,2,0,0,0.797,53,100,0.01,0.7,2
-SimulatedAnnealing,T100_a0.7_i2,small_01.txt,3,8,6,555,0,0,0,0,0.825,53,100,0.01,0.7,2
-SimulatedAnnealing,T100_a0.7_i2,small_01.txt,3,8,7,321,20,2,0,0,0.819,53,100,0.01,0.7,2
-SimulatedAnnealing,T100_a0.7_i2,small_01.txt,3,8,8,808,20,2,0,0,0.809,53,100,0.01,0.7,2
-SimulatedAnnealing,T100_a0.7_i2,small_01.txt,3,8,9,777,0,0,0,0,0.821,53,100,0.01,0.7,2
-SimulatedAnnealing,T100_a0.7_i2,small_01.txt,3,8,10,2024,30,3,0,0,0.819,53,100,0.01,0.7,2
-SimulatedAnnealing,T100_a0.7_i3,small_01.txt,3,8,1,42,30,3,0,0,1.328,79,100,0.01,0.7,3
-SimulatedAnnealing,T100_a0.7_i3,small_01.txt,3,8,2,7,0,0,0,0,1.079,79,100,0.01,0.7,3
-SimulatedAnnealing,T100_a0.7_i3,small_01.txt,3,8,3,13,20,2,0,0,1.061,79,100,0.01,0.7,3
-SimulatedAnnealing,T100_a0.7_i3,small_01.txt,3,8,4,99,20,2,0,0,1.097,79,100,0.01,0.7,3
-SimulatedAnnealing,T100_a0.7_i3,small_01.txt,3,8,5,1234,20,2,0,0,1.065,79,100,0.01,0.7,3
-SimulatedAnnealing,T100_a0.7_i3,small_01.txt,3,8,6,555,20,2,0,0,1.066,79,100,0.01,0.7,3
-SimulatedAnnealing,T100_a0.7_i3,small_01.txt,3,8,7,321,20,2,0,0,1.066,79,100,0.01,0.7,3
-SimulatedAnnealing,T100_a0.7_i3,small_01.txt,3,8,8,808,20,2,0,0,1.053,79,100,0.01,0.7,3
-SimulatedAnnealing,T100_a0.7_i3,small_01.txt,3,8,9,777,0,0,0,0,1.062,79,100,0.01,0.7,3
-SimulatedAnnealing,T100_a0.7_i3,small_01.txt,3,8,10,2024,0,0,0,0,1.054,79,100,0.01,0.7,3
-SimulatedAnnealing,T100_a0.7_i5,small_01.txt,3,8,1,42,20,2,0,0,2.126,131,100,0.01,0.7,5
-SimulatedAnnealing,T100_a0.7_i5,small_01.txt,3,8,2,7,20,2,0,0,1.981,131,100,0.01,0.7,5
-SimulatedAnnealing,T100_a0.7_i5,small_01.txt,3,8,3,13,20,2,0,0,1.987,131,100,0.01,0.7,5
-SimulatedAnnealing,T100_a0.7_i5,small_01.txt,3,8,4,99,0,0,0,0,2.162,131,100,0.01,0.7,5
-SimulatedAnnealing,T100_a0.7_i5,small_01.txt,3,8,5,1234,0,0,0,0,1.935,131,100,0.01,0.7,5
-SimulatedAnnealing,T100_a0.7_i5,small_01.txt,3,8,6,555,0,0,0,0,2.034,131,100,0.01,0.7,5
-SimulatedAnnealing,T100_a0.7_i5,small_01.txt,3,8,7,321,0,0,0,0,2.057,131,100,0.01,0.7,5
-SimulatedAnnealing,T100_a0.7_i5,small_01.txt,3,8,8,808,20,2,0,0,2.041,131,100,0.01,0.7,5
-SimulatedAnnealing,T100_a0.7_i5,small_01.txt,3,8,9,777,0,0,0,0,2.037,131,100,0.01,0.7,5
-SimulatedAnnealing,T100_a0.7_i5,small_01.txt,3,8,10,2024,0,0,0,0,2.049,131,100,0.01,0.7,5
-SimulatedAnnealing,T100_a0.9_i2,small_01.txt,3,8,1,42,20,2,0,0,2.932,177,100,0.01,0.9,2
-SimulatedAnnealing,T100_a0.9_i2,small_01.txt,3,8,2,7,20,2,0,0,2.83,177,100,0.01,0.9,2
-SimulatedAnnealing,T100_a0.9_i2,small_01.txt,3,8,3,13,0,0,0,0,2.551,177,100,0.01,0.9,2
-SimulatedAnnealing,T100_a0.9_i2,small_01.txt,3,8,4,99,20,2,0,0,2.373,177,100,0.01,0.9,2
-SimulatedAnnealing,T100_a0.9_i2,small_01.txt,3,8,5,1234,0,0,0,0,2.337,177,100,0.01,0.9,2
-SimulatedAnnealing,T100_a0.9_i2,small_01.txt,3,8,6,555,0,0,0,0,2.337,177,100,0.01,0.9,2
-SimulatedAnnealing,T100_a0.9_i2,small_01.txt,3,8,7,321,20,2,0,0,2.383,177,100,0.01,0.9,2
-SimulatedAnnealing,T100_a0.9_i2,small_01.txt,3,8,8,808,20,2,0,0,2.56,177,100,0.01,0.9,2
-SimulatedAnnealing,T100_a0.9_i2,small_01.txt,3,8,9,777,20,2,0,0,2.432,177,100,0.01,0.9,2
-SimulatedAnnealing,T100_a0.9_i2,small_01.txt,3,8,10,2024,0,0,0,0,2.419,177,100,0.01,0.9,2
-SimulatedAnnealing,T100_a0.9_i3,small_01.txt,3,8,1,42,0,0,0,0,4.0,265,100,0.01,0.9,3
-SimulatedAnnealing,T100_a0.9_i3,small_01.txt,3,8,2,7,0,0,0,0,3.52,265,100,0.01,0.9,3
-SimulatedAnnealing,T100_a0.9_i3,small_01.txt,3,8,3,13,0,0,0,0,3.707,265,100,0.01,0.9,3
-SimulatedAnnealing,T100_a0.9_i3,small_01.txt,3,8,4,99,0,0,0,0,3.603,265,100,0.01,0.9,3
-SimulatedAnnealing,T100_a0.9_i3,small_01.txt,3,8,5,1234,0,0,0,0,3.592,265,100,0.01,0.9,3
-SimulatedAnnealing,T100_a0.9_i3,small_01.txt,3,8,6,555,0,0,0,0,3.608,265,100,0.01,0.9,3
-SimulatedAnnealing,T100_a0.9_i3,small_01.txt,3,8,7,321,0,0,0,0,3.604,265,100,0.01,0.9,3
-SimulatedAnnealing,T100_a0.9_i3,small_01.txt,3,8,8,808,0,0,0,0,3.632,265,100,0.01,0.9,3
-SimulatedAnnealing,T100_a0.9_i3,small_01.txt,3,8,9,777,0,0,0,0,3.615,265,100,0.01,0.9,3
-SimulatedAnnealing,T100_a0.9_i3,small_01.txt,3,8,10,2024,20,2,0,0,3.604,265,100,0.01,0.9,3
-SimulatedAnnealing,T100_a0.9_i5,small_01.txt,3,8,1,42,20,2,0,0,6.392,441,100,0.01,0.9,5
-SimulatedAnnealing,T100_a0.9_i5,small_01.txt,3,8,2,7,0,0,0,0,6.121,441,100,0.01,0.9,5
-SimulatedAnnealing,T100_a0.9_i5,small_01.txt,3,8,3,13,0,0,0,0,5.892,441,100,0.01,0.9,5
-SimulatedAnnealing,T100_a0.9_i5,small_01.txt,3,8,4,99,0,0,0,0,6.067,441,100,0.01,0.9,5
-SimulatedAnnealing,T100_a0.9_i5,small_01.txt,3,8,5,1234,0,0,0,0,5.795,441,100,0.01,0.9,5
-SimulatedAnnealing,T100_a0.9_i5,small_01.txt,3,8,6,555,0,0,0,0,5.796,441,100,0.01,0.9,5
-SimulatedAnnealing,T100_a0.9_i5,small_01.txt,3,8,7,321,0,0,0,0,5.832,441,100,0.01,0.9,5
-SimulatedAnnealing,T100_a0.9_i5,small_01.txt,3,8,8,808,0,0,0,0,5.928,441,100,0.01,0.9,5
-SimulatedAnnealing,T100_a0.9_i5,small_01.txt,3,8,9,777,0,0,0,0,5.936,441,100,0.01,0.9,5
-SimulatedAnnealing,T100_a0.9_i5,small_01.txt,3,8,10,2024,20,2,0,0,6.003,441,100,0.01,0.9,5
-SimulatedAnnealing,T200_a0.5_i2,small_01.txt,3,8,1,42,20,2,0,0,0.576,31,200,0.01,0.5,2
-SimulatedAnnealing,T200_a0.5_i2,small_01.txt,3,8,2,7,0,0,0,0,0.515,31,200,0.01,0.5,2
-SimulatedAnnealing,T200_a0.5_i2,small_01.txt,3,8,3,13,20,2,0,0,0.422,31,200,0.01,0.5,2
-SimulatedAnnealing,T200_a0.5_i2,small_01.txt,3,8,4,99,20,2,0,0,0.498,31,200,0.01,0.5,2
-SimulatedAnnealing,T200_a0.5_i2,small_01.txt,3,8,5,1234,20,0,0,1,0.533,31,200,0.01,0.5,2
-SimulatedAnnealing,T200_a0.5_i2,small_01.txt,3,8,6,555,0,0,0,0,0.496,31,200,0.01,0.5,2
-SimulatedAnnealing,T200_a0.5_i2,small_01.txt,3,8,7,321,0,0,0,0,0.433,31,200,0.01,0.5,2
-SimulatedAnnealing,T200_a0.5_i2,small_01.txt,3,8,8,808,20,2,0,0,0.42,31,200,0.01,0.5,2
-SimulatedAnnealing,T200_a0.5_i2,small_01.txt,3,8,9,777,20,2,0,0,0.425,31,200,0.01,0.5,2
-SimulatedAnnealing,T200_a0.5_i2,small_01.txt,3,8,10,2024,40,4,0,0,0.421,31,200,0.01,0.5,2
-SimulatedAnnealing,T200_a0.5_i3,small_01.txt,3,8,1,42,20,2,0,0,0.81,46,200,0.01,0.5,3
-SimulatedAnnealing,T200_a0.5_i3,small_01.txt,3,8,2,7,20,2,0,0,0.635,46,200,0.01,0.5,3
-SimulatedAnnealing,T200_a0.5_i3,small_01.txt,3,8,3,13,20,2,0,0,0.629,46,200,0.01,0.5,3
-SimulatedAnnealing,T200_a0.5_i3,small_01.txt,3,8,4,99,20,2,0,0,0.646,46,200,0.01,0.5,3
-SimulatedAnnealing,T200_a0.5_i3,small_01.txt,3,8,5,1234,30,3,0,0,0.624,46,200,0.01,0.5,3
-SimulatedAnnealing,T200_a0.5_i3,small_01.txt,3,8,6,555,0,0,0,0,0.772,46,200,0.01,0.5,3
-SimulatedAnnealing,T200_a0.5_i3,small_01.txt,3,8,7,321,20,2,0,0,0.728,46,200,0.01,0.5,3
-SimulatedAnnealing,T200_a0.5_i3,small_01.txt,3,8,8,808,20,2,0,0,0.638,46,200,0.01,0.5,3
-SimulatedAnnealing,T200_a0.5_i3,small_01.txt,3,8,9,777,0,0,0,0,0.63,46,200,0.01,0.5,3
-SimulatedAnnealing,T200_a0.5_i3,small_01.txt,3,8,10,2024,20,2,0,0,0.623,46,200,0.01,0.5,3
-SimulatedAnnealing,T200_a0.5_i5,small_01.txt,3,8,1,42,30,3,0,0,1.196,76,200,0.01,0.5,5
-SimulatedAnnealing,T200_a0.5_i5,small_01.txt,3,8,2,7,20,2,0,0,1.09,76,200,0.01,0.5,5
-SimulatedAnnealing,T200_a0.5_i5,small_01.txt,3,8,3,13,20,2,0,0,1.026,76,200,0.01,0.5,5
-SimulatedAnnealing,T200_a0.5_i5,small_01.txt,3,8,4,99,0,0,0,0,1.025,76,200,0.01,0.5,5
-SimulatedAnnealing,T200_a0.5_i5,small_01.txt,3,8,5,1234,0,0,0,0,1.013,76,200,0.01,0.5,5
-SimulatedAnnealing,T200_a0.5_i5,small_01.txt,3,8,6,555,0,0,0,0,1.021,76,200,0.01,0.5,5
-SimulatedAnnealing,T200_a0.5_i5,small_01.txt,3,8,7,321,20,2,0,0,1.016,76,200,0.01,0.5,5
-SimulatedAnnealing,T200_a0.5_i5,small_01.txt,3,8,8,808,20,2,0,0,1.005,76,200,0.01,0.5,5
-SimulatedAnnealing,T200_a0.5_i5,small_01.txt,3,8,9,777,0,0,0,0,1.012,76,200,0.01,0.5,5
-SimulatedAnnealing,T200_a0.5_i5,small_01.txt,3,8,10,2024,20,2,0,0,1.01,76,200,0.01,0.5,5
-SimulatedAnnealing,T200_a0.7_i2,small_01.txt,3,8,1,42,20,2,0,0,0.984,57,200,0.01,0.7,2
-SimulatedAnnealing,T200_a0.7_i2,small_01.txt,3,8,2,7,20,2,0,0,0.847,57,200,0.01,0.7,2
-SimulatedAnnealing,T200_a0.7_i2,small_01.txt,3,8,3,13,20,2,0,0,0.942,57,200,0.01,0.7,2
-SimulatedAnnealing,T200_a0.7_i2,small_01.txt,3,8,4,99,20,2,0,0,0.769,57,200,0.01,0.7,2
-SimulatedAnnealing,T200_a0.7_i2,small_01.txt,3,8,5,1234,20,2,0,0,0.762,57,200,0.01,0.7,2
-SimulatedAnnealing,T200_a0.7_i2,small_01.txt,3,8,6,555,0,0,0,0,0.758,57,200,0.01,0.7,2
-SimulatedAnnealing,T200_a0.7_i2,small_01.txt,3,8,7,321,20,2,0,0,0.95,57,200,0.01,0.7,2
-SimulatedAnnealing,T200_a0.7_i2,small_01.txt,3,8,8,808,20,2,0,0,0.766,57,200,0.01,0.7,2
-SimulatedAnnealing,T200_a0.7_i2,small_01.txt,3,8,9,777,0,0,0,0,0.796,57,200,0.01,0.7,2
-SimulatedAnnealing,T200_a0.7_i2,small_01.txt,3,8,10,2024,20,2,0,0,0.763,57,200,0.01,0.7,2
-SimulatedAnnealing,T200_a0.7_i3,small_01.txt,3,8,1,42,30,3,0,0,1.179,85,200,0.01,0.7,3
-SimulatedAnnealing,T200_a0.7_i3,small_01.txt,3,8,2,7,20,2,0,0,1.207,85,200,0.01,0.7,3
-SimulatedAnnealing,T200_a0.7_i3,small_01.txt,3,8,3,13,20,2,0,0,1.144,85,200,0.01,0.7,3
-SimulatedAnnealing,T200_a0.7_i3,small_01.txt,3,8,4,99,0,0,0,0,1.124,85,200,0.01,0.7,3
-SimulatedAnnealing,T200_a0.7_i3,small_01.txt,3,8,5,1234,0,0,0,0,1.13,85,200,0.01,0.7,3
-SimulatedAnnealing,T200_a0.7_i3,small_01.txt,3,8,6,555,0,0,0,0,1.127,85,200,0.01,0.7,3
-SimulatedAnnealing,T200_a0.7_i3,small_01.txt,3,8,7,321,0,0,0,0,1.126,85,200,0.01,0.7,3
-SimulatedAnnealing,T200_a0.7_i3,small_01.txt,3,8,8,808,20,2,0,0,1.122,85,200,0.01,0.7,3
-SimulatedAnnealing,T200_a0.7_i3,small_01.txt,3,8,9,777,0,0,0,0,1.119,85,200,0.01,0.7,3
-SimulatedAnnealing,T200_a0.7_i3,small_01.txt,3,8,10,2024,20,2,0,0,1.132,85,200,0.01,0.7,3
-SimulatedAnnealing,T200_a0.7_i5,small_01.txt,3,8,1,42,20,2,0,0,2.349,141,200,0.01,0.7,5
-SimulatedAnnealing,T200_a0.7_i5,small_01.txt,3,8,2,7,20,2,0,0,2.1,141,200,0.01,0.7,5
-SimulatedAnnealing,T200_a0.7_i5,small_01.txt,3,8,3,13,0,0,0,0,1.884,141,200,0.01,0.7,5
-SimulatedAnnealing,T200_a0.7_i5,small_01.txt,3,8,4,99,0,0,0,0,1.875,141,200,0.01,0.7,5
-SimulatedAnnealing,T200_a0.7_i5,small_01.txt,3,8,5,1234,0,0,0,0,1.859,141,200,0.01,0.7,5
-SimulatedAnnealing,T200_a0.7_i5,small_01.txt,3,8,6,555,0,0,0,0,1.861,141,200,0.01,0.7,5
-SimulatedAnnealing,T200_a0.7_i5,small_01.txt,3,8,7,321,0,0,0,0,1.86,141,200,0.01,0.7,5
-SimulatedAnnealing,T200_a0.7_i5,small_01.txt,3,8,8,808,20,2,0,0,1.845,141,200,0.01,0.7,5
-SimulatedAnnealing,T200_a0.7_i5,small_01.txt,3,8,9,777,20,2,0,0,1.86,141,200,0.01,0.7,5
-SimulatedAnnealing,T200_a0.7_i5,small_01.txt,3,8,10,2024,0,0,0,0,1.87,141,200,0.01,0.7,5
-SimulatedAnnealing,T200_a0.9_i2,small_01.txt,3,8,1,42,20,2,0,0,2.778,189,200,0.01,0.9,2
-SimulatedAnnealing,T200_a0.9_i2,small_01.txt,3,8,2,7,20,2,0,0,2.505,189,200,0.01,0.9,2
-SimulatedAnnealing,T200_a0.9_i2,small_01.txt,3,8,3,13,0,0,0,0,2.483,189,200,0.01,0.9,2
-SimulatedAnnealing,T200_a0.9_i2,small_01.txt,3,8,4,99,0,0,0,0,2.476,189,200,0.01,0.9,2
-SimulatedAnnealing,T200_a0.9_i2,small_01.txt,3,8,5,1234,0,0,0,0,2.5,189,200,0.01,0.9,2
-SimulatedAnnealing,T200_a0.9_i2,small_01.txt,3,8,6,555,0,0,0,0,2.484,189,200,0.01,0.9,2
-SimulatedAnnealing,T200_a0.9_i2,small_01.txt,3,8,7,321,0,0,0,0,2.705,189,200,0.01,0.9,2
-SimulatedAnnealing,T200_a0.9_i2,small_01.txt,3,8,8,808,0,0,0,0,2.497,189,200,0.01,0.9,2
-SimulatedAnnealing,T200_a0.9_i2,small_01.txt,3,8,9,777,0,0,0,0,2.505,189,200,0.01,0.9,2
-SimulatedAnnealing,T200_a0.9_i2,small_01.txt,3,8,10,2024,0,0,0,0,2.491,189,200,0.01,0.9,2
-SimulatedAnnealing,T200_a0.9_i3,small_01.txt,3,8,1,42,0,0,0,0,4.294,283,200,0.01,0.9,3
-SimulatedAnnealing,T200_a0.9_i3,small_01.txt,3,8,2,7,20,2,0,0,3.983,283,200,0.01,0.9,3
-SimulatedAnnealing,T200_a0.9_i3,small_01.txt,3,8,3,13,20,2,0,0,3.877,283,200,0.01,0.9,3
-SimulatedAnnealing,T200_a0.9_i3,small_01.txt,3,8,4,99,20,2,0,0,3.75,283,200,0.01,0.9,3
-SimulatedAnnealing,T200_a0.9_i3,small_01.txt,3,8,5,1234,20,2,0,0,3.757,283,200,0.01,0.9,3
-SimulatedAnnealing,T200_a0.9_i3,small_01.txt,3,8,6,555,0,0,0,0,3.765,283,200,0.01,0.9,3
-SimulatedAnnealing,T200_a0.9_i3,small_01.txt,3,8,7,321,0,0,0,0,3.888,283,200,0.01,0.9,3
-SimulatedAnnealing,T200_a0.9_i3,small_01.txt,3,8,8,808,0,0,0,0,3.746,283,200,0.01,0.9,3
-SimulatedAnnealing,T200_a0.9_i3,small_01.txt,3,8,9,777,20,2,0,0,3.768,283,200,0.01,0.9,3
-SimulatedAnnealing,T200_a0.9_i3,small_01.txt,3,8,10,2024,0,0,0,0,3.751,283,200,0.01,0.9,3
-SimulatedAnnealing,T200_a0.9_i5,small_01.txt,3,8,1,42,0,0,0,0,6.825,471,200,0.01,0.9,5
-SimulatedAnnealing,T200_a0.9_i5,small_01.txt,3,8,2,7,0,0,0,0,6.175,471,200,0.01,0.9,5
-SimulatedAnnealing,T200_a0.9_i5,small_01.txt,3,8,3,13,0,0,0,0,7.475,471,200,0.01,0.9,5
-SimulatedAnnealing,T200_a0.9_i5,small_01.txt,3,8,4,99,0,0,0,0,6.375,471,200,0.01,0.9,5
-SimulatedAnnealing,T200_a0.9_i5,small_01.txt,3,8,5,1234,0,0,0,0,6.371,471,200,0.01,0.9,5
-SimulatedAnnealing,T200_a0.9_i5,small_01.txt,3,8,6,555,0,0,0,0,6.41,471,200,0.01,0.9,5
-SimulatedAnnealing,T200_a0.9_i5,small_01.txt,3,8,7,321,0,0,0,0,6.358,471,200,0.01,0.9,5
-SimulatedAnnealing,T200_a0.9_i5,small_01.txt,3,8,8,808,0,0,0,0,6.441,471,200,0.01,0.9,5
-SimulatedAnnealing,T200_a0.9_i5,small_01.txt,3,8,9,777,0,0,0,0,6.38,471,200,0.01,0.9,5
-SimulatedAnnealing,T200_a0.9_i5,small_01.txt,3,8,10,2024,20,2,0,0,6.371,471,200,0.01,0.9,5
-SimulatedAnnealing,T50_a0.5_i2,small_02.txt,3,8,1,42,40,4,0,0,0.466,27,50,0.01,0.5,2
-SimulatedAnnealing,T50_a0.5_i2,small_02.txt,3,8,2,7,50,3,0,1,0.379,27,50,0.01,0.5,2
-SimulatedAnnealing,T50_a0.5_i2,small_02.txt,3,8,3,13,40,4,0,0,0.371,27,50,0.01,0.5,2
-SimulatedAnnealing,T50_a0.5_i2,small_02.txt,3,8,4,99,40,4,0,0,0.369,27,50,0.01,0.5,2
-SimulatedAnnealing,T50_a0.5_i2,small_02.txt,3,8,5,1234,50,3,0,1,0.434,27,50,0.01,0.5,2
-SimulatedAnnealing,T50_a0.5_i2,small_02.txt,3,8,6,555,40,4,0,0,0.47,27,50,0.01,0.5,2
-SimulatedAnnealing,T50_a0.5_i2,small_02.txt,3,8,7,321,30,3,0,0,0.468,27,50,0.01,0.5,2
-SimulatedAnnealing,T50_a0.5_i2,small_02.txt,3,8,8,808,40,4,0,0,0.392,27,50,0.01,0.5,2
-SimulatedAnnealing,T50_a0.5_i2,small_02.txt,3,8,9,777,40,4,0,0,0.372,27,50,0.01,0.5,2
-SimulatedAnnealing,T50_a0.5_i2,small_02.txt,3,8,10,2024,40,4,0,0,0.393,27,50,0.01,0.5,2
-SimulatedAnnealing,T50_a0.5_i3,small_02.txt,3,8,1,42,40,4,0,0,0.716,40,50,0.01,0.5,3
-SimulatedAnnealing,T50_a0.5_i3,small_02.txt,3,8,2,7,40,4,0,0,0.567,40,50,0.01,0.5,3
-SimulatedAnnealing,T50_a0.5_i3,small_02.txt,3,8,3,13,30,3,0,0,0.599,40,50,0.01,0.5,3
-SimulatedAnnealing,T50_a0.5_i3,small_02.txt,3,8,4,99,40,4,0,0,0.548,40,50,0.01,0.5,3
-SimulatedAnnealing,T50_a0.5_i3,small_02.txt,3,8,5,1234,40,4,0,0,0.535,40,50,0.01,0.5,3
-SimulatedAnnealing,T50_a0.5_i3,small_02.txt,3,8,6,555,40,4,0,0,0.539,40,50,0.01,0.5,3
-SimulatedAnnealing,T50_a0.5_i3,small_02.txt,3,8,7,321,30,3,0,0,0.54,40,50,0.01,0.5,3
-SimulatedAnnealing,T50_a0.5_i3,small_02.txt,3,8,8,808,40,4,0,0,0.531,40,50,0.01,0.5,3
-SimulatedAnnealing,T50_a0.5_i3,small_02.txt,3,8,9,777,40,4,0,0,0.534,40,50,0.01,0.5,3
-SimulatedAnnealing,T50_a0.5_i3,small_02.txt,3,8,10,2024,40,4,0,0,0.538,40,50,0.01,0.5,3
-SimulatedAnnealing,T50_a0.5_i5,small_02.txt,3,8,1,42,40,4,0,0,1.118,66,50,0.01,0.5,5
-SimulatedAnnealing,T50_a0.5_i5,small_02.txt,3,8,2,7,40,4,0,0,0.964,66,50,0.01,0.5,5
-SimulatedAnnealing,T50_a0.5_i5,small_02.txt,3,8,3,13,40,4,0,0,0.906,66,50,0.01,0.5,5
-SimulatedAnnealing,T50_a0.5_i5,small_02.txt,3,8,4,99,40,4,0,0,0.897,66,50,0.01,0.5,5
-SimulatedAnnealing,T50_a0.5_i5,small_02.txt,3,8,5,1234,40,4,0,0,0.885,66,50,0.01,0.5,5
-SimulatedAnnealing,T50_a0.5_i5,small_02.txt,3,8,6,555,40,4,0,0,0.889,66,50,0.01,0.5,5
-SimulatedAnnealing,T50_a0.5_i5,small_02.txt,3,8,7,321,30,3,0,0,0.893,66,50,0.01,0.5,5
-SimulatedAnnealing,T50_a0.5_i5,small_02.txt,3,8,8,808,30,3,0,0,0.894,66,50,0.01,0.5,5
-SimulatedAnnealing,T50_a0.5_i5,small_02.txt,3,8,9,777,40,4,0,0,1.28,66,50,0.01,0.5,5
-SimulatedAnnealing,T50_a0.5_i5,small_02.txt,3,8,10,2024,40,4,0,0,0.935,66,50,0.01,0.5,5
-SimulatedAnnealing,T50_a0.7_i2,small_02.txt,3,8,1,42,40,4,0,0,0.703,49,50,0.01,0.7,2
-SimulatedAnnealing,T50_a0.7_i2,small_02.txt,3,8,2,7,40,4,0,0,0.679,49,50,0.01,0.7,2
-SimulatedAnnealing,T50_a0.7_i2,small_02.txt,3,8,3,13,30,3,0,0,0.719,49,50,0.01,0.7,2
-SimulatedAnnealing,T50_a0.7_i2,small_02.txt,3,8,4,99,40,4,0,0,0.661,49,50,0.01,0.7,2
-SimulatedAnnealing,T50_a0.7_i2,small_02.txt,3,8,5,1234,30,3,0,0,0.691,49,50,0.01,0.7,2
-SimulatedAnnealing,T50_a0.7_i2,small_02.txt,3,8,6,555,40,4,0,0,0.693,49,50,0.01,0.7,2
-SimulatedAnnealing,T50_a0.7_i2,small_02.txt,3,8,7,321,30,3,0,0,0.668,49,50,0.01,0.7,2
-SimulatedAnnealing,T50_a0.7_i2,small_02.txt,3,8,8,808,30,3,0,0,0.668,49,50,0.01,0.7,2
-SimulatedAnnealing,T50_a0.7_i2,small_02.txt,3,8,9,777,40,4,0,0,0.683,49,50,0.01,0.7,2
-SimulatedAnnealing,T50_a0.7_i2,small_02.txt,3,8,10,2024,40,4,0,0,0.663,49,50,0.01,0.7,2
-SimulatedAnnealing,T50_a0.7_i3,small_02.txt,3,8,1,42,40,4,0,0,1.025,73,50,0.01,0.7,3
-SimulatedAnnealing,T50_a0.7_i3,small_02.txt,3,8,2,7,40,4,0,0,1.076,73,50,0.01,0.7,3
-SimulatedAnnealing,T50_a0.7_i3,small_02.txt,3,8,3,13,30,3,0,0,1.153,73,50,0.01,0.7,3
-SimulatedAnnealing,T50_a0.7_i3,small_02.txt,3,8,4,99,30,3,0,0,0.978,73,50,0.01,0.7,3
-SimulatedAnnealing,T50_a0.7_i3,small_02.txt,3,8,5,1234,40,4,0,0,0.972,73,50,0.01,0.7,3
-SimulatedAnnealing,T50_a0.7_i3,small_02.txt,3,8,6,555,40,4,0,0,0.972,73,50,0.01,0.7,3
-SimulatedAnnealing,T50_a0.7_i3,small_02.txt,3,8,7,321,30,3,0,0,0.974,73,50,0.01,0.7,3
-SimulatedAnnealing,T50_a0.7_i3,small_02.txt,3,8,8,808,30,3,0,0,1.424,73,50,0.01,0.7,3
-SimulatedAnnealing,T50_a0.7_i3,small_02.txt,3,8,9,777,40,4,0,0,0.99,73,50,0.01,0.7,3
-SimulatedAnnealing,T50_a0.7_i3,small_02.txt,3,8,10,2024,40,4,0,0,1.223,73,50,0.01,0.7,3
-SimulatedAnnealing,T50_a0.7_i5,small_02.txt,3,8,1,42,30,3,0,0,1.894,121,50,0.01,0.7,5
-SimulatedAnnealing,T50_a0.7_i5,small_02.txt,3,8,2,7,30,3,0,0,1.844,121,50,0.01,0.7,5
-SimulatedAnnealing,T50_a0.7_i5,small_02.txt,3,8,3,13,30,3,0,0,1.611,121,50,0.01,0.7,5
-SimulatedAnnealing,T50_a0.7_i5,small_02.txt,3,8,4,99,30,3,0,0,1.865,121,50,0.01,0.7,5
-SimulatedAnnealing,T50_a0.7_i5,small_02.txt,3,8,5,1234,30,3,0,0,1.971,121,50,0.01,0.7,5
-SimulatedAnnealing,T50_a0.7_i5,small_02.txt,3,8,6,555,40,4,0,0,1.627,121,50,0.01,0.7,5
-SimulatedAnnealing,T50_a0.7_i5,small_02.txt,3,8,7,321,40,4,0,0,1.61,121,50,0.01,0.7,5
-SimulatedAnnealing,T50_a0.7_i5,small_02.txt,3,8,8,808,40,4,0,0,1.771,121,50,0.01,0.7,5
-SimulatedAnnealing,T50_a0.7_i5,small_02.txt,3,8,9,777,40,4,0,0,1.767,121,50,0.01,0.7,5
-SimulatedAnnealing,T50_a0.7_i5,small_02.txt,3,8,10,2024,40,4,0,0,1.619,121,50,0.01,0.7,5
-SimulatedAnnealing,T50_a0.9_i2,small_02.txt,3,8,1,42,30,3,0,0,2.648,163,50,0.01,0.9,2
-SimulatedAnnealing,T50_a0.9_i2,small_02.txt,3,8,2,7,30,3,0,0,2.298,163,50,0.01,0.9,2
-SimulatedAnnealing,T50_a0.9_i2,small_02.txt,3,8,3,13,40,4,0,0,2.177,163,50,0.01,0.9,2
-SimulatedAnnealing,T50_a0.9_i2,small_02.txt,3,8,4,99,30,3,0,0,2.181,163,50,0.01,0.9,2
-SimulatedAnnealing,T50_a0.9_i2,small_02.txt,3,8,5,1234,40,4,0,0,2.182,163,50,0.01,0.9,2
-SimulatedAnnealing,T50_a0.9_i2,small_02.txt,3,8,6,555,30,3,0,0,2.234,163,50,0.01,0.9,2
-SimulatedAnnealing,T50_a0.9_i2,small_02.txt,3,8,7,321,30,3,0,0,2.171,163,50,0.01,0.9,2
-SimulatedAnnealing,T50_a0.9_i2,small_02.txt,3,8,8,808,30,3,0,0,2.17,163,50,0.01,0.9,2
-SimulatedAnnealing,T50_a0.9_i2,small_02.txt,3,8,9,777,30,3,0,0,2.161,163,50,0.01,0.9,2
-SimulatedAnnealing,T50_a0.9_i2,small_02.txt,3,8,10,2024,30,3,0,0,2.17,163,50,0.01,0.9,2
-SimulatedAnnealing,T50_a0.9_i3,small_02.txt,3,8,1,42,30,3,0,0,3.442,244,50,0.01,0.9,3
-SimulatedAnnealing,T50_a0.9_i3,small_02.txt,3,8,2,7,30,3,0,0,3.247,244,50,0.01,0.9,3
-SimulatedAnnealing,T50_a0.9_i3,small_02.txt,3,8,3,13,30,3,0,0,3.232,244,50,0.01,0.9,3
-SimulatedAnnealing,T50_a0.9_i3,small_02.txt,3,8,4,99,30,3,0,0,3.187,244,50,0.01,0.9,3
-SimulatedAnnealing,T50_a0.9_i3,small_02.txt,3,8,5,1234,30,3,0,0,3.226,244,50,0.01,0.9,3
-SimulatedAnnealing,T50_a0.9_i3,small_02.txt,3,8,6,555,40,4,0,0,3.204,244,50,0.01,0.9,3
-SimulatedAnnealing,T50_a0.9_i3,small_02.txt,3,8,7,321,30,3,0,0,3.209,244,50,0.01,0.9,3
-SimulatedAnnealing,T50_a0.9_i3,small_02.txt,3,8,8,808,30,3,0,0,3.262,244,50,0.01,0.9,3
-SimulatedAnnealing,T50_a0.9_i3,small_02.txt,3,8,9,777,30,3,0,0,3.206,244,50,0.01,0.9,3
-SimulatedAnnealing,T50_a0.9_i3,small_02.txt,3,8,10,2024,40,4,0,0,3.198,244,50,0.01,0.9,3
-SimulatedAnnealing,T50_a0.9_i5,small_02.txt,3,8,1,42,30,3,0,0,5.786,406,50,0.01,0.9,5
-SimulatedAnnealing,T50_a0.9_i5,small_02.txt,3,8,2,7,30,3,0,0,5.438,406,50,0.01,0.9,5
-SimulatedAnnealing,T50_a0.9_i5,small_02.txt,3,8,3,13,30,3,0,0,5.336,406,50,0.01,0.9,5
-SimulatedAnnealing,T50_a0.9_i5,small_02.txt,3,8,4,99,30,3,0,0,5.345,406,50,0.01,0.9,5
-SimulatedAnnealing,T50_a0.9_i5,small_02.txt,3,8,5,1234,30,3,0,0,5.531,406,50,0.01,0.9,5
-SimulatedAnnealing,T50_a0.9_i5,small_02.txt,3,8,6,555,30,3,0,0,5.43,406,50,0.01,0.9,5
-SimulatedAnnealing,T50_a0.9_i5,small_02.txt,3,8,7,321,30,3,0,0,5.43,406,50,0.01,0.9,5
-SimulatedAnnealing,T50_a0.9_i5,small_02.txt,3,8,8,808,30,3,0,0,5.574,406,50,0.01,0.9,5
-SimulatedAnnealing,T50_a0.9_i5,small_02.txt,3,8,9,777,30,3,0,0,5.426,406,50,0.01,0.9,5
-SimulatedAnnealing,T50_a0.9_i5,small_02.txt,3,8,10,2024,30,3,0,0,5.423,406,50,0.01,0.9,5
-SimulatedAnnealing,T100_a0.5_i2,small_02.txt,3,8,1,42,40,4,0,0,0.543,29,100,0.01,0.5,2
-SimulatedAnnealing,T100_a0.5_i2,small_02.txt,3,8,2,7,40,4,0,0,0.545,29,100,0.01,0.5,2
-SimulatedAnnealing,T100_a0.5_i2,small_02.txt,3,8,3,13,40,4,0,0,0.454,29,100,0.01,0.5,2
-SimulatedAnnealing,T100_a0.5_i2,small_02.txt,3,8,4,99,40,4,0,0,0.547,29,100,0.01,0.5,2
-SimulatedAnnealing,T100_a0.5_i2,small_02.txt,3,8,5,1234,60,4,0,1,0.455,29,100,0.01,0.5,2
-SimulatedAnnealing,T100_a0.5_i2,small_02.txt,3,8,6,555,40,4,0,0,0.397,29,100,0.01,0.5,2
-SimulatedAnnealing,T100_a0.5_i2,small_02.txt,3,8,7,321,30,3,0,0,0.397,29,100,0.01,0.5,2
-SimulatedAnnealing,T100_a0.5_i2,small_02.txt,3,8,8,808,40,4,0,0,0.402,29,100,0.01,0.5,2
-SimulatedAnnealing,T100_a0.5_i2,small_02.txt,3,8,9,777,40,4,0,0,0.394,29,100,0.01,0.5,2
-SimulatedAnnealing,T100_a0.5_i2,small_02.txt,3,8,10,2024,50,5,0,0,0.396,29,100,0.01,0.5,2
-SimulatedAnnealing,T100_a0.5_i3,small_02.txt,3,8,1,42,40,4,0,0,0.773,43,100,0.01,0.5,3
-SimulatedAnnealing,T100_a0.5_i3,small_02.txt,3,8,2,7,40,4,0,0,0.715,43,100,0.01,0.5,3
-SimulatedAnnealing,T100_a0.5_i3,small_02.txt,3,8,3,13,30,3,0,0,0.668,43,100,0.01,0.5,3
-SimulatedAnnealing,T100_a0.5_i3,small_02.txt,3,8,4,99,40,4,0,0,0.584,43,100,0.01,0.5,3
-SimulatedAnnealing,T100_a0.5_i3,small_02.txt,3,8,5,1234,40,4,0,0,0.581,43,100,0.01,0.5,3
-SimulatedAnnealing,T100_a0.5_i3,small_02.txt,3,8,6,555,40,4,0,0,0.599,43,100,0.01,0.5,3
-SimulatedAnnealing,T100_a0.5_i3,small_02.txt,3,8,7,321,30,3,0,0,0.733,43,100,0.01,0.5,3
-SimulatedAnnealing,T100_a0.5_i3,small_02.txt,3,8,8,808,40,4,0,0,0.606,43,100,0.01,0.5,3
-SimulatedAnnealing,T100_a0.5_i3,small_02.txt,3,8,9,777,60,4,0,1,0.674,43,100,0.01,0.5,3
-SimulatedAnnealing,T100_a0.5_i3,small_02.txt,3,8,10,2024,40,4,0,0,0.583,43,100,0.01,0.5,3
-SimulatedAnnealing,T100_a0.5_i5,small_02.txt,3,8,1,42,30,3,0,0,0.998,71,100,0.01,0.5,5
-SimulatedAnnealing,T100_a0.5_i5,small_02.txt,3,8,2,7,30,3,0,0,1.025,71,100,0.01,0.5,5
-SimulatedAnnealing,T100_a0.5_i5,small_02.txt,3,8,3,13,30,3,0,0,0.961,71,100,0.01,0.5,5
-SimulatedAnnealing,T100_a0.5_i5,small_02.txt,3,8,4,99,30,3,0,0,0.949,71,100,0.01,0.5,5
-SimulatedAnnealing,T100_a0.5_i5,small_02.txt,3,8,5,1234,40,4,0,0,0.943,71,100,0.01,0.5,5
-SimulatedAnnealing,T100_a0.5_i5,small_02.txt,3,8,6,555,40,4,0,0,0.943,71,100,0.01,0.5,5
-SimulatedAnnealing,T100_a0.5_i5,small_02.txt,3,8,7,321,40,4,0,0,0.961,71,100,0.01,0.5,5
-SimulatedAnnealing,T100_a0.5_i5,small_02.txt,3,8,8,808,40,4,0,0,1.008,71,100,0.01,0.5,5
-SimulatedAnnealing,T100_a0.5_i5,small_02.txt,3,8,9,777,40,4,0,0,0.941,71,100,0.01,0.5,5
-SimulatedAnnealing,T100_a0.5_i5,small_02.txt,3,8,10,2024,40,4,0,0,0.951,71,100,0.01,0.5,5
-SimulatedAnnealing,T100_a0.7_i2,small_02.txt,3,8,1,42,40,4,0,0,0.893,53,100,0.01,0.7,2
-SimulatedAnnealing,T100_a0.7_i2,small_02.txt,3,8,2,7,40,4,0,0,0.727,53,100,0.01,0.7,2
-SimulatedAnnealing,T100_a0.7_i2,small_02.txt,3,8,3,13,30,3,0,0,0.935,53,100,0.01,0.7,2
-SimulatedAnnealing,T100_a0.7_i2,small_02.txt,3,8,4,99,40,4,0,0,0.719,53,100,0.01,0.7,2
-SimulatedAnnealing,T100_a0.7_i2,small_02.txt,3,8,5,1234,40,4,0,0,0.716,53,100,0.01,0.7,2
-SimulatedAnnealing,T100_a0.7_i2,small_02.txt,3,8,6,555,50,5,0,0,0.705,53,100,0.01,0.7,2
-SimulatedAnnealing,T100_a0.7_i2,small_02.txt,3,8,7,321,40,4,0,0,0.711,53,100,0.01,0.7,2
-SimulatedAnnealing,T100_a0.7_i2,small_02.txt,3,8,8,808,30,3,0,0,0.705,53,100,0.01,0.7,2
-SimulatedAnnealing,T100_a0.7_i2,small_02.txt,3,8,9,777,50,5,0,0,0.704,53,100,0.01,0.7,2
-SimulatedAnnealing,T100_a0.7_i2,small_02.txt,3,8,10,2024,40,4,0,0,0.705,53,100,0.01,0.7,2
-SimulatedAnnealing,T100_a0.7_i3,small_02.txt,3,8,1,42,30,3,0,0,1.297,79,100,0.01,0.7,3
-SimulatedAnnealing,T100_a0.7_i3,small_02.txt,3,8,2,7,30,3,0,0,1.287,79,100,0.01,0.7,3
-SimulatedAnnealing,T100_a0.7_i3,small_02.txt,3,8,3,13,30,3,0,0,1.143,79,100,0.01,0.7,3
-SimulatedAnnealing,T100_a0.7_i3,small_02.txt,3,8,4,99,30,3,0,0,1.089,79,100,0.01,0.7,3
-SimulatedAnnealing,T100_a0.7_i3,small_02.txt,3,8,5,1234,40,4,0,0,1.07,79,100,0.01,0.7,3
-SimulatedAnnealing,T100_a0.7_i3,small_02.txt,3,8,6,555,40,4,0,0,1.053,79,100,0.01,0.7,3
-SimulatedAnnealing,T100_a0.7_i3,small_02.txt,3,8,7,321,40,4,0,0,1.059,79,100,0.01,0.7,3
-SimulatedAnnealing,T100_a0.7_i3,small_02.txt,3,8,8,808,40,4,0,0,1.051,79,100,0.01,0.7,3
-SimulatedAnnealing,T100_a0.7_i3,small_02.txt,3,8,9,777,50,3,0,1,1.061,79,100,0.01,0.7,3
-SimulatedAnnealing,T100_a0.7_i3,small_02.txt,3,8,10,2024,40,4,0,0,1.056,79,100,0.01,0.7,3
-SimulatedAnnealing,T100_a0.7_i5,small_02.txt,3,8,1,42,30,3,0,0,2.01,131,100,0.01,0.7,5
-SimulatedAnnealing,T100_a0.7_i5,small_02.txt,3,8,2,7,30,3,0,0,1.869,131,100,0.01,0.7,5
-SimulatedAnnealing,T100_a0.7_i5,small_02.txt,3,8,3,13,30,3,0,0,1.739,131,100,0.01,0.7,5
-SimulatedAnnealing,T100_a0.7_i5,small_02.txt,3,8,4,99,30,3,0,0,1.734,131,100,0.01,0.7,5
-SimulatedAnnealing,T100_a0.7_i5,small_02.txt,3,8,5,1234,40,4,0,0,1.738,131,100,0.01,0.7,5
-SimulatedAnnealing,T100_a0.7_i5,small_02.txt,3,8,6,555,30,3,0,0,1.945,131,100,0.01,0.7,5
-SimulatedAnnealing,T100_a0.7_i5,small_02.txt,3,8,7,321,40,4,0,0,1.915,131,100,0.01,0.7,5
-SimulatedAnnealing,T100_a0.7_i5,small_02.txt,3,8,8,808,40,4,0,0,1.743,131,100,0.01,0.7,5
-SimulatedAnnealing,T100_a0.7_i5,small_02.txt,3,8,9,777,30,3,0,0,1.726,131,100,0.01,0.7,5
-SimulatedAnnealing,T100_a0.7_i5,small_02.txt,3,8,10,2024,30,3,0,0,1.722,131,100,0.01,0.7,5
-SimulatedAnnealing,T100_a0.9_i2,small_02.txt,3,8,1,42,30,3,0,0,2.833,177,100,0.01,0.9,2
-SimulatedAnnealing,T100_a0.9_i2,small_02.txt,3,8,2,7,30,3,0,0,2.399,177,100,0.01,0.9,2
-SimulatedAnnealing,T100_a0.9_i2,small_02.txt,3,8,3,13,40,4,0,0,2.336,177,100,0.01,0.9,2
-SimulatedAnnealing,T100_a0.9_i2,small_02.txt,3,8,4,99,30,3,0,0,2.751,177,100,0.01,0.9,2
-SimulatedAnnealing,T100_a0.9_i2,small_02.txt,3,8,5,1234,30,3,0,0,2.462,177,100,0.01,0.9,2
-SimulatedAnnealing,T100_a0.9_i2,small_02.txt,3,8,6,555,30,3,0,0,2.44,177,100,0.01,0.9,2
-SimulatedAnnealing,T100_a0.9_i2,small_02.txt,3,8,7,321,40,4,0,0,2.376,177,100,0.01,0.9,2
-SimulatedAnnealing,T100_a0.9_i2,small_02.txt,3,8,8,808,30,3,0,0,2.352,177,100,0.01,0.9,2
-SimulatedAnnealing,T100_a0.9_i2,small_02.txt,3,8,9,777,30,3,0,0,2.352,177,100,0.01,0.9,2
-SimulatedAnnealing,T100_a0.9_i2,small_02.txt,3,8,10,2024,30,3,0,0,2.358,177,100,0.01,0.9,2
-SimulatedAnnealing,T100_a0.9_i3,small_02.txt,3,8,1,42,30,3,0,0,3.957,265,100,0.01,0.9,3
-SimulatedAnnealing,T100_a0.9_i3,small_02.txt,3,8,2,7,40,4,0,0,3.501,265,100,0.01,0.9,3
-SimulatedAnnealing,T100_a0.9_i3,small_02.txt,3,8,3,13,30,3,0,0,3.496,265,100,0.01,0.9,3
-SimulatedAnnealing,T100_a0.9_i3,small_02.txt,3,8,4,99,30,3,0,0,3.509,265,100,0.01,0.9,3
-SimulatedAnnealing,T100_a0.9_i3,small_02.txt,3,8,5,1234,30,3,0,0,3.692,265,100,0.01,0.9,3
-SimulatedAnnealing,T100_a0.9_i3,small_02.txt,3,8,6,555,30,3,0,0,3.508,265,100,0.01,0.9,3
-SimulatedAnnealing,T100_a0.9_i3,small_02.txt,3,8,7,321,30,3,0,0,3.513,265,100,0.01,0.9,3
-SimulatedAnnealing,T100_a0.9_i3,small_02.txt,3,8,8,808,30,3,0,0,3.502,265,100,0.01,0.9,3
-SimulatedAnnealing,T100_a0.9_i3,small_02.txt,3,8,9,777,30,3,0,0,3.509,265,100,0.01,0.9,3
-SimulatedAnnealing,T100_a0.9_i3,small_02.txt,3,8,10,2024,30,3,0,0,3.606,265,100,0.01,0.9,3
-SimulatedAnnealing,T100_a0.9_i5,small_02.txt,3,8,1,42,30,3,0,0,5.95,441,100,0.01,0.9,5
-SimulatedAnnealing,T100_a0.9_i5,small_02.txt,3,8,2,7,40,4,0,0,5.811,441,100,0.01,0.9,5
-SimulatedAnnealing,T100_a0.9_i5,small_02.txt,3,8,3,13,30,3,0,0,5.887,441,100,0.01,0.9,5
-SimulatedAnnealing,T100_a0.9_i5,small_02.txt,3,8,4,99,30,3,0,0,5.881,441,100,0.01,0.9,5
-SimulatedAnnealing,T100_a0.9_i5,small_02.txt,3,8,5,1234,40,4,0,0,5.963,441,100,0.01,0.9,5
-SimulatedAnnealing,T100_a0.9_i5,small_02.txt,3,8,6,555,30,3,0,0,6.005,441,100,0.01,0.9,5
-SimulatedAnnealing,T100_a0.9_i5,small_02.txt,3,8,7,321,30,3,0,0,5.951,441,100,0.01,0.9,5
-SimulatedAnnealing,T100_a0.9_i5,small_02.txt,3,8,8,808,30,3,0,0,5.926,441,100,0.01,0.9,5
-SimulatedAnnealing,T100_a0.9_i5,small_02.txt,3,8,9,777,30,3,0,0,5.996,441,100,0.01,0.9,5
-SimulatedAnnealing,T100_a0.9_i5,small_02.txt,3,8,10,2024,30,3,0,0,5.947,441,100,0.01,0.9,5
-SimulatedAnnealing,T200_a0.5_i2,small_02.txt,3,8,1,42,40,4,0,0,0.586,31,200,0.01,0.5,2
-SimulatedAnnealing,T200_a0.5_i2,small_02.txt,3,8,2,7,40,4,0,0,0.536,31,200,0.01,0.5,2
-SimulatedAnnealing,T200_a0.5_i2,small_02.txt,3,8,3,13,40,4,0,0,0.452,31,200,0.01,0.5,2
-SimulatedAnnealing,T200_a0.5_i2,small_02.txt,3,8,4,99,40,4,0,0,0.582,31,200,0.01,0.5,2
-SimulatedAnnealing,T200_a0.5_i2,small_02.txt,3,8,5,1234,60,4,0,1,0.432,31,200,0.01,0.5,2
-SimulatedAnnealing,T200_a0.5_i2,small_02.txt,3,8,6,555,40,4,0,0,0.419,31,200,0.01,0.5,2
-SimulatedAnnealing,T200_a0.5_i2,small_02.txt,3,8,7,321,40,4,0,0,0.426,31,200,0.01,0.5,2
-SimulatedAnnealing,T200_a0.5_i2,small_02.txt,3,8,8,808,40,4,0,0,0.518,31,200,0.01,0.5,2
-SimulatedAnnealing,T200_a0.5_i2,small_02.txt,3,8,9,777,60,4,0,1,0.534,31,200,0.01,0.5,2
-SimulatedAnnealing,T200_a0.5_i2,small_02.txt,3,8,10,2024,50,5,0,0,0.473,31,200,0.01,0.5,2
-SimulatedAnnealing,T200_a0.5_i3,small_02.txt,3,8,1,42,40,4,0,0,0.673,46,200,0.01,0.5,3
-SimulatedAnnealing,T200_a0.5_i3,small_02.txt,3,8,2,7,40,4,0,0,0.636,46,200,0.01,0.5,3
-SimulatedAnnealing,T200_a0.5_i3,small_02.txt,3,8,3,13,30,3,0,0,0.719,46,200,0.01,0.5,3
-SimulatedAnnealing,T200_a0.5_i3,small_02.txt,3,8,4,99,40,4,0,0,0.709,46,200,0.01,0.5,3
-SimulatedAnnealing,T200_a0.5_i3,small_02.txt,3,8,5,1234,40,4,0,0,0.702,46,200,0.01,0.5,3
-SimulatedAnnealing,T200_a0.5_i3,small_02.txt,3,8,6,555,50,5,0,0,0.697,46,200,0.01,0.5,3
-SimulatedAnnealing,T200_a0.5_i3,small_02.txt,3,8,7,321,40,4,0,0,0.707,46,200,0.01,0.5,3
-SimulatedAnnealing,T200_a0.5_i3,small_02.txt,3,8,8,808,30,3,0,0,0.782,46,200,0.01,0.5,3
-SimulatedAnnealing,T200_a0.5_i3,small_02.txt,3,8,9,777,30,3,0,0,0.78,46,200,0.01,0.5,3
-SimulatedAnnealing,T200_a0.5_i3,small_02.txt,3,8,10,2024,40,4,0,0,0.668,46,200,0.01,0.5,3
-SimulatedAnnealing,T200_a0.5_i5,small_02.txt,3,8,1,42,30,3,0,0,1.236,76,200,0.01,0.5,5
-SimulatedAnnealing,T200_a0.5_i5,small_02.txt,3,8,2,7,30,3,0,0,1.19,76,200,0.01,0.5,5
-SimulatedAnnealing,T200_a0.5_i5,small_02.txt,3,8,3,13,30,3,0,0,1.147,76,200,0.01,0.5,5
-SimulatedAnnealing,T200_a0.5_i5,small_02.txt,3,8,4,99,40,4,0,0,1.141,76,200,0.01,0.5,5
-SimulatedAnnealing,T200_a0.5_i5,small_02.txt,3,8,5,1234,30,3,0,0,1.127,76,200,0.01,0.5,5
-SimulatedAnnealing,T200_a0.5_i5,small_02.txt,3,8,6,555,40,4,0,0,1.136,76,200,0.01,0.5,5
-SimulatedAnnealing,T200_a0.5_i5,small_02.txt,3,8,7,321,40,4,0,0,1.133,76,200,0.01,0.5,5
-SimulatedAnnealing,T200_a0.5_i5,small_02.txt,3,8,8,808,30,3,0,0,1.385,76,200,0.01,0.5,5
-SimulatedAnnealing,T200_a0.5_i5,small_02.txt,3,8,9,777,40,4,0,0,1.179,76,200,0.01,0.5,5
-SimulatedAnnealing,T200_a0.5_i5,small_02.txt,3,8,10,2024,30,3,0,0,1.152,76,200,0.01,0.5,5
-SimulatedAnnealing,T200_a0.7_i2,small_02.txt,3,8,1,42,30,3,0,0,0.928,57,200,0.01,0.7,2
-SimulatedAnnealing,T200_a0.7_i2,small_02.txt,3,8,2,7,40,4,0,0,0.808,57,200,0.01,0.7,2
-SimulatedAnnealing,T200_a0.7_i2,small_02.txt,3,8,3,13,30,3,0,0,0.904,57,200,0.01,0.7,2
-SimulatedAnnealing,T200_a0.7_i2,small_02.txt,3,8,4,99,30,3,0,0,0.906,57,200,0.01,0.7,2
-SimulatedAnnealing,T200_a0.7_i2,small_02.txt,3,8,5,1234,40,4,0,0,0.856,57,200,0.01,0.7,2
-SimulatedAnnealing,T200_a0.7_i2,small_02.txt,3,8,6,555,40,4,0,0,0.874,57,200,0.01,0.7,2
-SimulatedAnnealing,T200_a0.7_i2,small_02.txt,3,8,7,321,40,4,0,0,0.891,57,200,0.01,0.7,2
-SimulatedAnnealing,T200_a0.7_i2,small_02.txt,3,8,8,808,40,4,0,0,0.856,57,200,0.01,0.7,2
-SimulatedAnnealing,T200_a0.7_i2,small_02.txt,3,8,9,777,40,4,0,0,0.885,57,200,0.01,0.7,2
-SimulatedAnnealing,T200_a0.7_i2,small_02.txt,3,8,10,2024,40,4,0,0,0.883,57,200,0.01,0.7,2
-SimulatedAnnealing,T200_a0.7_i3,small_02.txt,3,8,1,42,30,3,0,0,1.313,85,200,0.01,0.7,3
-SimulatedAnnealing,T200_a0.7_i3,small_02.txt,3,8,2,7,30,3,0,0,1.311,85,200,0.01,0.7,3
-SimulatedAnnealing,T200_a0.7_i3,small_02.txt,3,8,3,13,40,4,0,0,1.287,85,200,0.01,0.7,3
-SimulatedAnnealing,T200_a0.7_i3,small_02.txt,3,8,4,99,40,4,0,0,1.369,85,200,0.01,0.7,3
-SimulatedAnnealing,T200_a0.7_i3,small_02.txt,3,8,5,1234,40,4,0,0,1.329,85,200,0.01,0.7,3
-SimulatedAnnealing,T200_a0.7_i3,small_02.txt,3,8,6,555,40,4,0,0,1.378,85,200,0.01,0.7,3
-SimulatedAnnealing,T200_a0.7_i3,small_02.txt,3,8,7,321,40,4,0,0,1.287,85,200,0.01,0.7,3
-SimulatedAnnealing,T200_a0.7_i3,small_02.txt,3,8,8,808,30,3,0,0,1.32,85,200,0.01,0.7,3
-SimulatedAnnealing,T200_a0.7_i3,small_02.txt,3,8,9,777,30,3,0,0,1.335,85,200,0.01,0.7,3
-SimulatedAnnealing,T200_a0.7_i3,small_02.txt,3,8,10,2024,40,4,0,0,1.31,85,200,0.01,0.7,3
-SimulatedAnnealing,T200_a0.7_i5,small_02.txt,3,8,1,42,40,4,0,0,2.137,141,200,0.01,0.7,5
-SimulatedAnnealing,T200_a0.7_i5,small_02.txt,3,8,2,7,30,3,0,0,2.105,141,200,0.01,0.7,5
-SimulatedAnnealing,T200_a0.7_i5,small_02.txt,3,8,3,13,30,3,0,0,2.123,141,200,0.01,0.7,5
-SimulatedAnnealing,T200_a0.7_i5,small_02.txt,3,8,4,99,30,3,0,0,2.243,141,200,0.01,0.7,5
-SimulatedAnnealing,T200_a0.7_i5,small_02.txt,3,8,5,1234,30,3,0,0,1.939,141,200,0.01,0.7,5
-SimulatedAnnealing,T200_a0.7_i5,small_02.txt,3,8,6,555,30,3,0,0,1.913,141,200,0.01,0.7,5
-SimulatedAnnealing,T200_a0.7_i5,small_02.txt,3,8,7,321,30,3,0,0,1.965,141,200,0.01,0.7,5
-SimulatedAnnealing,T200_a0.7_i5,small_02.txt,3,8,8,808,30,3,0,0,2.139,141,200,0.01,0.7,5
-SimulatedAnnealing,T200_a0.7_i5,small_02.txt,3,8,9,777,40,4,0,0,2.152,141,200,0.01,0.7,5
-SimulatedAnnealing,T200_a0.7_i5,small_02.txt,3,8,10,2024,40,4,0,0,2.145,141,200,0.01,0.7,5
-SimulatedAnnealing,T200_a0.9_i2,small_02.txt,3,8,1,42,30,3,0,0,2.939,189,200,0.01,0.9,2
-SimulatedAnnealing,T200_a0.9_i2,small_02.txt,3,8,2,7,40,4,0,0,2.626,189,200,0.01,0.9,2
-SimulatedAnnealing,T200_a0.9_i2,small_02.txt,3,8,3,13,30,3,0,0,2.818,189,200,0.01,0.9,2
-SimulatedAnnealing,T200_a0.9_i2,small_02.txt,3,8,4,99,30,3,0,0,2.86,189,200,0.01,0.9,2
-SimulatedAnnealing,T200_a0.9_i2,small_02.txt,3,8,5,1234,40,4,0,0,2.876,189,200,0.01,0.9,2
-SimulatedAnnealing,T200_a0.9_i2,small_02.txt,3,8,6,555,30,3,0,0,2.86,189,200,0.01,0.9,2
-SimulatedAnnealing,T200_a0.9_i2,small_02.txt,3,8,7,321,30,3,0,0,3.03,189,200,0.01,0.9,2
-SimulatedAnnealing,T200_a0.9_i2,small_02.txt,3,8,8,808,30,3,0,0,2.983,189,200,0.01,0.9,2
-SimulatedAnnealing,T200_a0.9_i2,small_02.txt,3,8,9,777,30,3,0,0,2.88,189,200,0.01,0.9,2
-SimulatedAnnealing,T200_a0.9_i2,small_02.txt,3,8,10,2024,30,3,0,0,2.841,189,200,0.01,0.9,2
-SimulatedAnnealing,T200_a0.9_i3,small_02.txt,3,8,1,42,30,3,0,0,4.33,283,200,0.01,0.9,3
-SimulatedAnnealing,T200_a0.9_i3,small_02.txt,3,8,2,7,30,3,0,0,4.422,283,200,0.01,0.9,3
-SimulatedAnnealing,T200_a0.9_i3,small_02.txt,3,8,3,13,30,3,0,0,4.203,283,200,0.01,0.9,3
-SimulatedAnnealing,T200_a0.9_i3,small_02.txt,3,8,4,99,30,3,0,0,4.21,283,200,0.01,0.9,3
-SimulatedAnnealing,T200_a0.9_i3,small_02.txt,3,8,5,1234,30,3,0,0,4.267,283,200,0.01,0.9,3
-SimulatedAnnealing,T200_a0.9_i3,small_02.txt,3,8,6,555,30,3,0,0,4.571,283,200,0.01,0.9,3
-SimulatedAnnealing,T200_a0.9_i3,small_02.txt,3,8,7,321,30,3,0,0,4.398,283,200,0.01,0.9,3
-SimulatedAnnealing,T200_a0.9_i3,small_02.txt,3,8,8,808,40,4,0,0,4.335,283,200,0.01,0.9,3
-SimulatedAnnealing,T200_a0.9_i3,small_02.txt,3,8,9,777,30,3,0,0,4.294,283,200,0.01,0.9,3
-SimulatedAnnealing,T200_a0.9_i3,small_02.txt,3,8,10,2024,30,3,0,0,4.656,283,200,0.01,0.9,3
-SimulatedAnnealing,T200_a0.9_i5,small_02.txt,3,8,1,42,30,3,0,0,7.051,471,200,0.01,0.9,5
-SimulatedAnnealing,T200_a0.9_i5,small_02.txt,3,8,2,7,30,3,0,0,7.5,471,200,0.01,0.9,5
-SimulatedAnnealing,T200_a0.9_i5,small_02.txt,3,8,3,13,30,3,0,0,7.135,471,200,0.01,0.9,5
-SimulatedAnnealing,T200_a0.9_i5,small_02.txt,3,8,4,99,30,3,0,0,7.094,471,200,0.01,0.9,5
-SimulatedAnnealing,T200_a0.9_i5,small_02.txt,3,8,5,1234,30,3,0,0,6.465,471,200,0.01,0.9,5
-SimulatedAnnealing,T200_a0.9_i5,small_02.txt,3,8,6,555,30,3,0,0,6.377,471,200,0.01,0.9,5
-SimulatedAnnealing,T200_a0.9_i5,small_02.txt,3,8,7,321,30,3,0,0,6.52,471,200,0.01,0.9,5
-SimulatedAnnealing,T200_a0.9_i5,small_02.txt,3,8,8,808,30,3,0,0,6.493,471,200,0.01,0.9,5
-SimulatedAnnealing,T200_a0.9_i5,small_02.txt,3,8,9,777,30,3,0,0,6.5,471,200,0.01,0.9,5
-SimulatedAnnealing,T200_a0.9_i5,small_02.txt,3,8,10,2024,30,3,0,0,6.596,471,200,0.01,0.9,5
+algoritmo,configuracion,archivo,N,P,corrida,semilla,costoFinal,solucion,conflictosMachoMacho,conflictosMachoHembraCelo,enfermosFueraPrimeraFila,tiempoMs,solucionesEvaluadas,temperatura_inicial,temperatura_minima,alpha,iteraciones_por_temperatura
+SimulatedAnnealing,T50_a0.5_i2,small_01.txt,3,8,1,42,0,"[6, 8, 7, 1, 5, 2, 4, 0]",0,0,0,0.468,27,50,0.01,0.5,2
+SimulatedAnnealing,T50_a0.5_i2,small_01.txt,3,8,2,7,0,"[2, 0, 3, 1, 5, 4, 6, 8]",0,0,0,0.385,27,50,0.01,0.5,2
+SimulatedAnnealing,T50_a0.5_i2,small_01.txt,3,8,3,13,40,"[3, 2, 7, 4, 5, 6, 1, 8]",2,0,1,0.374,27,50,0.01,0.5,2
+SimulatedAnnealing,T50_a0.5_i2,small_01.txt,3,8,4,99,20,"[8, 3, 4, 2, 7, 5, 6, 1]",2,0,0,0.378,27,50,0.01,0.5,2
+SimulatedAnnealing,T50_a0.5_i2,small_01.txt,3,8,5,1234,30,"[8, 5, 3, 0, 4, 1, 7, 6]",3,0,0,0.417,27,50,0.01,0.5,2
+SimulatedAnnealing,T50_a0.5_i2,small_01.txt,3,8,6,555,0,"[2, 8, 7, 1, 3, 6, 0, 4]",0,0,0,0.389,27,50,0.01,0.5,2
+SimulatedAnnealing,T50_a0.5_i2,small_01.txt,3,8,7,321,20,"[2, 3, 7, 1, 4, 8, 6, 0]",2,0,0,0.375,27,50,0.01,0.5,2
+SimulatedAnnealing,T50_a0.5_i2,small_01.txt,3,8,8,808,20,"[7, 2, 8, 1, 5, 4, 0, 6]",2,0,0,0.377,27,50,0.01,0.5,2
+SimulatedAnnealing,T50_a0.5_i2,small_01.txt,3,8,9,777,40,"[6, 0, 1, 5, 4, 2, 8, 7]",2,0,1,0.389,27,50,0.01,0.5,2
+SimulatedAnnealing,T50_a0.5_i2,small_01.txt,3,8,10,2024,20,"[0, 3, 4, 1, 6, 7, 5, 2]",2,0,0,0.375,27,50,0.01,0.5,2
+SimulatedAnnealing,T50_a0.5_i3,small_01.txt,3,8,1,42,20,"[7, 6, 4, 1, 3, 0, 2, 5]",2,0,0,0.646,40,50,0.01,0.5,3
+SimulatedAnnealing,T50_a0.5_i3,small_01.txt,3,8,2,7,0,"[2, 0, 3, 1, 5, 4, 6, 8]",0,0,0,0.551,40,50,0.01,0.5,3
+SimulatedAnnealing,T50_a0.5_i3,small_01.txt,3,8,3,13,40,"[3, 2, 7, 4, 5, 6, 1, 8]",2,0,1,0.59,40,50,0.01,0.5,3
+SimulatedAnnealing,T50_a0.5_i3,small_01.txt,3,8,4,99,20,"[8, 3, 4, 2, 7, 5, 6, 1]",2,0,0,0.562,40,50,0.01,0.5,3
+SimulatedAnnealing,T50_a0.5_i3,small_01.txt,3,8,5,1234,20,"[3, 8, 2, 0, 4, 6, 1, 5]",2,0,0,0.555,40,50,0.01,0.5,3
+SimulatedAnnealing,T50_a0.5_i3,small_01.txt,3,8,6,555,0,"[2, 8, 7, 1, 3, 6, 0, 4]",0,0,0,0.58,40,50,0.01,0.5,3
+SimulatedAnnealing,T50_a0.5_i3,small_01.txt,3,8,7,321,20,"[2, 3, 7, 1, 4, 8, 6, 0]",2,0,0,0.55,40,50,0.01,0.5,3
+SimulatedAnnealing,T50_a0.5_i3,small_01.txt,3,8,8,808,20,"[7, 2, 8, 1, 5, 4, 0, 6]",2,0,0,0.548,40,50,0.01,0.5,3
+SimulatedAnnealing,T50_a0.5_i3,small_01.txt,3,8,9,777,30,"[8, 3, 7, 2, 1, 0, 5, 6]",3,0,0,0.541,40,50,0.01,0.5,3
+SimulatedAnnealing,T50_a0.5_i3,small_01.txt,3,8,10,2024,40,"[0, 3, 6, 1, 8, 4, 5, 2]",4,0,0,0.55,40,50,0.01,0.5,3
+SimulatedAnnealing,T50_a0.5_i5,small_01.txt,3,8,1,42,20,"[1, 6, 3, 2, 4, 7, 0, 5]",2,0,0,0.927,66,50,0.01,0.5,5
+SimulatedAnnealing,T50_a0.5_i5,small_01.txt,3,8,2,7,20,"[2, 0, 4, 1, 7, 3, 6, 8]",2,0,0,0.905,66,50,0.01,0.5,5
+SimulatedAnnealing,T50_a0.5_i5,small_01.txt,3,8,3,13,0,"[2, 0, 7, 1, 5, 8, 4, 6]",0,0,0,0.894,66,50,0.01,0.5,5
+SimulatedAnnealing,T50_a0.5_i5,small_01.txt,3,8,4,99,20,"[8, 3, 4, 2, 7, 5, 6, 1]",2,0,0,0.893,66,50,0.01,0.5,5
+SimulatedAnnealing,T50_a0.5_i5,small_01.txt,3,8,5,1234,20,"[5, 6, 4, 0, 8, 7, 1, 3]",2,0,0,1.054,66,50,0.01,0.5,5
+SimulatedAnnealing,T50_a0.5_i5,small_01.txt,3,8,6,555,0,"[2, 8, 7, 1, 3, 6, 0, 4]",0,0,0,1.035,66,50,0.01,0.5,5
+SimulatedAnnealing,T50_a0.5_i5,small_01.txt,3,8,7,321,0,"[4, 0, 7, 1, 3, 6, 8, 2]",0,0,0,0.901,66,50,0.01,0.5,5
+SimulatedAnnealing,T50_a0.5_i5,small_01.txt,3,8,8,808,20,"[7, 2, 8, 1, 5, 4, 0, 6]",2,0,0,0.88,66,50,0.01,0.5,5
+SimulatedAnnealing,T50_a0.5_i5,small_01.txt,3,8,9,777,20,"[0, 2, 6, 1, 3, 8, 4, 7]",2,0,0,1.021,66,50,0.01,0.5,5
+SimulatedAnnealing,T50_a0.5_i5,small_01.txt,3,8,10,2024,30,"[4, 6, 3, 2, 0, 1, 8, 5]",3,0,0,1.146,66,50,0.01,0.5,5
+SimulatedAnnealing,T50_a0.7_i2,small_01.txt,3,8,1,42,20,"[7, 6, 4, 1, 3, 0, 2, 5]",2,0,0,0.707,49,50,0.01,0.7,2
+SimulatedAnnealing,T50_a0.7_i2,small_01.txt,3,8,2,7,0,"[2, 0, 3, 1, 5, 4, 6, 8]",0,0,0,0.67,49,50,0.01,0.7,2
+SimulatedAnnealing,T50_a0.7_i2,small_01.txt,3,8,3,13,0,"[4, 0, 5, 1, 7, 2, 8, 6]",0,0,0,0.725,49,50,0.01,0.7,2
+SimulatedAnnealing,T50_a0.7_i2,small_01.txt,3,8,4,99,20,"[8, 3, 4, 2, 7, 5, 6, 1]",2,0,0,0.674,49,50,0.01,0.7,2
+SimulatedAnnealing,T50_a0.7_i2,small_01.txt,3,8,5,1234,20,"[0, 4, 1, 3, 7, 6, 2, 8]",0,0,1,0.68,49,50,0.01,0.7,2
+SimulatedAnnealing,T50_a0.7_i2,small_01.txt,3,8,6,555,0,"[2, 8, 7, 1, 3, 6, 0, 4]",0,0,0,0.668,49,50,0.01,0.7,2
+SimulatedAnnealing,T50_a0.7_i2,small_01.txt,3,8,7,321,20,"[2, 3, 7, 1, 4, 8, 6, 0]",2,0,0,0.666,49,50,0.01,0.7,2
+SimulatedAnnealing,T50_a0.7_i2,small_01.txt,3,8,8,808,20,"[7, 2, 8, 1, 5, 4, 0, 6]",2,0,0,0.667,49,50,0.01,0.7,2
+SimulatedAnnealing,T50_a0.7_i2,small_01.txt,3,8,9,777,20,"[4, 5, 3, 2, 1, 0, 8, 6]",2,0,0,0.662,49,50,0.01,0.7,2
+SimulatedAnnealing,T50_a0.7_i2,small_01.txt,3,8,10,2024,30,"[7, 6, 1, 2, 8, 0, 4, 5]",3,0,0,0.662,49,50,0.01,0.7,2
+SimulatedAnnealing,T50_a0.7_i3,small_01.txt,3,8,1,42,20,"[1, 6, 3, 2, 4, 7, 0, 5]",2,0,0,1.149,73,50,0.01,0.7,3
+SimulatedAnnealing,T50_a0.7_i3,small_01.txt,3,8,2,7,20,"[2, 0, 4, 1, 7, 3, 6, 8]",2,0,0,1.17,73,50,0.01,0.7,3
+SimulatedAnnealing,T50_a0.7_i3,small_01.txt,3,8,3,13,0,"[8, 2, 3, 1, 5, 4, 6, 0]",0,0,0,1.031,73,50,0.01,0.7,3
+SimulatedAnnealing,T50_a0.7_i3,small_01.txt,3,8,4,99,20,"[8, 3, 4, 2, 7, 5, 6, 1]",2,0,0,0.999,73,50,0.01,0.7,3
+SimulatedAnnealing,T50_a0.7_i3,small_01.txt,3,8,5,1234,20,"[5, 6, 4, 0, 8, 7, 1, 3]",2,0,0,0.981,73,50,0.01,0.7,3
+SimulatedAnnealing,T50_a0.7_i3,small_01.txt,3,8,6,555,0,"[8, 2, 5, 1, 7, 6, 4, 0]",0,0,0,0.979,73,50,0.01,0.7,3
+SimulatedAnnealing,T50_a0.7_i3,small_01.txt,3,8,7,321,0,"[4, 0, 5, 1, 3, 2, 8, 6]",0,0,0,0.986,73,50,0.01,0.7,3
+SimulatedAnnealing,T50_a0.7_i3,small_01.txt,3,8,8,808,20,"[7, 2, 8, 1, 5, 4, 0, 6]",2,0,0,0.986,73,50,0.01,0.7,3
+SimulatedAnnealing,T50_a0.7_i3,small_01.txt,3,8,9,777,20,"[6, 4, 2, 1, 7, 8, 5, 0]",2,0,0,1.239,73,50,0.01,0.7,3
+SimulatedAnnealing,T50_a0.7_i3,small_01.txt,3,8,10,2024,30,"[4, 6, 3, 2, 0, 1, 8, 5]",3,0,0,0.994,73,50,0.01,0.7,3
+SimulatedAnnealing,T50_a0.7_i5,small_01.txt,3,8,1,42,30,"[6, 8, 2, 1, 5, 7, 4, 0]",3,0,0,1.662,121,50,0.01,0.7,5
+SimulatedAnnealing,T50_a0.7_i5,small_01.txt,3,8,2,7,0,"[0, 8, 7, 1, 3, 2, 4, 6]",0,0,0,1.89,121,50,0.01,0.7,5
+SimulatedAnnealing,T50_a0.7_i5,small_01.txt,3,8,3,13,0,"[6, 2, 3, 1, 5, 0, 8, 4]",0,0,0,1.647,121,50,0.01,0.7,5
+SimulatedAnnealing,T50_a0.7_i5,small_01.txt,3,8,4,99,0,"[6, 4, 5, 1, 7, 2, 8, 0]",0,0,0,1.659,121,50,0.01,0.7,5
+SimulatedAnnealing,T50_a0.7_i5,small_01.txt,3,8,5,1234,0,"[8, 2, 5, 1, 7, 0, 4, 6]",0,0,0,1.659,121,50,0.01,0.7,5
+SimulatedAnnealing,T50_a0.7_i5,small_01.txt,3,8,6,555,20,"[4, 8, 7, 0, 3, 6, 1, 2]",2,0,0,1.664,121,50,0.01,0.7,5
+SimulatedAnnealing,T50_a0.7_i5,small_01.txt,3,8,7,321,20,"[2, 3, 7, 1, 4, 8, 6, 0]",2,0,0,1.662,121,50,0.01,0.7,5
+SimulatedAnnealing,T50_a0.7_i5,small_01.txt,3,8,8,808,20,"[7, 2, 8, 1, 5, 4, 0, 6]",2,0,0,1.65,121,50,0.01,0.7,5
+SimulatedAnnealing,T50_a0.7_i5,small_01.txt,3,8,9,777,20,"[5, 2, 8, 0, 4, 1, 7, 3]",2,0,0,1.996,121,50,0.01,0.7,5
+SimulatedAnnealing,T50_a0.7_i5,small_01.txt,3,8,10,2024,20,"[6, 1, 4, 2, 3, 8, 0, 5]",2,0,0,1.703,121,50,0.01,0.7,5
+SimulatedAnnealing,T50_a0.9_i2,small_01.txt,3,8,1,42,0,"[2, 4, 5, 1, 3, 8, 6, 0]",0,0,0,2.494,163,50,0.01,0.9,2
+SimulatedAnnealing,T50_a0.9_i2,small_01.txt,3,8,2,7,0,"[0, 8, 7, 1, 3, 4, 2, 6]",0,0,0,2.199,163,50,0.01,0.9,2
+SimulatedAnnealing,T50_a0.9_i2,small_01.txt,3,8,3,13,0,"[8, 4, 5, 1, 3, 0, 6, 2]",0,0,0,2.162,163,50,0.01,0.9,2
+SimulatedAnnealing,T50_a0.9_i2,small_01.txt,3,8,4,99,0,"[6, 0, 5, 1, 7, 8, 2, 4]",0,0,0,2.175,163,50,0.01,0.9,2
+SimulatedAnnealing,T50_a0.9_i2,small_01.txt,3,8,5,1234,0,"[8, 0, 5, 1, 3, 2, 4, 6]",0,0,0,2.181,163,50,0.01,0.9,2
+SimulatedAnnealing,T50_a0.9_i2,small_01.txt,3,8,6,555,0,"[6, 2, 7, 1, 5, 0, 8, 4]",0,0,0,2.268,163,50,0.01,0.9,2
+SimulatedAnnealing,T50_a0.9_i2,small_01.txt,3,8,7,321,0,"[2, 8, 3, 1, 5, 0, 6, 4]",0,0,0,2.27,163,50,0.01,0.9,2
+SimulatedAnnealing,T50_a0.9_i2,small_01.txt,3,8,8,808,0,"[6, 2, 3, 1, 5, 4, 0, 8]",0,0,0,2.172,163,50,0.01,0.9,2
+SimulatedAnnealing,T50_a0.9_i2,small_01.txt,3,8,9,777,0,"[8, 2, 5, 1, 7, 4, 0, 6]",0,0,0,2.176,163,50,0.01,0.9,2
+SimulatedAnnealing,T50_a0.9_i2,small_01.txt,3,8,10,2024,20,"[6, 1, 4, 2, 3, 8, 0, 5]",2,0,0,2.183,163,50,0.01,0.9,2
+SimulatedAnnealing,T50_a0.9_i3,small_01.txt,3,8,1,42,20,"[6, 5, 8, 2, 4, 0, 7, 1]",2,0,0,3.752,244,50,0.01,0.9,3
+SimulatedAnnealing,T50_a0.9_i3,small_01.txt,3,8,2,7,20,"[2, 0, 4, 1, 7, 3, 6, 8]",2,0,0,3.36,244,50,0.01,0.9,3
+SimulatedAnnealing,T50_a0.9_i3,small_01.txt,3,8,3,13,0,"[6, 4, 7, 1, 5, 0, 8, 2]",0,0,0,3.329,244,50,0.01,0.9,3
+SimulatedAnnealing,T50_a0.9_i3,small_01.txt,3,8,4,99,0,"[8, 0, 3, 1, 7, 6, 2, 4]",0,0,0,3.246,244,50,0.01,0.9,3
+SimulatedAnnealing,T50_a0.9_i3,small_01.txt,3,8,5,1234,0,"[4, 8, 3, 1, 7, 2, 6, 0]",0,0,0,3.338,244,50,0.01,0.9,3
+SimulatedAnnealing,T50_a0.9_i3,small_01.txt,3,8,6,555,0,"[2, 0, 5, 1, 7, 6, 8, 4]",0,0,0,3.362,244,50,0.01,0.9,3
+SimulatedAnnealing,T50_a0.9_i3,small_01.txt,3,8,7,321,20,"[2, 3, 7, 1, 4, 8, 6, 0]",2,0,0,3.365,244,50,0.01,0.9,3
+SimulatedAnnealing,T50_a0.9_i3,small_01.txt,3,8,8,808,0,"[6, 4, 7, 1, 5, 0, 2, 8]",0,0,0,3.336,244,50,0.01,0.9,3
+SimulatedAnnealing,T50_a0.9_i3,small_01.txt,3,8,9,777,20,"[1, 5, 0, 2, 6, 8, 7, 3]",2,0,0,3.296,244,50,0.01,0.9,3
+SimulatedAnnealing,T50_a0.9_i3,small_01.txt,3,8,10,2024,0,"[6, 8, 5, 1, 3, 0, 4, 2]",0,0,0,3.359,244,50,0.01,0.9,3
+SimulatedAnnealing,T50_a0.9_i5,small_01.txt,3,8,1,42,0,"[0, 4, 5, 1, 3, 6, 2, 8]",0,0,0,6.032,406,50,0.01,0.9,5
+SimulatedAnnealing,T50_a0.9_i5,small_01.txt,3,8,2,7,0,"[6, 0, 7, 1, 5, 4, 2, 8]",0,0,0,5.599,406,50,0.01,0.9,5
+SimulatedAnnealing,T50_a0.9_i5,small_01.txt,3,8,3,13,0,"[2, 4, 3, 1, 7, 0, 8, 6]",0,0,0,5.624,406,50,0.01,0.9,5
+SimulatedAnnealing,T50_a0.9_i5,small_01.txt,3,8,4,99,0,"[2, 4, 5, 1, 3, 6, 0, 8]",0,0,0,6.289,406,50,0.01,0.9,5
+SimulatedAnnealing,T50_a0.9_i5,small_01.txt,3,8,5,1234,0,"[2, 6, 3, 1, 5, 0, 4, 8]",0,0,0,5.708,406,50,0.01,0.9,5
+SimulatedAnnealing,T50_a0.9_i5,small_01.txt,3,8,6,555,0,"[4, 2, 7, 1, 3, 6, 0, 8]",0,0,0,5.741,406,50,0.01,0.9,5
+SimulatedAnnealing,T50_a0.9_i5,small_01.txt,3,8,7,321,0,"[0, 6, 3, 1, 5, 4, 2, 8]",0,0,0,5.954,406,50,0.01,0.9,5
+SimulatedAnnealing,T50_a0.9_i5,small_01.txt,3,8,8,808,0,"[0, 8, 5, 1, 3, 6, 4, 2]",0,0,0,5.807,406,50,0.01,0.9,5
+SimulatedAnnealing,T50_a0.9_i5,small_01.txt,3,8,9,777,0,"[0, 6, 3, 1, 7, 2, 4, 8]",0,0,0,5.895,406,50,0.01,0.9,5
+SimulatedAnnealing,T50_a0.9_i5,small_01.txt,3,8,10,2024,0,"[0, 8, 5, 1, 3, 6, 2, 4]",0,0,0,5.776,406,50,0.01,0.9,5
+SimulatedAnnealing,T100_a0.5_i2,small_01.txt,3,8,1,42,20,"[7, 6, 4, 1, 3, 0, 2, 5]",2,0,0,0.543,29,100,0.01,0.5,2
+SimulatedAnnealing,T100_a0.5_i2,small_01.txt,3,8,2,7,0,"[2, 0, 3, 1, 5, 4, 6, 8]",0,0,0,0.485,29,100,0.01,0.5,2
+SimulatedAnnealing,T100_a0.5_i2,small_01.txt,3,8,3,13,40,"[3, 2, 7, 4, 5, 6, 1, 8]",2,0,1,0.414,29,100,0.01,0.5,2
+SimulatedAnnealing,T100_a0.5_i2,small_01.txt,3,8,4,99,20,"[8, 3, 4, 2, 7, 5, 6, 1]",2,0,0,0.399,29,100,0.01,0.5,2
+SimulatedAnnealing,T100_a0.5_i2,small_01.txt,3,8,5,1234,30,"[8, 5, 3, 0, 4, 1, 7, 6]",3,0,0,0.396,29,100,0.01,0.5,2
+SimulatedAnnealing,T100_a0.5_i2,small_01.txt,3,8,6,555,0,"[2, 8, 7, 1, 3, 6, 0, 4]",0,0,0,0.396,29,100,0.01,0.5,2
+SimulatedAnnealing,T100_a0.5_i2,small_01.txt,3,8,7,321,20,"[2, 3, 7, 1, 4, 8, 6, 0]",2,0,0,0.401,29,100,0.01,0.5,2
+SimulatedAnnealing,T100_a0.5_i2,small_01.txt,3,8,8,808,20,"[7, 2, 8, 1, 5, 4, 0, 6]",2,0,0,0.392,29,100,0.01,0.5,2
+SimulatedAnnealing,T100_a0.5_i2,small_01.txt,3,8,9,777,20,"[7, 1, 6, 0, 8, 2, 5, 3]",2,0,0,0.396,29,100,0.01,0.5,2
+SimulatedAnnealing,T100_a0.5_i2,small_01.txt,3,8,10,2024,40,"[0, 3, 6, 1, 8, 4, 5, 2]",4,0,0,0.398,29,100,0.01,0.5,2
+SimulatedAnnealing,T100_a0.5_i3,small_01.txt,3,8,1,42,20,"[7, 6, 4, 1, 3, 0, 2, 5]",2,0,0,0.793,43,100,0.01,0.5,3
+SimulatedAnnealing,T100_a0.5_i3,small_01.txt,3,8,2,7,0,"[8, 0, 5, 1, 7, 2, 6, 4]",0,0,0,0.672,43,100,0.01,0.5,3
+SimulatedAnnealing,T100_a0.5_i3,small_01.txt,3,8,3,13,40,"[3, 2, 7, 4, 5, 6, 1, 8]",2,0,1,0.644,43,100,0.01,0.5,3
+SimulatedAnnealing,T100_a0.5_i3,small_01.txt,3,8,4,99,20,"[8, 3, 4, 2, 7, 5, 6, 1]",2,0,0,0.751,43,100,0.01,0.5,3
+SimulatedAnnealing,T100_a0.5_i3,small_01.txt,3,8,5,1234,30,"[2, 7, 8, 0, 4, 1, 6, 5]",3,0,0,0.682,43,100,0.01,0.5,3
+SimulatedAnnealing,T100_a0.5_i3,small_01.txt,3,8,6,555,0,"[8, 2, 5, 1, 7, 6, 4, 0]",0,0,0,0.611,43,100,0.01,0.5,3
+SimulatedAnnealing,T100_a0.5_i3,small_01.txt,3,8,7,321,20,"[2, 3, 7, 1, 4, 8, 6, 0]",2,0,0,0.636,43,100,0.01,0.5,3
+SimulatedAnnealing,T100_a0.5_i3,small_01.txt,3,8,8,808,20,"[7, 2, 8, 1, 5, 4, 0, 6]",2,0,0,0.956,43,100,0.01,0.5,3
+SimulatedAnnealing,T100_a0.5_i3,small_01.txt,3,8,9,777,0,"[4, 2, 7, 1, 3, 8, 6, 0]",0,0,0,0.716,43,100,0.01,0.5,3
+SimulatedAnnealing,T100_a0.5_i3,small_01.txt,3,8,10,2024,40,"[0, 3, 6, 1, 8, 4, 5, 2]",4,0,0,0.617,43,100,0.01,0.5,3
+SimulatedAnnealing,T100_a0.5_i5,small_01.txt,3,8,1,42,20,"[1, 6, 3, 2, 4, 7, 0, 5]",2,0,0,1.01,71,100,0.01,0.5,5
+SimulatedAnnealing,T100_a0.5_i5,small_01.txt,3,8,2,7,20,"[2, 0, 4, 1, 7, 3, 6, 8]",2,0,0,1.096,71,100,0.01,0.5,5
+SimulatedAnnealing,T100_a0.5_i5,small_01.txt,3,8,3,13,20,"[7, 3, 5, 1, 6, 8, 0, 2]",2,0,0,0.967,71,100,0.01,0.5,5
+SimulatedAnnealing,T100_a0.5_i5,small_01.txt,3,8,4,99,20,"[8, 3, 4, 2, 7, 5, 6, 1]",2,0,0,0.971,71,100,0.01,0.5,5
+SimulatedAnnealing,T100_a0.5_i5,small_01.txt,3,8,5,1234,20,"[5, 6, 4, 0, 8, 7, 1, 3]",2,0,0,0.951,71,100,0.01,0.5,5
+SimulatedAnnealing,T100_a0.5_i5,small_01.txt,3,8,6,555,0,"[8, 2, 5, 1, 7, 6, 4, 0]",0,0,0,0.967,71,100,0.01,0.5,5
+SimulatedAnnealing,T100_a0.5_i5,small_01.txt,3,8,7,321,20,"[8, 3, 4, 2, 7, 5, 6, 1]",2,0,0,0.954,71,100,0.01,0.5,5
+SimulatedAnnealing,T100_a0.5_i5,small_01.txt,3,8,8,808,20,"[7, 2, 8, 1, 5, 4, 0, 6]",2,0,0,0.951,71,100,0.01,0.5,5
+SimulatedAnnealing,T100_a0.5_i5,small_01.txt,3,8,9,777,0,"[4, 2, 7, 1, 3, 8, 6, 0]",0,0,0,0.953,71,100,0.01,0.5,5
+SimulatedAnnealing,T100_a0.5_i5,small_01.txt,3,8,10,2024,20,"[0, 4, 7, 1, 5, 3, 2, 8]",2,0,0,0.957,71,100,0.01,0.5,5
+SimulatedAnnealing,T100_a0.7_i2,small_01.txt,3,8,1,42,20,"[1, 6, 3, 2, 4, 7, 0, 5]",2,0,0,0.948,53,100,0.01,0.7,2
+SimulatedAnnealing,T100_a0.7_i2,small_01.txt,3,8,2,7,20,"[2, 0, 4, 1, 7, 3, 6, 8]",2,0,0,0.734,53,100,0.01,0.7,2
+SimulatedAnnealing,T100_a0.7_i2,small_01.txt,3,8,3,13,0,"[2, 0, 7, 1, 5, 8, 4, 6]",0,0,0,0.715,53,100,0.01,0.7,2
+SimulatedAnnealing,T100_a0.7_i2,small_01.txt,3,8,4,99,20,"[8, 3, 4, 2, 7, 5, 6, 1]",2,0,0,0.718,53,100,0.01,0.7,2
+SimulatedAnnealing,T100_a0.7_i2,small_01.txt,3,8,5,1234,20,"[5, 6, 4, 0, 8, 7, 1, 3]",2,0,0,0.715,53,100,0.01,0.7,2
+SimulatedAnnealing,T100_a0.7_i2,small_01.txt,3,8,6,555,0,"[8, 2, 5, 1, 7, 6, 4, 0]",0,0,0,0.722,53,100,0.01,0.7,2
+SimulatedAnnealing,T100_a0.7_i2,small_01.txt,3,8,7,321,20,"[8, 5, 4, 2, 7, 3, 6, 1]",2,0,0,0.717,53,100,0.01,0.7,2
+SimulatedAnnealing,T100_a0.7_i2,small_01.txt,3,8,8,808,20,"[7, 2, 8, 1, 5, 4, 0, 6]",2,0,0,0.71,53,100,0.01,0.7,2
+SimulatedAnnealing,T100_a0.7_i2,small_01.txt,3,8,9,777,0,"[4, 2, 7, 1, 3, 8, 6, 0]",0,0,0,0.721,53,100,0.01,0.7,2
+SimulatedAnnealing,T100_a0.7_i2,small_01.txt,3,8,10,2024,30,"[7, 6, 1, 2, 8, 0, 4, 5]",3,0,0,0.764,53,100,0.01,0.7,2
+SimulatedAnnealing,T100_a0.7_i3,small_01.txt,3,8,1,42,30,"[6, 8, 2, 1, 5, 7, 4, 0]",3,0,0,1.134,79,100,0.01,0.7,3
+SimulatedAnnealing,T100_a0.7_i3,small_01.txt,3,8,2,7,0,"[0, 8, 7, 1, 3, 2, 4, 6]",0,0,0,1.123,79,100,0.01,0.7,3
+SimulatedAnnealing,T100_a0.7_i3,small_01.txt,3,8,3,13,20,"[0, 2, 5, 1, 4, 8, 7, 3]",2,0,0,1.064,79,100,0.01,0.7,3
+SimulatedAnnealing,T100_a0.7_i3,small_01.txt,3,8,4,99,20,"[7, 1, 3, 2, 4, 0, 6, 5]",2,0,0,1.066,79,100,0.01,0.7,3
+SimulatedAnnealing,T100_a0.7_i3,small_01.txt,3,8,5,1234,20,"[3, 7, 6, 0, 4, 8, 1, 5]",2,0,0,1.064,79,100,0.01,0.7,3
+SimulatedAnnealing,T100_a0.7_i3,small_01.txt,3,8,6,555,20,"[4, 8, 7, 0, 3, 6, 1, 2]",2,0,0,1.057,79,100,0.01,0.7,3
+SimulatedAnnealing,T100_a0.7_i3,small_01.txt,3,8,7,321,20,"[8, 0, 7, 2, 3, 5, 6, 4]",2,0,0,1.071,79,100,0.01,0.7,3
+SimulatedAnnealing,T100_a0.7_i3,small_01.txt,3,8,8,808,20,"[7, 2, 8, 1, 5, 4, 0, 6]",2,0,0,1.05,79,100,0.01,0.7,3
+SimulatedAnnealing,T100_a0.7_i3,small_01.txt,3,8,9,777,0,"[4, 2, 7, 1, 3, 8, 6, 0]",0,0,0,1.058,79,100,0.01,0.7,3
+SimulatedAnnealing,T100_a0.7_i3,small_01.txt,3,8,10,2024,0,"[8, 0, 7, 1, 5, 2, 6, 4]",0,0,0,1.055,79,100,0.01,0.7,3
+SimulatedAnnealing,T100_a0.7_i5,small_01.txt,3,8,1,42,20,"[0, 5, 4, 2, 8, 1, 6, 7]",2,0,0,2.053,131,100,0.01,0.7,5
+SimulatedAnnealing,T100_a0.7_i5,small_01.txt,3,8,2,7,20,"[2, 0, 4, 1, 7, 3, 6, 8]",2,0,0,1.824,131,100,0.01,0.7,5
+SimulatedAnnealing,T100_a0.7_i5,small_01.txt,3,8,3,13,20,"[4, 7, 3, 1, 6, 2, 0, 8]",2,0,0,1.753,131,100,0.01,0.7,5
+SimulatedAnnealing,T100_a0.7_i5,small_01.txt,3,8,4,99,0,"[6, 2, 5, 1, 7, 4, 0, 8]",0,0,0,1.841,131,100,0.01,0.7,5
+SimulatedAnnealing,T100_a0.7_i5,small_01.txt,3,8,5,1234,0,"[8, 0, 5, 1, 3, 2, 4, 6]",0,0,0,1.791,131,100,0.01,0.7,5
+SimulatedAnnealing,T100_a0.7_i5,small_01.txt,3,8,6,555,0,"[2, 0, 3, 1, 5, 6, 4, 8]",0,0,0,1.79,131,100,0.01,0.7,5
+SimulatedAnnealing,T100_a0.7_i5,small_01.txt,3,8,7,321,0,"[8, 4, 7, 1, 3, 0, 2, 6]",0,0,0,1.786,131,100,0.01,0.7,5
+SimulatedAnnealing,T100_a0.7_i5,small_01.txt,3,8,8,808,20,"[7, 2, 8, 1, 5, 4, 0, 6]",2,0,0,1.792,131,100,0.01,0.7,5
+SimulatedAnnealing,T100_a0.7_i5,small_01.txt,3,8,9,777,0,"[4, 8, 5, 1, 3, 2, 0, 6]",0,0,0,1.792,131,100,0.01,0.7,5
+SimulatedAnnealing,T100_a0.7_i5,small_01.txt,3,8,10,2024,0,"[6, 4, 3, 1, 5, 8, 0, 2]",0,0,0,1.784,131,100,0.01,0.7,5
+SimulatedAnnealing,T100_a0.9_i2,small_01.txt,3,8,1,42,20,"[6, 5, 8, 2, 4, 0, 7, 1]",2,0,0,2.903,177,100,0.01,0.9,2
+SimulatedAnnealing,T100_a0.9_i2,small_01.txt,3,8,2,7,20,"[2, 0, 4, 1, 7, 3, 6, 8]",2,0,0,2.33,177,100,0.01,0.9,2
+SimulatedAnnealing,T100_a0.9_i2,small_01.txt,3,8,3,13,0,"[4, 8, 3, 1, 5, 0, 6, 2]",0,0,0,2.323,177,100,0.01,0.9,2
+SimulatedAnnealing,T100_a0.9_i2,small_01.txt,3,8,4,99,20,"[0, 6, 5, 1, 3, 8, 7, 2]",2,0,0,2.324,177,100,0.01,0.9,2
+SimulatedAnnealing,T100_a0.9_i2,small_01.txt,3,8,5,1234,0,"[0, 8, 5, 1, 7, 2, 6, 4]",0,0,0,2.325,177,100,0.01,0.9,2
+SimulatedAnnealing,T100_a0.9_i2,small_01.txt,3,8,6,555,0,"[2, 0, 3, 1, 5, 6, 4, 8]",0,0,0,2.317,177,100,0.01,0.9,2
+SimulatedAnnealing,T100_a0.9_i2,small_01.txt,3,8,7,321,20,"[0, 2, 6, 1, 5, 3, 8, 4]",2,0,0,2.456,177,100,0.01,0.9,2
+SimulatedAnnealing,T100_a0.9_i2,small_01.txt,3,8,8,808,20,"[7, 2, 8, 1, 5, 4, 0, 6]",2,0,0,2.6,177,100,0.01,0.9,2
+SimulatedAnnealing,T100_a0.9_i2,small_01.txt,3,8,9,777,20,"[6, 4, 3, 2, 7, 8, 1, 0]",2,0,0,2.44,177,100,0.01,0.9,2
+SimulatedAnnealing,T100_a0.9_i2,small_01.txt,3,8,10,2024,0,"[6, 4, 3, 1, 5, 8, 0, 2]",0,0,0,2.479,177,100,0.01,0.9,2
+SimulatedAnnealing,T100_a0.9_i3,small_01.txt,3,8,1,42,0,"[8, 2, 3, 1, 7, 4, 0, 6]",0,0,0,3.91,265,100,0.01,0.9,3
+SimulatedAnnealing,T100_a0.9_i3,small_01.txt,3,8,2,7,0,"[0, 8, 7, 1, 3, 6, 4, 2]",0,0,0,3.544,265,100,0.01,0.9,3
+SimulatedAnnealing,T100_a0.9_i3,small_01.txt,3,8,3,13,0,"[0, 2, 5, 1, 7, 8, 6, 4]",0,0,0,3.928,265,100,0.01,0.9,3
+SimulatedAnnealing,T100_a0.9_i3,small_01.txt,3,8,4,99,0,"[8, 0, 7, 1, 3, 2, 4, 6]",0,0,0,3.528,265,100,0.01,0.9,3
+SimulatedAnnealing,T100_a0.9_i3,small_01.txt,3,8,5,1234,0,"[2, 6, 3, 1, 5, 0, 4, 8]",0,0,0,3.514,265,100,0.01,0.9,3
+SimulatedAnnealing,T100_a0.9_i3,small_01.txt,3,8,6,555,0,"[6, 8, 3, 1, 7, 2, 0, 4]",0,0,0,3.516,265,100,0.01,0.9,3
+SimulatedAnnealing,T100_a0.9_i3,small_01.txt,3,8,7,321,0,"[4, 6, 5, 1, 7, 2, 0, 8]",0,0,0,3.512,265,100,0.01,0.9,3
+SimulatedAnnealing,T100_a0.9_i3,small_01.txt,3,8,8,808,0,"[0, 2, 7, 1, 3, 6, 8, 4]",0,0,0,3.864,265,100,0.01,0.9,3
+SimulatedAnnealing,T100_a0.9_i3,small_01.txt,3,8,9,777,0,"[2, 8, 7, 1, 3, 6, 4, 0]",0,0,0,3.771,265,100,0.01,0.9,3
+SimulatedAnnealing,T100_a0.9_i3,small_01.txt,3,8,10,2024,20,"[7, 1, 4, 2, 6, 3, 8, 5]",2,0,0,3.774,265,100,0.01,0.9,3
+SimulatedAnnealing,T100_a0.9_i5,small_01.txt,3,8,1,42,20,"[6, 1, 4, 2, 7, 8, 5, 3]",2,0,0,6.511,441,100,0.01,0.9,5
+SimulatedAnnealing,T100_a0.9_i5,small_01.txt,3,8,2,7,0,"[2, 8, 3, 1, 5, 6, 0, 4]",0,0,0,6.082,441,100,0.01,0.9,5
+SimulatedAnnealing,T100_a0.9_i5,small_01.txt,3,8,3,13,0,"[6, 2, 5, 1, 7, 8, 0, 4]",0,0,0,6.071,441,100,0.01,0.9,5
+SimulatedAnnealing,T100_a0.9_i5,small_01.txt,3,8,4,99,0,"[4, 8, 3, 1, 5, 6, 2, 0]",0,0,0,6.175,441,100,0.01,0.9,5
+SimulatedAnnealing,T100_a0.9_i5,small_01.txt,3,8,5,1234,0,"[2, 8, 3, 1, 5, 4, 0, 6]",0,0,0,6.192,441,100,0.01,0.9,5
+SimulatedAnnealing,T100_a0.9_i5,small_01.txt,3,8,6,555,0,"[8, 2, 7, 1, 5, 0, 4, 6]",0,0,0,6.221,441,100,0.01,0.9,5
+SimulatedAnnealing,T100_a0.9_i5,small_01.txt,3,8,7,321,0,"[6, 4, 7, 1, 5, 8, 0, 2]",0,0,0,6.657,441,100,0.01,0.9,5
+SimulatedAnnealing,T100_a0.9_i5,small_01.txt,3,8,8,808,0,"[0, 4, 7, 1, 5, 6, 2, 8]",0,0,0,6.212,441,100,0.01,0.9,5
+SimulatedAnnealing,T100_a0.9_i5,small_01.txt,3,8,9,777,0,"[6, 8, 7, 1, 5, 2, 0, 4]",0,0,0,6.523,441,100,0.01,0.9,5
+SimulatedAnnealing,T100_a0.9_i5,small_01.txt,3,8,10,2024,20,"[2, 3, 4, 1, 6, 0, 7, 5]",2,0,0,6.197,441,100,0.01,0.9,5
+SimulatedAnnealing,T200_a0.5_i2,small_01.txt,3,8,1,42,20,"[7, 6, 4, 1, 3, 0, 2, 5]",2,0,0,0.634,31,200,0.01,0.5,2
+SimulatedAnnealing,T200_a0.5_i2,small_01.txt,3,8,2,7,0,"[8, 0, 5, 1, 7, 2, 6, 4]",0,0,0,0.432,31,200,0.01,0.5,2
+SimulatedAnnealing,T200_a0.5_i2,small_01.txt,3,8,3,13,20,"[7, 2, 4, 1, 3, 8, 6, 0]",2,0,0,0.424,31,200,0.01,0.5,2
+SimulatedAnnealing,T200_a0.5_i2,small_01.txt,3,8,4,99,20,"[8, 3, 4, 2, 7, 5, 6, 1]",2,0,0,0.418,31,200,0.01,0.5,2
+SimulatedAnnealing,T200_a0.5_i2,small_01.txt,3,8,5,1234,20,"[2, 8, 1, 3, 5, 4, 0, 6]",0,0,1,0.427,31,200,0.01,0.5,2
+SimulatedAnnealing,T200_a0.5_i2,small_01.txt,3,8,6,555,0,"[8, 2, 5, 1, 7, 6, 4, 0]",0,0,0,0.419,31,200,0.01,0.5,2
+SimulatedAnnealing,T200_a0.5_i2,small_01.txt,3,8,7,321,0,"[8, 0, 7, 1, 5, 2, 6, 4]",0,0,0,0.426,31,200,0.01,0.5,2
+SimulatedAnnealing,T200_a0.5_i2,small_01.txt,3,8,8,808,20,"[7, 2, 8, 1, 5, 4, 0, 6]",2,0,0,0.418,31,200,0.01,0.5,2
+SimulatedAnnealing,T200_a0.5_i2,small_01.txt,3,8,9,777,20,"[7, 1, 6, 0, 8, 2, 5, 3]",2,0,0,0.42,31,200,0.01,0.5,2
+SimulatedAnnealing,T200_a0.5_i2,small_01.txt,3,8,10,2024,40,"[0, 3, 6, 1, 8, 4, 5, 2]",4,0,0,0.424,31,200,0.01,0.5,2
+SimulatedAnnealing,T200_a0.5_i3,small_01.txt,3,8,1,42,20,"[1, 6, 3, 2, 4, 7, 0, 5]",2,0,0,0.949,46,200,0.01,0.5,3
+SimulatedAnnealing,T200_a0.5_i3,small_01.txt,3,8,2,7,20,"[2, 0, 4, 1, 7, 3, 6, 8]",2,0,0,0.652,46,200,0.01,0.5,3
+SimulatedAnnealing,T200_a0.5_i3,small_01.txt,3,8,3,13,20,"[8, 7, 6, 0, 2, 5, 1, 3]",2,0,0,0.713,46,200,0.01,0.5,3
+SimulatedAnnealing,T200_a0.5_i3,small_01.txt,3,8,4,99,20,"[8, 3, 4, 2, 7, 5, 6, 1]",2,0,0,0.628,46,200,0.01,0.5,3
+SimulatedAnnealing,T200_a0.5_i3,small_01.txt,3,8,5,1234,30,"[2, 7, 8, 0, 4, 1, 6, 5]",3,0,0,0.63,46,200,0.01,0.5,3
+SimulatedAnnealing,T200_a0.5_i3,small_01.txt,3,8,6,555,0,"[8, 2, 5, 1, 7, 6, 4, 0]",0,0,0,0.764,46,200,0.01,0.5,3
+SimulatedAnnealing,T200_a0.5_i3,small_01.txt,3,8,7,321,20,"[8, 5, 4, 2, 7, 3, 6, 1]",2,0,0,0.674,46,200,0.01,0.5,3
+SimulatedAnnealing,T200_a0.5_i3,small_01.txt,3,8,8,808,20,"[7, 2, 8, 1, 5, 4, 0, 6]",2,0,0,0.632,46,200,0.01,0.5,3
+SimulatedAnnealing,T200_a0.5_i3,small_01.txt,3,8,9,777,0,"[4, 2, 7, 1, 3, 8, 6, 0]",0,0,0,0.711,46,200,0.01,0.5,3
+SimulatedAnnealing,T200_a0.5_i3,small_01.txt,3,8,10,2024,20,"[0, 4, 5, 1, 7, 3, 2, 8]",2,0,0,0.67,46,200,0.01,0.5,3
+SimulatedAnnealing,T200_a0.5_i5,small_01.txt,3,8,1,42,30,"[6, 8, 2, 1, 5, 7, 4, 0]",3,0,0,1.242,76,200,0.01,0.5,5
+SimulatedAnnealing,T200_a0.5_i5,small_01.txt,3,8,2,7,20,"[2, 0, 4, 1, 7, 3, 6, 8]",2,0,0,1.089,76,200,0.01,0.5,5
+SimulatedAnnealing,T200_a0.5_i5,small_01.txt,3,8,3,13,20,"[7, 3, 5, 1, 6, 8, 0, 2]",2,0,0,1.043,76,200,0.01,0.5,5
+SimulatedAnnealing,T200_a0.5_i5,small_01.txt,3,8,4,99,0,"[0, 4, 3, 1, 5, 6, 2, 8]",0,0,0,1.026,76,200,0.01,0.5,5
+SimulatedAnnealing,T200_a0.5_i5,small_01.txt,3,8,5,1234,0,"[8, 2, 5, 1, 7, 0, 4, 6]",0,0,0,1.013,76,200,0.01,0.5,5
+SimulatedAnnealing,T200_a0.5_i5,small_01.txt,3,8,6,555,0,"[2, 8, 3, 1, 5, 4, 6, 0]",0,0,0,1.013,76,200,0.01,0.5,5
+SimulatedAnnealing,T200_a0.5_i5,small_01.txt,3,8,7,321,20,"[8, 0, 7, 2, 3, 5, 6, 4]",2,0,0,1.016,76,200,0.01,0.5,5
+SimulatedAnnealing,T200_a0.5_i5,small_01.txt,3,8,8,808,20,"[7, 2, 8, 1, 5, 4, 0, 6]",2,0,0,1.009,76,200,0.01,0.5,5
+SimulatedAnnealing,T200_a0.5_i5,small_01.txt,3,8,9,777,0,"[4, 2, 7, 1, 3, 8, 6, 0]",0,0,0,1.021,76,200,0.01,0.5,5
+SimulatedAnnealing,T200_a0.5_i5,small_01.txt,3,8,10,2024,20,"[0, 4, 7, 1, 5, 3, 2, 8]",2,0,0,1.013,76,200,0.01,0.5,5
+SimulatedAnnealing,T200_a0.7_i2,small_01.txt,3,8,1,42,20,"[1, 6, 3, 2, 4, 7, 0, 5]",2,0,0,1.031,57,200,0.01,0.7,2
+SimulatedAnnealing,T200_a0.7_i2,small_01.txt,3,8,2,7,20,"[2, 0, 4, 1, 7, 3, 6, 8]",2,0,0,0.781,57,200,0.01,0.7,2
+SimulatedAnnealing,T200_a0.7_i2,small_01.txt,3,8,3,13,20,"[7, 3, 5, 1, 6, 8, 0, 2]",2,0,0,0.988,57,200,0.01,0.7,2
+SimulatedAnnealing,T200_a0.7_i2,small_01.txt,3,8,4,99,20,"[7, 1, 3, 2, 4, 0, 6, 5]",2,0,0,0.785,57,200,0.01,0.7,2
+SimulatedAnnealing,T200_a0.7_i2,small_01.txt,3,8,5,1234,20,"[5, 6, 4, 0, 8, 7, 1, 3]",2,0,0,0.777,57,200,0.01,0.7,2
+SimulatedAnnealing,T200_a0.7_i2,small_01.txt,3,8,6,555,0,"[6, 4, 7, 1, 3, 2, 8, 0]",0,0,0,0.769,57,200,0.01,0.7,2
+SimulatedAnnealing,T200_a0.7_i2,small_01.txt,3,8,7,321,20,"[8, 0, 7, 2, 3, 5, 6, 4]",2,0,0,0.769,57,200,0.01,0.7,2
+SimulatedAnnealing,T200_a0.7_i2,small_01.txt,3,8,8,808,20,"[7, 2, 8, 1, 5, 4, 0, 6]",2,0,0,0.769,57,200,0.01,0.7,2
+SimulatedAnnealing,T200_a0.7_i2,small_01.txt,3,8,9,777,0,"[4, 2, 7, 1, 3, 8, 6, 0]",0,0,0,0.764,57,200,0.01,0.7,2
+SimulatedAnnealing,T200_a0.7_i2,small_01.txt,3,8,10,2024,20,"[0, 4, 7, 1, 5, 3, 2, 8]",2,0,0,0.765,57,200,0.01,0.7,2
+SimulatedAnnealing,T200_a0.7_i3,small_01.txt,3,8,1,42,30,"[6, 8, 2, 1, 5, 7, 4, 0]",3,0,0,1.332,85,200,0.01,0.7,3
+SimulatedAnnealing,T200_a0.7_i3,small_01.txt,3,8,2,7,20,"[2, 0, 4, 1, 7, 3, 6, 8]",2,0,0,1.151,85,200,0.01,0.7,3
+SimulatedAnnealing,T200_a0.7_i3,small_01.txt,3,8,3,13,20,"[7, 3, 5, 1, 6, 8, 0, 2]",2,0,0,1.155,85,200,0.01,0.7,3
+SimulatedAnnealing,T200_a0.7_i3,small_01.txt,3,8,4,99,0,"[0, 4, 3, 1, 5, 6, 2, 8]",0,0,0,1.148,85,200,0.01,0.7,3
+SimulatedAnnealing,T200_a0.7_i3,small_01.txt,3,8,5,1234,0,"[8, 2, 5, 1, 7, 0, 4, 6]",0,0,0,1.139,85,200,0.01,0.7,3
+SimulatedAnnealing,T200_a0.7_i3,small_01.txt,3,8,6,555,0,"[2, 8, 3, 1, 5, 4, 6, 0]",0,0,0,1.148,85,200,0.01,0.7,3
+SimulatedAnnealing,T200_a0.7_i3,small_01.txt,3,8,7,321,0,"[6, 0, 7, 1, 5, 4, 8, 2]",0,0,0,1.143,85,200,0.01,0.7,3
+SimulatedAnnealing,T200_a0.7_i3,small_01.txt,3,8,8,808,20,"[7, 2, 8, 1, 5, 4, 0, 6]",2,0,0,1.144,85,200,0.01,0.7,3
+SimulatedAnnealing,T200_a0.7_i3,small_01.txt,3,8,9,777,0,"[4, 8, 5, 1, 3, 2, 0, 6]",0,0,0,1.149,85,200,0.01,0.7,3
+SimulatedAnnealing,T200_a0.7_i3,small_01.txt,3,8,10,2024,20,"[5, 4, 3, 2, 1, 8, 0, 6]",2,0,0,1.611,85,200,0.01,0.7,3
+SimulatedAnnealing,T200_a0.7_i5,small_01.txt,3,8,1,42,20,"[6, 1, 4, 2, 7, 8, 5, 3]",2,0,0,1.975,141,200,0.01,0.7,5
+SimulatedAnnealing,T200_a0.7_i5,small_01.txt,3,8,2,7,20,"[2, 0, 4, 1, 7, 3, 6, 8]",2,0,0,1.9,141,200,0.01,0.7,5
+SimulatedAnnealing,T200_a0.7_i5,small_01.txt,3,8,3,13,0,"[4, 8, 3, 1, 5, 0, 6, 2]",0,0,0,1.889,141,200,0.01,0.7,5
+SimulatedAnnealing,T200_a0.7_i5,small_01.txt,3,8,4,99,0,"[8, 0, 7, 1, 5, 6, 2, 4]",0,0,0,1.897,141,200,0.01,0.7,5
+SimulatedAnnealing,T200_a0.7_i5,small_01.txt,3,8,5,1234,0,"[0, 8, 5, 1, 7, 2, 6, 4]",0,0,0,1.892,141,200,0.01,0.7,5
+SimulatedAnnealing,T200_a0.7_i5,small_01.txt,3,8,6,555,0,"[2, 8, 3, 1, 5, 4, 6, 0]",0,0,0,1.888,141,200,0.01,0.7,5
+SimulatedAnnealing,T200_a0.7_i5,small_01.txt,3,8,7,321,0,"[8, 2, 3, 1, 7, 6, 0, 4]",0,0,0,1.904,141,200,0.01,0.7,5
+SimulatedAnnealing,T200_a0.7_i5,small_01.txt,3,8,8,808,20,"[7, 2, 8, 1, 5, 4, 0, 6]",2,0,0,1.903,141,200,0.01,0.7,5
+SimulatedAnnealing,T200_a0.7_i5,small_01.txt,3,8,9,777,20,"[6, 4, 3, 2, 7, 8, 1, 0]",2,0,0,1.963,141,200,0.01,0.7,5
+SimulatedAnnealing,T200_a0.7_i5,small_01.txt,3,8,10,2024,0,"[6, 4, 3, 1, 5, 8, 0, 2]",0,0,0,1.89,141,200,0.01,0.7,5
+SimulatedAnnealing,T200_a0.9_i2,small_01.txt,3,8,1,42,20,"[6, 1, 4, 2, 7, 8, 5, 3]",2,0,0,3.031,189,200,0.01,0.9,2
+SimulatedAnnealing,T200_a0.9_i2,small_01.txt,3,8,2,7,20,"[2, 0, 4, 1, 7, 3, 6, 8]",2,0,0,2.531,189,200,0.01,0.9,2
+SimulatedAnnealing,T200_a0.9_i2,small_01.txt,3,8,3,13,0,"[8, 6, 5, 1, 7, 0, 2, 4]",0,0,0,2.532,189,200,0.01,0.9,2
+SimulatedAnnealing,T200_a0.9_i2,small_01.txt,3,8,4,99,0,"[8, 0, 7, 1, 3, 2, 4, 6]",0,0,0,2.532,189,200,0.01,0.9,2
+SimulatedAnnealing,T200_a0.9_i2,small_01.txt,3,8,5,1234,0,"[4, 2, 3, 1, 7, 0, 8, 6]",0,0,0,3.025,189,200,0.01,0.9,2
+SimulatedAnnealing,T200_a0.9_i2,small_01.txt,3,8,6,555,0,"[2, 8, 3, 1, 5, 4, 6, 0]",0,0,0,2.748,189,200,0.01,0.9,2
+SimulatedAnnealing,T200_a0.9_i2,small_01.txt,3,8,7,321,0,"[8, 2, 3, 1, 7, 6, 0, 4]",0,0,0,2.625,189,200,0.01,0.9,2
+SimulatedAnnealing,T200_a0.9_i2,small_01.txt,3,8,8,808,0,"[0, 2, 7, 1, 3, 6, 8, 4]",0,0,0,2.628,189,200,0.01,0.9,2
+SimulatedAnnealing,T200_a0.9_i2,small_01.txt,3,8,9,777,0,"[2, 8, 7, 1, 5, 0, 6, 4]",0,0,0,2.655,189,200,0.01,0.9,2
+SimulatedAnnealing,T200_a0.9_i2,small_01.txt,3,8,10,2024,0,"[0, 6, 5, 1, 3, 8, 4, 2]",0,0,0,2.693,189,200,0.01,0.9,2
+SimulatedAnnealing,T200_a0.9_i3,small_01.txt,3,8,1,42,0,"[4, 0, 5, 1, 7, 8, 2, 6]",0,0,0,4.371,283,200,0.01,0.9,3
+SimulatedAnnealing,T200_a0.9_i3,small_01.txt,3,8,2,7,20,"[2, 0, 4, 1, 7, 3, 6, 8]",2,0,0,4.122,283,200,0.01,0.9,3
+SimulatedAnnealing,T200_a0.9_i3,small_01.txt,3,8,3,13,20,"[0, 2, 7, 1, 4, 6, 8, 5]",2,0,0,3.825,283,200,0.01,0.9,3
+SimulatedAnnealing,T200_a0.9_i3,small_01.txt,3,8,4,99,20,"[0, 6, 5, 1, 3, 4, 7, 2]",2,0,0,3.818,283,200,0.01,0.9,3
+SimulatedAnnealing,T200_a0.9_i3,small_01.txt,3,8,5,1234,20,"[0, 5, 6, 2, 4, 7, 1, 3]",2,0,0,4.82,283,200,0.01,0.9,3
+SimulatedAnnealing,T200_a0.9_i3,small_01.txt,3,8,6,555,0,"[2, 8, 3, 1, 5, 4, 6, 0]",0,0,0,3.92,283,200,0.01,0.9,3
+SimulatedAnnealing,T200_a0.9_i3,small_01.txt,3,8,7,321,0,"[4, 6, 7, 1, 3, 8, 2, 0]",0,0,0,3.89,283,200,0.01,0.9,3
+SimulatedAnnealing,T200_a0.9_i3,small_01.txt,3,8,8,808,0,"[0, 4, 7, 1, 5, 6, 2, 8]",0,0,0,3.866,283,200,0.01,0.9,3
+SimulatedAnnealing,T200_a0.9_i3,small_01.txt,3,8,9,777,20,"[6, 4, 3, 2, 7, 8, 1, 0]",2,0,0,4.686,283,200,0.01,0.9,3
+SimulatedAnnealing,T200_a0.9_i3,small_01.txt,3,8,10,2024,0,"[8, 4, 7, 1, 5, 6, 2, 0]",0,0,0,3.821,283,200,0.01,0.9,3
+SimulatedAnnealing,T200_a0.9_i5,small_01.txt,3,8,1,42,0,"[4, 6, 5, 1, 3, 8, 2, 0]",0,0,0,6.394,471,200,0.01,0.9,5
+SimulatedAnnealing,T200_a0.9_i5,small_01.txt,3,8,2,7,0,"[6, 4, 5, 1, 3, 8, 0, 2]",0,0,0,6.495,471,200,0.01,0.9,5
+SimulatedAnnealing,T200_a0.9_i5,small_01.txt,3,8,3,13,0,"[2, 6, 7, 1, 5, 0, 8, 4]",0,0,0,6.591,471,200,0.01,0.9,5
+SimulatedAnnealing,T200_a0.9_i5,small_01.txt,3,8,4,99,0,"[0, 8, 5, 1, 3, 4, 2, 6]",0,0,0,6.571,471,200,0.01,0.9,5
+SimulatedAnnealing,T200_a0.9_i5,small_01.txt,3,8,5,1234,0,"[2, 8, 7, 1, 3, 4, 0, 6]",0,0,0,6.589,471,200,0.01,0.9,5
+SimulatedAnnealing,T200_a0.9_i5,small_01.txt,3,8,6,555,0,"[2, 8, 3, 1, 5, 4, 6, 0]",0,0,0,6.56,471,200,0.01,0.9,5
+SimulatedAnnealing,T200_a0.9_i5,small_01.txt,3,8,7,321,0,"[2, 6, 5, 1, 7, 0, 4, 8]",0,0,0,6.848,471,200,0.01,0.9,5
+SimulatedAnnealing,T200_a0.9_i5,small_01.txt,3,8,8,808,0,"[0, 4, 7, 1, 5, 6, 2, 8]",0,0,0,6.247,471,200,0.01,0.9,5
+SimulatedAnnealing,T200_a0.9_i5,small_01.txt,3,8,9,777,0,"[8, 0, 3, 1, 5, 6, 4, 2]",0,0,0,6.453,471,200,0.01,0.9,5
+SimulatedAnnealing,T200_a0.9_i5,small_01.txt,3,8,10,2024,20,"[0, 4, 3, 2, 7, 8, 5, 6]",2,0,0,6.806,471,200,0.01,0.9,5
+SimulatedAnnealing,T50_a0.5_i2,small_02.txt,3,8,1,42,40,"[3, 6, 2, 0, 4, 7, 1, 8]",4,0,0,0.395,27,50,0.01,0.5,2
+SimulatedAnnealing,T50_a0.5_i2,small_02.txt,3,8,2,7,50,"[6, 4, 5, 7, 1, 8, 2, 0]",3,0,1,0.428,27,50,0.01,0.5,2
+SimulatedAnnealing,T50_a0.5_i2,small_02.txt,3,8,3,13,40,"[3, 5, 7, 0, 4, 1, 6, 8]",4,0,0,0.386,27,50,0.01,0.5,2
+SimulatedAnnealing,T50_a0.5_i2,small_02.txt,3,8,4,99,40,"[3, 6, 1, 2, 4, 5, 7, 8]",4,0,0,0.373,27,50,0.01,0.5,2
+SimulatedAnnealing,T50_a0.5_i2,small_02.txt,3,8,5,1234,50,"[6, 4, 2, 5, 1, 7, 0, 8]",3,0,1,0.368,27,50,0.01,0.5,2
+SimulatedAnnealing,T50_a0.5_i2,small_02.txt,3,8,6,555,40,"[2, 3, 8, 0, 5, 6, 1, 4]",4,0,0,0.376,27,50,0.01,0.5,2
+SimulatedAnnealing,T50_a0.5_i2,small_02.txt,3,8,7,321,30,"[3, 6, 0, 1, 7, 2, 4, 8]",3,0,0,0.379,27,50,0.01,0.5,2
+SimulatedAnnealing,T50_a0.5_i2,small_02.txt,3,8,8,808,40,"[7, 2, 8, 1, 4, 3, 0, 6]",4,0,0,0.368,27,50,0.01,0.5,2
+SimulatedAnnealing,T50_a0.5_i2,small_02.txt,3,8,9,777,40,"[3, 1, 7, 0, 6, 2, 8, 5]",4,0,0,0.369,27,50,0.01,0.5,2
+SimulatedAnnealing,T50_a0.5_i2,small_02.txt,3,8,10,2024,40,"[0, 8, 2, 1, 6, 7, 3, 4]",4,0,0,0.369,27,50,0.01,0.5,2
+SimulatedAnnealing,T50_a0.5_i3,small_02.txt,3,8,1,42,40,"[3, 6, 2, 0, 4, 7, 1, 8]",4,0,0,0.704,40,50,0.01,0.5,3
+SimulatedAnnealing,T50_a0.5_i3,small_02.txt,3,8,2,7,40,"[3, 1, 6, 0, 7, 8, 4, 2]",4,0,0,0.646,40,50,0.01,0.5,3
+SimulatedAnnealing,T50_a0.5_i3,small_02.txt,3,8,3,13,30,"[0, 6, 5, 1, 3, 2, 4, 8]",3,0,0,0.566,40,50,0.01,0.5,3
+SimulatedAnnealing,T50_a0.5_i3,small_02.txt,3,8,4,99,40,"[3, 6, 1, 2, 4, 5, 7, 8]",4,0,0,0.639,40,50,0.01,0.5,3
+SimulatedAnnealing,T50_a0.5_i3,small_02.txt,3,8,5,1234,40,"[3, 1, 5, 0, 4, 7, 6, 8]",4,0,0,0.713,40,50,0.01,0.5,3
+SimulatedAnnealing,T50_a0.5_i3,small_02.txt,3,8,6,555,40,"[4, 3, 2, 0, 5, 8, 1, 6]",4,0,0,0.554,40,50,0.01,0.5,3
+SimulatedAnnealing,T50_a0.5_i3,small_02.txt,3,8,7,321,30,"[3, 6, 0, 1, 7, 2, 4, 8]",3,0,0,0.561,40,50,0.01,0.5,3
+SimulatedAnnealing,T50_a0.5_i3,small_02.txt,3,8,8,808,40,"[7, 2, 8, 1, 4, 3, 0, 6]",4,0,0,0.543,40,50,0.01,0.5,3
+SimulatedAnnealing,T50_a0.5_i3,small_02.txt,3,8,9,777,40,"[3, 1, 7, 0, 6, 2, 8, 5]",4,0,0,0.546,40,50,0.01,0.5,3
+SimulatedAnnealing,T50_a0.5_i3,small_02.txt,3,8,10,2024,40,"[1, 0, 6, 2, 7, 8, 5, 3]",4,0,0,0.55,40,50,0.01,0.5,3
+SimulatedAnnealing,T50_a0.5_i5,small_02.txt,3,8,1,42,40,"[3, 6, 2, 0, 4, 7, 1, 8]",4,0,0,1.141,66,50,0.01,0.5,5
+SimulatedAnnealing,T50_a0.5_i5,small_02.txt,3,8,2,7,40,"[3, 1, 5, 0, 7, 8, 2, 6]",4,0,0,1.015,66,50,0.01,0.5,5
+SimulatedAnnealing,T50_a0.5_i5,small_02.txt,3,8,3,13,40,"[3, 5, 7, 0, 4, 1, 6, 8]",4,0,0,1.004,66,50,0.01,0.5,5
+SimulatedAnnealing,T50_a0.5_i5,small_02.txt,3,8,4,99,40,"[3, 6, 1, 2, 4, 5, 7, 8]",4,0,0,0.955,66,50,0.01,0.5,5
+SimulatedAnnealing,T50_a0.5_i5,small_02.txt,3,8,5,1234,40,"[3, 1, 5, 0, 4, 7, 6, 8]",4,0,0,0.897,66,50,0.01,0.5,5
+SimulatedAnnealing,T50_a0.5_i5,small_02.txt,3,8,6,555,40,"[4, 3, 2, 0, 5, 8, 1, 6]",4,0,0,0.901,66,50,0.01,0.5,5
+SimulatedAnnealing,T50_a0.5_i5,small_02.txt,3,8,7,321,30,"[3, 6, 0, 1, 7, 2, 4, 8]",3,0,0,0.901,66,50,0.01,0.5,5
+SimulatedAnnealing,T50_a0.5_i5,small_02.txt,3,8,8,808,30,"[0, 6, 4, 1, 3, 5, 8, 2]",3,0,0,0.898,66,50,0.01,0.5,5
+SimulatedAnnealing,T50_a0.5_i5,small_02.txt,3,8,9,777,40,"[1, 4, 2, 0, 7, 6, 8, 3]",4,0,0,0.903,66,50,0.01,0.5,5
+SimulatedAnnealing,T50_a0.5_i5,small_02.txt,3,8,10,2024,40,"[3, 5, 1, 2, 6, 7, 0, 8]",4,0,0,0.898,66,50,0.01,0.5,5
+SimulatedAnnealing,T50_a0.7_i2,small_02.txt,3,8,1,42,40,"[3, 6, 2, 0, 4, 7, 1, 8]",4,0,0,0.886,49,50,0.01,0.7,2
+SimulatedAnnealing,T50_a0.7_i2,small_02.txt,3,8,2,7,40,"[3, 1, 5, 0, 7, 8, 2, 6]",4,0,0,0.859,49,50,0.01,0.7,2
+SimulatedAnnealing,T50_a0.7_i2,small_02.txt,3,8,3,13,30,"[0, 6, 5, 1, 3, 2, 4, 8]",3,0,0,0.672,49,50,0.01,0.7,2
+SimulatedAnnealing,T50_a0.7_i2,small_02.txt,3,8,4,99,40,"[3, 6, 1, 2, 4, 5, 7, 8]",4,0,0,0.664,49,50,0.01,0.7,2
+SimulatedAnnealing,T50_a0.7_i2,small_02.txt,3,8,5,1234,30,"[2, 6, 0, 1, 3, 5, 8, 4]",3,0,0,0.673,49,50,0.01,0.7,2
+SimulatedAnnealing,T50_a0.7_i2,small_02.txt,3,8,6,555,40,"[4, 3, 2, 0, 5, 8, 1, 6]",4,0,0,0.667,49,50,0.01,0.7,2
+SimulatedAnnealing,T50_a0.7_i2,small_02.txt,3,8,7,321,30,"[3, 6, 0, 1, 7, 2, 4, 8]",3,0,0,0.667,49,50,0.01,0.7,2
+SimulatedAnnealing,T50_a0.7_i2,small_02.txt,3,8,8,808,30,"[8, 2, 6, 1, 7, 4, 5, 0]",3,0,0,0.665,49,50,0.01,0.7,2
+SimulatedAnnealing,T50_a0.7_i2,small_02.txt,3,8,9,777,40,"[3, 1, 7, 0, 6, 2, 8, 5]",4,0,0,0.791,49,50,0.01,0.7,2
+SimulatedAnnealing,T50_a0.7_i2,small_02.txt,3,8,10,2024,40,"[1, 0, 6, 2, 7, 8, 5, 3]",4,0,0,0.701,49,50,0.01,0.7,2
+SimulatedAnnealing,T50_a0.7_i3,small_02.txt,3,8,1,42,40,"[3, 6, 2, 0, 4, 7, 1, 8]",4,0,0,1.022,73,50,0.01,0.7,3
+SimulatedAnnealing,T50_a0.7_i3,small_02.txt,3,8,2,7,40,"[3, 1, 5, 0, 7, 8, 2, 6]",4,0,0,1.113,73,50,0.01,0.7,3
+SimulatedAnnealing,T50_a0.7_i3,small_02.txt,3,8,3,13,30,"[4, 6, 3, 1, 7, 0, 8, 2]",3,0,0,0.988,73,50,0.01,0.7,3
+SimulatedAnnealing,T50_a0.7_i3,small_02.txt,3,8,4,99,30,"[8, 2, 4, 1, 7, 6, 5, 0]",3,0,0,1.109,73,50,0.01,0.7,3
+SimulatedAnnealing,T50_a0.7_i3,small_02.txt,3,8,5,1234,40,"[3, 1, 8, 0, 4, 7, 6, 5]",4,0,0,1.112,73,50,0.01,0.7,3
+SimulatedAnnealing,T50_a0.7_i3,small_02.txt,3,8,6,555,40,"[4, 3, 2, 0, 5, 8, 1, 6]",4,0,0,0.983,73,50,0.01,0.7,3
+SimulatedAnnealing,T50_a0.7_i3,small_02.txt,3,8,7,321,30,"[3, 6, 0, 1, 7, 2, 4, 8]",3,0,0,0.979,73,50,0.01,0.7,3
+SimulatedAnnealing,T50_a0.7_i3,small_02.txt,3,8,8,808,30,"[0, 6, 4, 1, 3, 5, 8, 2]",3,0,0,0.979,73,50,0.01,0.7,3
+SimulatedAnnealing,T50_a0.7_i3,small_02.txt,3,8,9,777,40,"[1, 4, 2, 0, 7, 6, 8, 3]",4,0,0,0.98,73,50,0.01,0.7,3
+SimulatedAnnealing,T50_a0.7_i3,small_02.txt,3,8,10,2024,40,"[3, 5, 1, 2, 6, 7, 0, 8]",4,0,0,1.0,73,50,0.01,0.7,3
+SimulatedAnnealing,T50_a0.7_i5,small_02.txt,3,8,1,42,30,"[6, 4, 2, 1, 5, 0, 3, 8]",3,0,0,1.895,121,50,0.01,0.7,5
+SimulatedAnnealing,T50_a0.7_i5,small_02.txt,3,8,2,7,30,"[8, 6, 0, 1, 7, 4, 5, 2]",3,0,0,1.624,121,50,0.01,0.7,5
+SimulatedAnnealing,T50_a0.7_i5,small_02.txt,3,8,3,13,30,"[6, 2, 0, 1, 3, 4, 8, 5]",3,0,0,1.613,121,50,0.01,0.7,5
+SimulatedAnnealing,T50_a0.7_i5,small_02.txt,3,8,4,99,30,"[8, 2, 4, 1, 7, 6, 5, 0]",3,0,0,1.763,121,50,0.01,0.7,5
+SimulatedAnnealing,T50_a0.7_i5,small_02.txt,3,8,5,1234,30,"[0, 8, 2, 1, 3, 7, 4, 6]",3,0,0,1.605,121,50,0.01,0.7,5
+SimulatedAnnealing,T50_a0.7_i5,small_02.txt,3,8,6,555,40,"[2, 8, 5, 0, 7, 6, 3, 1]",4,0,0,1.614,121,50,0.01,0.7,5
+SimulatedAnnealing,T50_a0.7_i5,small_02.txt,3,8,7,321,40,"[5, 0, 7, 1, 8, 2, 6, 3]",4,0,0,1.618,121,50,0.01,0.7,5
+SimulatedAnnealing,T50_a0.7_i5,small_02.txt,3,8,8,808,40,"[7, 2, 8, 1, 4, 3, 0, 6]",4,0,0,1.612,121,50,0.01,0.7,5
+SimulatedAnnealing,T50_a0.7_i5,small_02.txt,3,8,9,777,40,"[1, 4, 2, 0, 7, 6, 8, 3]",4,0,0,1.636,121,50,0.01,0.7,5
+SimulatedAnnealing,T50_a0.7_i5,small_02.txt,3,8,10,2024,40,"[3, 5, 1, 2, 6, 7, 0, 8]",4,0,0,1.61,121,50,0.01,0.7,5
+SimulatedAnnealing,T50_a0.9_i2,small_02.txt,3,8,1,42,30,"[6, 4, 2, 1, 5, 0, 3, 8]",3,0,0,2.348,163,50,0.01,0.9,2
+SimulatedAnnealing,T50_a0.9_i2,small_02.txt,3,8,2,7,30,"[6, 2, 4, 1, 7, 8, 5, 0]",3,0,0,2.371,163,50,0.01,0.9,2
+SimulatedAnnealing,T50_a0.9_i2,small_02.txt,3,8,3,13,40,"[3, 5, 7, 0, 4, 1, 6, 8]",4,0,0,2.331,163,50,0.01,0.9,2
+SimulatedAnnealing,T50_a0.9_i2,small_02.txt,3,8,4,99,30,"[6, 0, 4, 1, 5, 8, 7, 2]",3,0,0,2.168,163,50,0.01,0.9,2
+SimulatedAnnealing,T50_a0.9_i2,small_02.txt,3,8,5,1234,40,"[3, 2, 6, 0, 8, 7, 5, 1]",4,0,0,2.156,163,50,0.01,0.9,2
+SimulatedAnnealing,T50_a0.9_i2,small_02.txt,3,8,6,555,30,"[2, 7, 8, 1, 3, 0, 4, 6]",3,0,0,2.165,163,50,0.01,0.9,2
+SimulatedAnnealing,T50_a0.9_i2,small_02.txt,3,8,7,321,30,"[4, 2, 0, 1, 5, 8, 7, 6]",3,0,0,2.157,163,50,0.01,0.9,2
+SimulatedAnnealing,T50_a0.9_i2,small_02.txt,3,8,8,808,30,"[4, 6, 2, 1, 5, 7, 8, 0]",3,0,0,2.208,163,50,0.01,0.9,2
+SimulatedAnnealing,T50_a0.9_i2,small_02.txt,3,8,9,777,30,"[6, 5, 8, 1, 3, 2, 0, 4]",3,0,0,2.184,163,50,0.01,0.9,2
+SimulatedAnnealing,T50_a0.9_i2,small_02.txt,3,8,10,2024,30,"[8, 0, 2, 1, 3, 4, 5, 6]",3,0,0,3.423,163,50,0.01,0.9,2
+SimulatedAnnealing,T50_a0.9_i3,small_02.txt,3,8,1,42,30,"[0, 6, 2, 1, 3, 4, 7, 8]",3,0,0,3.659,244,50,0.01,0.9,3
+SimulatedAnnealing,T50_a0.9_i3,small_02.txt,3,8,2,7,30,"[2, 8, 0, 1, 5, 6, 3, 4]",3,0,0,3.265,244,50,0.01,0.9,3
+SimulatedAnnealing,T50_a0.9_i3,small_02.txt,3,8,3,13,30,"[8, 0, 6, 1, 5, 7, 2, 4]",3,0,0,3.247,244,50,0.01,0.9,3
+SimulatedAnnealing,T50_a0.9_i3,small_02.txt,3,8,4,99,30,"[2, 0, 8, 1, 3, 5, 6, 4]",3,0,0,3.251,244,50,0.01,0.9,3
+SimulatedAnnealing,T50_a0.9_i3,small_02.txt,3,8,5,1234,30,"[4, 6, 5, 1, 7, 2, 8, 0]",3,0,0,3.486,244,50,0.01,0.9,3
+SimulatedAnnealing,T50_a0.9_i3,small_02.txt,3,8,6,555,40,"[7, 1, 3, 0, 5, 8, 2, 6]",4,0,0,3.419,244,50,0.01,0.9,3
+SimulatedAnnealing,T50_a0.9_i3,small_02.txt,3,8,7,321,30,"[4, 2, 0, 1, 5, 8, 7, 6]",3,0,0,3.396,244,50,0.01,0.9,3
+SimulatedAnnealing,T50_a0.9_i3,small_02.txt,3,8,8,808,30,"[3, 2, 8, 1, 5, 4, 0, 6]",3,0,0,3.413,244,50,0.01,0.9,3
+SimulatedAnnealing,T50_a0.9_i3,small_02.txt,3,8,9,777,30,"[6, 4, 2, 1, 3, 7, 8, 0]",3,0,0,3.459,244,50,0.01,0.9,3
+SimulatedAnnealing,T50_a0.9_i3,small_02.txt,3,8,10,2024,40,"[8, 0, 6, 1, 4, 5, 3, 2]",4,0,0,3.477,244,50,0.01,0.9,3
+SimulatedAnnealing,T50_a0.9_i5,small_02.txt,3,8,1,42,30,"[6, 0, 5, 1, 3, 8, 4, 2]",3,0,0,5.911,406,50,0.01,0.9,5
+SimulatedAnnealing,T50_a0.9_i5,small_02.txt,3,8,2,7,30,"[6, 0, 3, 1, 7, 4, 8, 2]",3,0,0,5.419,406,50,0.01,0.9,5
+SimulatedAnnealing,T50_a0.9_i5,small_02.txt,3,8,3,13,30,"[2, 6, 8, 1, 3, 4, 5, 0]",3,0,0,5.67,406,50,0.01,0.9,5
+SimulatedAnnealing,T50_a0.9_i5,small_02.txt,3,8,4,99,30,"[2, 0, 8, 1, 3, 5, 6, 4]",3,0,0,5.629,406,50,0.01,0.9,5
+SimulatedAnnealing,T50_a0.9_i5,small_02.txt,3,8,5,1234,30,"[4, 0, 8, 1, 7, 5, 2, 6]",3,0,0,5.638,406,50,0.01,0.9,5
+SimulatedAnnealing,T50_a0.9_i5,small_02.txt,3,8,6,555,30,"[8, 4, 6, 1, 5, 2, 3, 0]",3,0,0,5.96,406,50,0.01,0.9,5
+SimulatedAnnealing,T50_a0.9_i5,small_02.txt,3,8,7,321,30,"[4, 2, 0, 1, 5, 8, 7, 6]",3,0,0,5.429,406,50,0.01,0.9,5
+SimulatedAnnealing,T50_a0.9_i5,small_02.txt,3,8,8,808,30,"[4, 0, 6, 1, 7, 8, 3, 2]",3,0,0,5.421,406,50,0.01,0.9,5
+SimulatedAnnealing,T50_a0.9_i5,small_02.txt,3,8,9,777,30,"[2, 6, 0, 1, 5, 4, 8, 7]",3,0,0,5.979,406,50,0.01,0.9,5
+SimulatedAnnealing,T50_a0.9_i5,small_02.txt,3,8,10,2024,30,"[6, 2, 4, 1, 7, 3, 0, 8]",3,0,0,5.396,406,50,0.01,0.9,5
+SimulatedAnnealing,T100_a0.5_i2,small_02.txt,3,8,1,42,40,"[3, 6, 2, 0, 4, 7, 1, 8]",4,0,0,0.528,29,100,0.01,0.5,2
+SimulatedAnnealing,T100_a0.5_i2,small_02.txt,3,8,2,7,40,"[3, 1, 6, 0, 7, 8, 4, 2]",4,0,0,0.473,29,100,0.01,0.5,2
+SimulatedAnnealing,T100_a0.5_i2,small_02.txt,3,8,3,13,40,"[3, 5, 7, 0, 4, 1, 6, 8]",4,0,0,0.398,29,100,0.01,0.5,2
+SimulatedAnnealing,T100_a0.5_i2,small_02.txt,3,8,4,99,40,"[3, 6, 1, 2, 4, 5, 7, 8]",4,0,0,0.396,29,100,0.01,0.5,2
+SimulatedAnnealing,T100_a0.5_i2,small_02.txt,3,8,5,1234,60,"[8, 3, 2, 5, 4, 6, 0, 1]",4,0,1,0.398,29,100,0.01,0.5,2
+SimulatedAnnealing,T100_a0.5_i2,small_02.txt,3,8,6,555,40,"[0, 5, 1, 2, 8, 6, 7, 3]",4,0,0,0.53,29,100,0.01,0.5,2
+SimulatedAnnealing,T100_a0.5_i2,small_02.txt,3,8,7,321,30,"[3, 6, 0, 1, 7, 2, 4, 8]",3,0,0,0.407,29,100,0.01,0.5,2
+SimulatedAnnealing,T100_a0.5_i2,small_02.txt,3,8,8,808,40,"[7, 2, 8, 1, 4, 3, 0, 6]",4,0,0,0.396,29,100,0.01,0.5,2
+SimulatedAnnealing,T100_a0.5_i2,small_02.txt,3,8,9,777,40,"[3, 1, 7, 0, 6, 2, 8, 5]",4,0,0,0.406,29,100,0.01,0.5,2
+SimulatedAnnealing,T100_a0.5_i2,small_02.txt,3,8,10,2024,50,"[0, 3, 6, 1, 8, 4, 5, 2]",5,0,0,0.395,29,100,0.01,0.5,2
+SimulatedAnnealing,T100_a0.5_i3,small_02.txt,3,8,1,42,40,"[3, 6, 2, 0, 4, 7, 1, 8]",4,0,0,1.308,43,100,0.01,0.5,3
+SimulatedAnnealing,T100_a0.5_i3,small_02.txt,3,8,2,7,40,"[7, 1, 6, 2, 3, 0, 5, 8]",4,0,0,0.628,43,100,0.01,0.5,3
+SimulatedAnnealing,T100_a0.5_i3,small_02.txt,3,8,3,13,30,"[8, 0, 2, 1, 5, 4, 7, 6]",3,0,0,0.592,43,100,0.01,0.5,3
+SimulatedAnnealing,T100_a0.5_i3,small_02.txt,3,8,4,99,40,"[3, 6, 1, 2, 4, 5, 7, 8]",4,0,0,0.757,43,100,0.01,0.5,3
+SimulatedAnnealing,T100_a0.5_i3,small_02.txt,3,8,5,1234,40,"[3, 1, 5, 0, 4, 7, 6, 8]",4,0,0,0.578,43,100,0.01,0.5,3
+SimulatedAnnealing,T100_a0.5_i3,small_02.txt,3,8,6,555,40,"[0, 5, 1, 2, 8, 6, 7, 3]",4,0,0,0.587,43,100,0.01,0.5,3
+SimulatedAnnealing,T100_a0.5_i3,small_02.txt,3,8,7,321,30,"[3, 6, 0, 1, 7, 2, 4, 8]",3,0,0,0.582,43,100,0.01,0.5,3
+SimulatedAnnealing,T100_a0.5_i3,small_02.txt,3,8,8,808,40,"[7, 2, 8, 1, 4, 3, 0, 6]",4,0,0,0.927,43,100,0.01,0.5,3
+SimulatedAnnealing,T100_a0.5_i3,small_02.txt,3,8,9,777,60,"[6, 0, 1, 5, 4, 2, 8, 7]",4,0,1,0.607,43,100,0.01,0.5,3
+SimulatedAnnealing,T100_a0.5_i3,small_02.txt,3,8,10,2024,40,"[3, 5, 1, 2, 6, 7, 0, 8]",4,0,0,0.597,43,100,0.01,0.5,3
+SimulatedAnnealing,T100_a0.5_i5,small_02.txt,3,8,1,42,30,"[6, 4, 2, 1, 5, 0, 3, 8]",3,0,0,1.099,71,100,0.01,0.5,5
+SimulatedAnnealing,T100_a0.5_i5,small_02.txt,3,8,2,7,30,"[8, 4, 0, 1, 7, 6, 5, 2]",3,0,0,0.996,71,100,0.01,0.5,5
+SimulatedAnnealing,T100_a0.5_i5,small_02.txt,3,8,3,13,30,"[4, 0, 6, 1, 3, 8, 2, 7]",3,0,0,0.958,71,100,0.01,0.5,5
+SimulatedAnnealing,T100_a0.5_i5,small_02.txt,3,8,4,99,30,"[8, 2, 4, 1, 7, 6, 5, 0]",3,0,0,0.953,71,100,0.01,0.5,5
+SimulatedAnnealing,T100_a0.5_i5,small_02.txt,3,8,5,1234,40,"[3, 1, 8, 0, 4, 7, 6, 5]",4,0,0,0.949,71,100,0.01,0.5,5
+SimulatedAnnealing,T100_a0.5_i5,small_02.txt,3,8,6,555,40,"[5, 7, 3, 2, 4, 8, 1, 0]",4,0,0,0.949,71,100,0.01,0.5,5
+SimulatedAnnealing,T100_a0.5_i5,small_02.txt,3,8,7,321,40,"[5, 0, 7, 1, 8, 2, 6, 3]",4,0,0,0.959,71,100,0.01,0.5,5
+SimulatedAnnealing,T100_a0.5_i5,small_02.txt,3,8,8,808,40,"[7, 2, 8, 1, 4, 3, 0, 6]",4,0,0,0.947,71,100,0.01,0.5,5
+SimulatedAnnealing,T100_a0.5_i5,small_02.txt,3,8,9,777,40,"[3, 1, 8, 0, 6, 5, 2, 7]",4,0,0,0.953,71,100,0.01,0.5,5
+SimulatedAnnealing,T100_a0.5_i5,small_02.txt,3,8,10,2024,40,"[3, 5, 1, 2, 6, 7, 0, 8]",4,0,0,0.952,71,100,0.01,0.5,5
+SimulatedAnnealing,T100_a0.7_i2,small_02.txt,3,8,1,42,40,"[3, 6, 2, 0, 4, 7, 1, 8]",4,0,0,0.975,53,100,0.01,0.7,2
+SimulatedAnnealing,T100_a0.7_i2,small_02.txt,3,8,2,7,40,"[7, 1, 6, 2, 3, 0, 5, 8]",4,0,0,0.773,53,100,0.01,0.7,2
+SimulatedAnnealing,T100_a0.7_i2,small_02.txt,3,8,3,13,30,"[8, 0, 2, 1, 5, 4, 7, 6]",3,0,0,0.726,53,100,0.01,0.7,2
+SimulatedAnnealing,T100_a0.7_i2,small_02.txt,3,8,4,99,40,"[3, 6, 1, 2, 4, 5, 7, 8]",4,0,0,0.713,53,100,0.01,0.7,2
+SimulatedAnnealing,T100_a0.7_i2,small_02.txt,3,8,5,1234,40,"[3, 1, 5, 0, 4, 7, 6, 8]",4,0,0,0.724,53,100,0.01,0.7,2
+SimulatedAnnealing,T100_a0.7_i2,small_02.txt,3,8,6,555,50,"[2, 5, 8, 0, 7, 6, 1, 4]",5,0,0,0.718,53,100,0.01,0.7,2
+SimulatedAnnealing,T100_a0.7_i2,small_02.txt,3,8,7,321,40,"[5, 0, 7, 1, 8, 2, 6, 3]",4,0,0,0.718,53,100,0.01,0.7,2
+SimulatedAnnealing,T100_a0.7_i2,small_02.txt,3,8,8,808,30,"[0, 6, 4, 1, 3, 5, 8, 2]",3,0,0,0.719,53,100,0.01,0.7,2
+SimulatedAnnealing,T100_a0.7_i2,small_02.txt,3,8,9,777,50,"[6, 4, 2, 0, 1, 7, 3, 8]",5,0,0,0.716,53,100,0.01,0.7,2
+SimulatedAnnealing,T100_a0.7_i2,small_02.txt,3,8,10,2024,40,"[3, 5, 1, 2, 6, 7, 0, 8]",4,0,0,0.713,53,100,0.01,0.7,2
+SimulatedAnnealing,T100_a0.7_i3,small_02.txt,3,8,1,42,30,"[6, 4, 2, 1, 5, 0, 3, 8]",3,0,0,1.103,79,100,0.01,0.7,3
+SimulatedAnnealing,T100_a0.7_i3,small_02.txt,3,8,2,7,30,"[8, 4, 0, 1, 7, 6, 5, 2]",3,0,0,1.081,79,100,0.01,0.7,3
+SimulatedAnnealing,T100_a0.7_i3,small_02.txt,3,8,3,13,30,"[4, 0, 6, 1, 3, 8, 2, 7]",3,0,0,1.355,79,100,0.01,0.7,3
+SimulatedAnnealing,T100_a0.7_i3,small_02.txt,3,8,4,99,30,"[2, 3, 6, 1, 7, 8, 4, 0]",3,0,0,1.131,79,100,0.01,0.7,3
+SimulatedAnnealing,T100_a0.7_i3,small_02.txt,3,8,5,1234,40,"[3, 1, 8, 0, 4, 7, 6, 5]",4,0,0,1.062,79,100,0.01,0.7,3
+SimulatedAnnealing,T100_a0.7_i3,small_02.txt,3,8,6,555,40,"[5, 7, 3, 2, 4, 8, 1, 0]",4,0,0,1.063,79,100,0.01,0.7,3
+SimulatedAnnealing,T100_a0.7_i3,small_02.txt,3,8,7,321,40,"[5, 0, 7, 1, 8, 2, 6, 3]",4,0,0,1.066,79,100,0.01,0.7,3
+SimulatedAnnealing,T100_a0.7_i3,small_02.txt,3,8,8,808,40,"[7, 2, 8, 1, 4, 3, 0, 6]",4,0,0,1.063,79,100,0.01,0.7,3
+SimulatedAnnealing,T100_a0.7_i3,small_02.txt,3,8,9,777,50,"[0, 3, 2, 5, 7, 8, 6, 4]",3,0,1,1.101,79,100,0.01,0.7,3
+SimulatedAnnealing,T100_a0.7_i3,small_02.txt,3,8,10,2024,40,"[3, 5, 1, 2, 6, 7, 0, 8]",4,0,0,1.062,79,100,0.01,0.7,3
+SimulatedAnnealing,T100_a0.7_i5,small_02.txt,3,8,1,42,30,"[6, 4, 2, 1, 5, 0, 3, 8]",3,0,0,2.045,131,100,0.01,0.7,5
+SimulatedAnnealing,T100_a0.7_i5,small_02.txt,3,8,2,7,30,"[7, 4, 8, 1, 3, 0, 6, 2]",3,0,0,1.847,131,100,0.01,0.7,5
+SimulatedAnnealing,T100_a0.7_i5,small_02.txt,3,8,3,13,30,"[8, 0, 6, 1, 5, 7, 2, 4]",3,0,0,2.038,131,100,0.01,0.7,5
+SimulatedAnnealing,T100_a0.7_i5,small_02.txt,3,8,4,99,30,"[6, 0, 4, 1, 5, 8, 7, 2]",3,0,0,1.746,131,100,0.01,0.7,5
+SimulatedAnnealing,T100_a0.7_i5,small_02.txt,3,8,5,1234,40,"[3, 2, 6, 0, 8, 7, 5, 1]",4,0,0,1.747,131,100,0.01,0.7,5
+SimulatedAnnealing,T100_a0.7_i5,small_02.txt,3,8,6,555,30,"[2, 8, 3, 1, 5, 0, 6, 4]",3,0,0,1.746,131,100,0.01,0.7,5
+SimulatedAnnealing,T100_a0.7_i5,small_02.txt,3,8,7,321,40,"[5, 0, 7, 1, 8, 2, 6, 3]",4,0,0,1.765,131,100,0.01,0.7,5
+SimulatedAnnealing,T100_a0.7_i5,small_02.txt,3,8,8,808,40,"[7, 2, 8, 1, 4, 3, 0, 6]",4,0,0,2.063,131,100,0.01,0.7,5
+SimulatedAnnealing,T100_a0.7_i5,small_02.txt,3,8,9,777,30,"[6, 4, 8, 1, 5, 0, 7, 2]",3,0,0,1.925,131,100,0.01,0.7,5
+SimulatedAnnealing,T100_a0.7_i5,small_02.txt,3,8,10,2024,30,"[8, 2, 4, 1, 5, 7, 0, 6]",3,0,0,1.837,131,100,0.01,0.7,5
+SimulatedAnnealing,T100_a0.9_i2,small_02.txt,3,8,1,42,30,"[3, 6, 0, 1, 7, 4, 8, 2]",3,0,0,2.573,177,100,0.01,0.9,2
+SimulatedAnnealing,T100_a0.9_i2,small_02.txt,3,8,2,7,30,"[6, 0, 2, 1, 5, 8, 7, 4]",3,0,0,2.359,177,100,0.01,0.9,2
+SimulatedAnnealing,T100_a0.9_i2,small_02.txt,3,8,3,13,40,"[3, 7, 8, 0, 4, 2, 6, 1]",4,0,0,2.351,177,100,0.01,0.9,2
+SimulatedAnnealing,T100_a0.9_i2,small_02.txt,3,8,4,99,30,"[2, 0, 8, 1, 3, 5, 6, 4]",3,0,0,2.352,177,100,0.01,0.9,2
+SimulatedAnnealing,T100_a0.9_i2,small_02.txt,3,8,5,1234,30,"[7, 2, 4, 1, 5, 6, 0, 8]",3,0,0,2.356,177,100,0.01,0.9,2
+SimulatedAnnealing,T100_a0.9_i2,small_02.txt,3,8,6,555,30,"[2, 8, 3, 1, 5, 0, 6, 4]",3,0,0,2.638,177,100,0.01,0.9,2
+SimulatedAnnealing,T100_a0.9_i2,small_02.txt,3,8,7,321,40,"[5, 0, 7, 1, 8, 2, 6, 3]",4,0,0,2.476,177,100,0.01,0.9,2
+SimulatedAnnealing,T100_a0.9_i2,small_02.txt,3,8,8,808,30,"[0, 6, 8, 1, 5, 3, 2, 4]",3,0,0,2.466,177,100,0.01,0.9,2
+SimulatedAnnealing,T100_a0.9_i2,small_02.txt,3,8,9,777,30,"[8, 2, 6, 1, 7, 4, 0, 3]",3,0,0,2.469,177,100,0.01,0.9,2
+SimulatedAnnealing,T100_a0.9_i2,small_02.txt,3,8,10,2024,30,"[8, 2, 4, 1, 5, 7, 0, 6]",3,0,0,2.45,177,100,0.01,0.9,2
+SimulatedAnnealing,T100_a0.9_i3,small_02.txt,3,8,1,42,30,"[4, 2, 5, 1, 3, 8, 6, 0]",3,0,0,3.968,265,100,0.01,0.9,3
+SimulatedAnnealing,T100_a0.9_i3,small_02.txt,3,8,2,7,40,"[7, 1, 6, 2, 3, 0, 5, 8]",4,0,0,3.906,265,100,0.01,0.9,3
+SimulatedAnnealing,T100_a0.9_i3,small_02.txt,3,8,3,13,30,"[2, 6, 8, 1, 3, 4, 5, 0]",3,0,0,3.633,265,100,0.01,0.9,3
+SimulatedAnnealing,T100_a0.9_i3,small_02.txt,3,8,4,99,30,"[2, 8, 0, 1, 3, 5, 6, 4]",3,0,0,3.629,265,100,0.01,0.9,3
+SimulatedAnnealing,T100_a0.9_i3,small_02.txt,3,8,5,1234,30,"[4, 0, 8, 1, 7, 5, 2, 6]",3,0,0,3.65,265,100,0.01,0.9,3
+SimulatedAnnealing,T100_a0.9_i3,small_02.txt,3,8,6,555,30,"[2, 8, 3, 1, 5, 0, 6, 4]",3,0,0,3.752,265,100,0.01,0.9,3
+SimulatedAnnealing,T100_a0.9_i3,small_02.txt,3,8,7,321,30,"[2, 0, 4, 1, 5, 8, 6, 7]",3,0,0,3.686,265,100,0.01,0.9,3
+SimulatedAnnealing,T100_a0.9_i3,small_02.txt,3,8,8,808,30,"[5, 4, 2, 1, 7, 8, 6, 0]",3,0,0,3.67,265,100,0.01,0.9,3
+SimulatedAnnealing,T100_a0.9_i3,small_02.txt,3,8,9,777,30,"[0, 2, 8, 1, 5, 3, 6, 4]",3,0,0,3.668,265,100,0.01,0.9,3
+SimulatedAnnealing,T100_a0.9_i3,small_02.txt,3,8,10,2024,30,"[8, 6, 0, 1, 5, 4, 2, 3]",3,0,0,3.672,265,100,0.01,0.9,3
+SimulatedAnnealing,T100_a0.9_i5,small_02.txt,3,8,1,42,30,"[0, 8, 6, 1, 5, 7, 4, 2]",3,0,0,6.285,441,100,0.01,0.9,5
+SimulatedAnnealing,T100_a0.9_i5,small_02.txt,3,8,2,7,40,"[7, 1, 6, 2, 3, 0, 5, 8]",4,0,0,5.848,441,100,0.01,0.9,5
+SimulatedAnnealing,T100_a0.9_i5,small_02.txt,3,8,3,13,30,"[7, 4, 8, 1, 5, 2, 0, 6]",3,0,0,5.911,441,100,0.01,0.9,5
+SimulatedAnnealing,T100_a0.9_i5,small_02.txt,3,8,4,99,30,"[0, 6, 3, 1, 7, 8, 4, 2]",3,0,0,5.923,441,100,0.01,0.9,5
+SimulatedAnnealing,T100_a0.9_i5,small_02.txt,3,8,5,1234,40,"[8, 6, 0, 1, 7, 2, 3, 5]",4,0,0,5.86,441,100,0.01,0.9,5
+SimulatedAnnealing,T100_a0.9_i5,small_02.txt,3,8,6,555,30,"[6, 0, 2, 1, 7, 4, 5, 8]",3,0,0,5.891,441,100,0.01,0.9,5
+SimulatedAnnealing,T100_a0.9_i5,small_02.txt,3,8,7,321,30,"[8, 5, 6, 1, 7, 2, 4, 0]",3,0,0,5.867,441,100,0.01,0.9,5
+SimulatedAnnealing,T100_a0.9_i5,small_02.txt,3,8,8,808,30,"[7, 8, 2, 1, 3, 0, 4, 6]",3,0,0,5.847,441,100,0.01,0.9,5
+SimulatedAnnealing,T100_a0.9_i5,small_02.txt,3,8,9,777,30,"[6, 5, 2, 1, 7, 8, 0, 4]",3,0,0,5.905,441,100,0.01,0.9,5
+SimulatedAnnealing,T100_a0.9_i5,small_02.txt,3,8,10,2024,30,"[8, 6, 2, 1, 5, 0, 4, 7]",3,0,0,5.872,441,100,0.01,0.9,5
+SimulatedAnnealing,T200_a0.5_i2,small_02.txt,3,8,1,42,40,"[3, 6, 2, 0, 4, 7, 1, 8]",4,0,0,0.571,31,200,0.01,0.5,2
+SimulatedAnnealing,T200_a0.5_i2,small_02.txt,3,8,2,7,40,"[7, 1, 6, 2, 3, 0, 5, 8]",4,0,0,0.434,31,200,0.01,0.5,2
+SimulatedAnnealing,T200_a0.5_i2,small_02.txt,3,8,3,13,40,"[3, 5, 1, 0, 4, 7, 6, 8]",4,0,0,0.433,31,200,0.01,0.5,2
+SimulatedAnnealing,T200_a0.5_i2,small_02.txt,3,8,4,99,40,"[3, 6, 1, 2, 4, 5, 7, 8]",4,0,0,0.429,31,200,0.01,0.5,2
+SimulatedAnnealing,T200_a0.5_i2,small_02.txt,3,8,5,1234,60,"[8, 3, 2, 5, 4, 6, 0, 1]",4,0,1,0.434,31,200,0.01,0.5,2
+SimulatedAnnealing,T200_a0.5_i2,small_02.txt,3,8,6,555,40,"[0, 5, 1, 2, 8, 6, 7, 3]",4,0,0,0.43,31,200,0.01,0.5,2
+SimulatedAnnealing,T200_a0.5_i2,small_02.txt,3,8,7,321,40,"[5, 0, 7, 1, 8, 2, 6, 3]",4,0,0,0.429,31,200,0.01,0.5,2
+SimulatedAnnealing,T200_a0.5_i2,small_02.txt,3,8,8,808,40,"[7, 2, 8, 1, 4, 3, 0, 6]",4,0,0,0.428,31,200,0.01,0.5,2
+SimulatedAnnealing,T200_a0.5_i2,small_02.txt,3,8,9,777,60,"[6, 0, 1, 5, 4, 2, 8, 7]",4,0,1,0.432,31,200,0.01,0.5,2
+SimulatedAnnealing,T200_a0.5_i2,small_02.txt,3,8,10,2024,50,"[0, 3, 6, 1, 8, 4, 5, 2]",5,0,0,0.426,31,200,0.01,0.5,2
+SimulatedAnnealing,T200_a0.5_i3,small_02.txt,3,8,1,42,40,"[3, 6, 2, 0, 4, 7, 1, 8]",4,0,0,0.863,46,200,0.01,0.5,3
+SimulatedAnnealing,T200_a0.5_i3,small_02.txt,3,8,2,7,40,"[7, 1, 6, 2, 3, 0, 5, 8]",4,0,0,0.639,46,200,0.01,0.5,3
+SimulatedAnnealing,T200_a0.5_i3,small_02.txt,3,8,3,13,30,"[8, 0, 2, 1, 5, 4, 7, 6]",3,0,0,0.634,46,200,0.01,0.5,3
+SimulatedAnnealing,T200_a0.5_i3,small_02.txt,3,8,4,99,40,"[3, 6, 1, 2, 4, 5, 7, 8]",4,0,0,0.729,46,200,0.01,0.5,3
+SimulatedAnnealing,T200_a0.5_i3,small_02.txt,3,8,5,1234,40,"[3, 1, 5, 0, 4, 7, 6, 8]",4,0,0,0.628,46,200,0.01,0.5,3
+SimulatedAnnealing,T200_a0.5_i3,small_02.txt,3,8,6,555,50,"[2, 5, 8, 0, 7, 6, 1, 4]",5,0,0,0.631,46,200,0.01,0.5,3
+SimulatedAnnealing,T200_a0.5_i3,small_02.txt,3,8,7,321,40,"[5, 0, 7, 1, 8, 2, 6, 3]",4,0,0,0.624,46,200,0.01,0.5,3
+SimulatedAnnealing,T200_a0.5_i3,small_02.txt,3,8,8,808,30,"[0, 6, 4, 1, 3, 5, 8, 2]",3,0,0,0.618,46,200,0.01,0.5,3
+SimulatedAnnealing,T200_a0.5_i3,small_02.txt,3,8,9,777,30,"[3, 8, 2, 1, 7, 4, 0, 6]",3,0,0,0.631,46,200,0.01,0.5,3
+SimulatedAnnealing,T200_a0.5_i3,small_02.txt,3,8,10,2024,40,"[3, 5, 1, 2, 6, 7, 0, 8]",4,0,0,0.625,46,200,0.01,0.5,3
+SimulatedAnnealing,T200_a0.5_i5,small_02.txt,3,8,1,42,30,"[6, 4, 2, 1, 5, 0, 3, 8]",3,0,0,1.342,76,200,0.01,0.5,5
+SimulatedAnnealing,T200_a0.5_i5,small_02.txt,3,8,2,7,30,"[8, 4, 0, 1, 7, 6, 5, 2]",3,0,0,1.096,76,200,0.01,0.5,5
+SimulatedAnnealing,T200_a0.5_i5,small_02.txt,3,8,3,13,30,"[4, 0, 6, 1, 3, 8, 2, 7]",3,0,0,1.027,76,200,0.01,0.5,5
+SimulatedAnnealing,T200_a0.5_i5,small_02.txt,3,8,4,99,40,"[3, 6, 1, 2, 4, 5, 7, 8]",4,0,0,1.013,76,200,0.01,0.5,5
+SimulatedAnnealing,T200_a0.5_i5,small_02.txt,3,8,5,1234,30,"[0, 6, 7, 1, 3, 8, 2, 4]",3,0,0,1.015,76,200,0.01,0.5,5
+SimulatedAnnealing,T200_a0.5_i5,small_02.txt,3,8,6,555,40,"[0, 8, 1, 2, 3, 5, 7, 6]",4,0,0,1.013,76,200,0.01,0.5,5
+SimulatedAnnealing,T200_a0.5_i5,small_02.txt,3,8,7,321,40,"[5, 0, 7, 1, 8, 2, 6, 3]",4,0,0,1.02,76,200,0.01,0.5,5
+SimulatedAnnealing,T200_a0.5_i5,small_02.txt,3,8,8,808,30,"[4, 8, 2, 1, 5, 7, 6, 0]",3,0,0,1.013,76,200,0.01,0.5,5
+SimulatedAnnealing,T200_a0.5_i5,small_02.txt,3,8,9,777,40,"[3, 1, 5, 2, 8, 0, 6, 7]",4,0,0,1.051,76,200,0.01,0.5,5
+SimulatedAnnealing,T200_a0.5_i5,small_02.txt,3,8,10,2024,30,"[0, 4, 6, 1, 5, 8, 7, 2]",3,0,0,1.013,76,200,0.01,0.5,5
+SimulatedAnnealing,T200_a0.7_i2,small_02.txt,3,8,1,42,30,"[6, 4, 2, 1, 5, 0, 3, 8]",3,0,0,0.932,57,200,0.01,0.7,2
+SimulatedAnnealing,T200_a0.7_i2,small_02.txt,3,8,2,7,40,"[7, 1, 6, 2, 3, 0, 5, 8]",4,0,0,1.03,57,200,0.01,0.7,2
+SimulatedAnnealing,T200_a0.7_i2,small_02.txt,3,8,3,13,30,"[4, 0, 6, 1, 3, 8, 2, 7]",3,0,0,0.772,57,200,0.01,0.7,2
+SimulatedAnnealing,T200_a0.7_i2,small_02.txt,3,8,4,99,30,"[2, 3, 6, 1, 7, 8, 4, 0]",3,0,0,0.843,57,200,0.01,0.7,2
+SimulatedAnnealing,T200_a0.7_i2,small_02.txt,3,8,5,1234,40,"[3, 1, 8, 0, 4, 7, 6, 5]",4,0,0,0.774,57,200,0.01,0.7,2
+SimulatedAnnealing,T200_a0.7_i2,small_02.txt,3,8,6,555,40,"[0, 8, 1, 2, 3, 5, 7, 6]",4,0,0,0.791,57,200,0.01,0.7,2
+SimulatedAnnealing,T200_a0.7_i2,small_02.txt,3,8,7,321,40,"[5, 0, 7, 1, 8, 2, 6, 3]",4,0,0,0.776,57,200,0.01,0.7,2
+SimulatedAnnealing,T200_a0.7_i2,small_02.txt,3,8,8,808,40,"[7, 2, 8, 1, 4, 3, 0, 6]",4,0,0,0.776,57,200,0.01,0.7,2
+SimulatedAnnealing,T200_a0.7_i2,small_02.txt,3,8,9,777,40,"[3, 1, 8, 0, 6, 5, 2, 7]",4,0,0,0.772,57,200,0.01,0.7,2
+SimulatedAnnealing,T200_a0.7_i2,small_02.txt,3,8,10,2024,40,"[3, 5, 1, 2, 6, 7, 0, 8]",4,0,0,0.764,57,200,0.01,0.7,2
+SimulatedAnnealing,T200_a0.7_i3,small_02.txt,3,8,1,42,30,"[6, 4, 2, 1, 5, 0, 3, 8]",3,0,0,1.402,85,200,0.01,0.7,3
+SimulatedAnnealing,T200_a0.7_i3,small_02.txt,3,8,2,7,30,"[2, 3, 6, 1, 5, 8, 0, 4]",3,0,0,1.346,85,200,0.01,0.7,3
+SimulatedAnnealing,T200_a0.7_i3,small_02.txt,3,8,3,13,40,"[3, 7, 8, 0, 4, 2, 6, 1]",4,0,0,1.205,85,200,0.01,0.7,3
+SimulatedAnnealing,T200_a0.7_i3,small_02.txt,3,8,4,99,40,"[3, 6, 1, 2, 4, 5, 7, 8]",4,0,0,1.149,85,200,0.01,0.7,3
+SimulatedAnnealing,T200_a0.7_i3,small_02.txt,3,8,5,1234,40,"[3, 1, 7, 0, 5, 8, 2, 6]",4,0,0,1.144,85,200,0.01,0.7,3
+SimulatedAnnealing,T200_a0.7_i3,small_02.txt,3,8,6,555,40,"[0, 8, 1, 2, 3, 5, 7, 6]",4,0,0,1.143,85,200,0.01,0.7,3
+SimulatedAnnealing,T200_a0.7_i3,small_02.txt,3,8,7,321,40,"[5, 0, 7, 1, 8, 2, 6, 3]",4,0,0,1.14,85,200,0.01,0.7,3
+SimulatedAnnealing,T200_a0.7_i3,small_02.txt,3,8,8,808,30,"[8, 4, 6, 1, 7, 5, 2, 0]",3,0,0,1.363,85,200,0.01,0.7,3
+SimulatedAnnealing,T200_a0.7_i3,small_02.txt,3,8,9,777,30,"[6, 4, 8, 1, 5, 0, 7, 2]",3,0,0,1.139,85,200,0.01,0.7,3
+SimulatedAnnealing,T200_a0.7_i3,small_02.txt,3,8,10,2024,40,"[8, 0, 6, 1, 4, 5, 3, 2]",4,0,0,1.143,85,200,0.01,0.7,3
+SimulatedAnnealing,T200_a0.7_i5,small_02.txt,3,8,1,42,40,"[1, 8, 3, 0, 4, 7, 5, 2]",4,0,0,2.098,141,200,0.01,0.7,5
+SimulatedAnnealing,T200_a0.7_i5,small_02.txt,3,8,2,7,30,"[0, 2, 4, 1, 7, 3, 8, 6]",3,0,0,1.874,141,200,0.01,0.7,5
+SimulatedAnnealing,T200_a0.7_i5,small_02.txt,3,8,3,13,30,"[0, 8, 2, 1, 3, 6, 4, 5]",3,0,0,1.873,141,200,0.01,0.7,5
+SimulatedAnnealing,T200_a0.7_i5,small_02.txt,3,8,4,99,30,"[2, 0, 8, 1, 3, 5, 6, 4]",3,0,0,1.874,141,200,0.01,0.7,5
+SimulatedAnnealing,T200_a0.7_i5,small_02.txt,3,8,5,1234,30,"[7, 2, 4, 1, 5, 6, 0, 8]",3,0,0,1.876,141,200,0.01,0.7,5
+SimulatedAnnealing,T200_a0.7_i5,small_02.txt,3,8,6,555,30,"[6, 0, 4, 1, 7, 8, 2, 3]",3,0,0,1.885,141,200,0.01,0.7,5
+SimulatedAnnealing,T200_a0.7_i5,small_02.txt,3,8,7,321,30,"[2, 0, 8, 1, 7, 5, 4, 6]",3,0,0,1.868,141,200,0.01,0.7,5
+SimulatedAnnealing,T200_a0.7_i5,small_02.txt,3,8,8,808,30,"[8, 0, 2, 1, 3, 4, 5, 6]",3,0,0,2.169,141,200,0.01,0.7,5
+SimulatedAnnealing,T200_a0.7_i5,small_02.txt,3,8,9,777,40,"[7, 3, 2, 0, 6, 8, 5, 1]",4,0,0,2.03,141,200,0.01,0.7,5
+SimulatedAnnealing,T200_a0.7_i5,small_02.txt,3,8,10,2024,40,"[8, 0, 6, 1, 4, 5, 3, 2]",4,0,0,1.998,141,200,0.01,0.7,5
+SimulatedAnnealing,T200_a0.9_i2,small_02.txt,3,8,1,42,30,"[3, 6, 8, 1, 7, 2, 0, 4]",3,0,0,2.821,189,200,0.01,0.9,2
+SimulatedAnnealing,T200_a0.9_i2,small_02.txt,3,8,2,7,40,"[7, 1, 6, 2, 3, 0, 5, 8]",4,0,0,2.542,189,200,0.01,0.9,2
+SimulatedAnnealing,T200_a0.9_i2,small_02.txt,3,8,3,13,30,"[2, 6, 8, 1, 3, 4, 5, 0]",3,0,0,2.523,189,200,0.01,0.9,2
+SimulatedAnnealing,T200_a0.9_i2,small_02.txt,3,8,4,99,30,"[2, 8, 0, 1, 3, 5, 6, 4]",3,0,0,2.594,189,200,0.01,0.9,2
+SimulatedAnnealing,T200_a0.9_i2,small_02.txt,3,8,5,1234,40,"[6, 5, 3, 0, 4, 1, 8, 7]",4,0,0,2.589,189,200,0.01,0.9,2
+SimulatedAnnealing,T200_a0.9_i2,small_02.txt,3,8,6,555,30,"[2, 7, 8, 1, 3, 4, 6, 0]",3,0,0,2.574,189,200,0.01,0.9,2
+SimulatedAnnealing,T200_a0.9_i2,small_02.txt,3,8,7,321,30,"[8, 0, 6, 1, 3, 7, 4, 2]",3,0,0,2.578,189,200,0.01,0.9,2
+SimulatedAnnealing,T200_a0.9_i2,small_02.txt,3,8,8,808,30,"[2, 8, 3, 1, 5, 4, 0, 6]",3,0,0,2.565,189,200,0.01,0.9,2
+SimulatedAnnealing,T200_a0.9_i2,small_02.txt,3,8,9,777,30,"[4, 8, 2, 1, 3, 5, 0, 6]",3,0,0,2.578,189,200,0.01,0.9,2
+SimulatedAnnealing,T200_a0.9_i2,small_02.txt,3,8,10,2024,30,"[0, 5, 6, 1, 3, 4, 2, 8]",3,0,0,2.569,189,200,0.01,0.9,2
+SimulatedAnnealing,T200_a0.9_i3,small_02.txt,3,8,1,42,30,"[8, 0, 6, 1, 5, 2, 7, 4]",3,0,0,4.032,283,200,0.01,0.9,3
+SimulatedAnnealing,T200_a0.9_i3,small_02.txt,3,8,2,7,30,"[2, 5, 0, 1, 7, 8, 6, 4]",3,0,0,3.785,283,200,0.01,0.9,3
+SimulatedAnnealing,T200_a0.9_i3,small_02.txt,3,8,3,13,30,"[8, 4, 0, 1, 3, 6, 2, 7]",3,0,0,3.775,283,200,0.01,0.9,3
+SimulatedAnnealing,T200_a0.9_i3,small_02.txt,3,8,4,99,30,"[0, 4, 5, 1, 7, 2, 6, 8]",3,0,0,3.811,283,200,0.01,0.9,3
+SimulatedAnnealing,T200_a0.9_i3,small_02.txt,3,8,5,1234,30,"[7, 6, 8, 1, 5, 2, 4, 0]",3,0,0,4.06,283,200,0.01,0.9,3
+SimulatedAnnealing,T200_a0.9_i3,small_02.txt,3,8,6,555,30,"[2, 6, 8, 1, 7, 0, 4, 5]",3,0,0,3.866,283,200,0.01,0.9,3
+SimulatedAnnealing,T200_a0.9_i3,small_02.txt,3,8,7,321,30,"[0, 2, 6, 1, 3, 8, 5, 4]",3,0,0,3.872,283,200,0.01,0.9,3
+SimulatedAnnealing,T200_a0.9_i3,small_02.txt,3,8,8,808,40,"[7, 2, 8, 1, 4, 3, 0, 6]",4,0,0,3.885,283,200,0.01,0.9,3
+SimulatedAnnealing,T200_a0.9_i3,small_02.txt,3,8,9,777,30,"[2, 0, 7, 1, 3, 4, 8, 6]",3,0,0,3.924,283,200,0.01,0.9,3
+SimulatedAnnealing,T200_a0.9_i3,small_02.txt,3,8,10,2024,30,"[8, 6, 2, 1, 5, 0, 4, 7]",3,0,0,3.864,283,200,0.01,0.9,3
+SimulatedAnnealing,T200_a0.9_i5,small_02.txt,3,8,1,42,30,"[6, 2, 3, 1, 7, 0, 4, 8]",3,0,0,6.268,471,200,0.01,0.9,5
+SimulatedAnnealing,T200_a0.9_i5,small_02.txt,3,8,2,7,30,"[0, 6, 8, 1, 7, 4, 2, 5]",3,0,0,6.762,471,200,0.01,0.9,5
+SimulatedAnnealing,T200_a0.9_i5,small_02.txt,3,8,3,13,30,"[4, 6, 0, 1, 7, 2, 5, 8]",3,0,0,6.358,471,200,0.01,0.9,5
+SimulatedAnnealing,T200_a0.9_i5,small_02.txt,3,8,4,99,30,"[6, 2, 5, 1, 7, 4, 8, 0]",3,0,0,6.408,471,200,0.01,0.9,5
+SimulatedAnnealing,T200_a0.9_i5,small_02.txt,3,8,5,1234,30,"[2, 4, 8, 1, 7, 6, 0, 3]",3,0,0,6.938,471,200,0.01,0.9,5
+SimulatedAnnealing,T200_a0.9_i5,small_02.txt,3,8,6,555,30,"[6, 2, 8, 1, 5, 3, 4, 0]",3,0,0,6.348,471,200,0.01,0.9,5
+SimulatedAnnealing,T200_a0.9_i5,small_02.txt,3,8,7,321,30,"[8, 0, 4, 1, 7, 2, 6, 5]",3,0,0,6.612,471,200,0.01,0.9,5
+SimulatedAnnealing,T200_a0.9_i5,small_02.txt,3,8,8,808,30,"[8, 4, 7, 1, 3, 6, 2, 0]",3,0,0,6.256,471,200,0.01,0.9,5
+SimulatedAnnealing,T200_a0.9_i5,small_02.txt,3,8,9,777,30,"[4, 0, 6, 1, 5, 7, 8, 2]",3,0,0,6.232,471,200,0.01,0.9,5
+SimulatedAnnealing,T200_a0.9_i5,small_02.txt,3,8,10,2024,30,"[6, 0, 2, 1, 3, 7, 4, 8]",3,0,0,6.564,471,200,0.01,0.9,5
