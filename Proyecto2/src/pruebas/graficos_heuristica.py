@@ -280,9 +280,9 @@ def mostrar_mejor_configuracion(filas):
 
 
 def main():
-    # TIPO_PRUEBA = "small"
-    # TIPO_PRUEBA = "medium"
-    TIPO_PRUEBA = "large"
+    TIPO_PRUEBA = "small"
+    #TIPO_PRUEBA = "medium"
+    #TIPO_PRUEBA = "large"
 
     carpeta_raiz = os.path.join(
         os.path.dirname(__file__),
