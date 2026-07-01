@@ -1,11 +1,11 @@
 from src.pruebas.probar_metaheuristica import ejecutar_experimentos
-#from src.pruebas.probar_fuerza_bruta import ejecutar_fuerza_bruta
+from src.pruebas.probar_fuerza_Bruta import ejecutar_fuerza_bruta
 
 # TODO seria modificar el de abajo cuando se implemente. 
 # from src.pruebas.probar_heuristica import ejecutar_heuristica
 
 # Selección de algoritmo: "SA", "FB", "HE"
-ALGORITMO = "SA"
+ALGORITMO = "FB"
 
 TIPO_PRUEBA = "small"
 #TIPO_PRUEBA = "medium"
