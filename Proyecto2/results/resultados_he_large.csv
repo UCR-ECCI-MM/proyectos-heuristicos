@@ -1,0 +1,7 @@
+algoritmo,configuracion,archivo,N,P,corrida,semilla,costoFinal,conflictosMachoMacho,conflictosMachoHembraCelo,enfermosFueraPrimeraFila,tiempoMs,solucionesEvaluadas
+Heuristica,H1,large_01.txt,10,100,1,-1,960,41,15,20,103.267,5050
+Heuristica,H2,large_01.txt,10,100,1,-1,950,41,14,20,103.125,5050
+Heuristica,H3,large_01.txt,10,100,1,-1,1090,40,19,25,104.814,5050
+Heuristica,H1,large_02.txt,15,200,1,-1,500,14,10,13,1089.801,25100
+Heuristica,H2,large_02.txt,15,200,1,-1,540,12,16,13,1089.429,25100
+Heuristica,H3,large_02.txt,15,200,1,-1,610,0,15,23,1102.55,25100

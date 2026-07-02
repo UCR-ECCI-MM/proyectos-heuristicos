@@ -1,0 +1,14 @@
+RESUMEN DE RESULTADOS
+
+FUERZA BRUTA
+small -> costo promedio: 15.00, tiempo promedio: 10686.22 ms
+
+HEURISTICA
+small -> mejor configuración: H1, costo promedio: 30.00, tiempo promedio: 0.00 ms
+medium -> mejor configuración: H1, costo promedio: 145.00, tiempo promedio: 1.63 ms
+large -> mejor configuración: H1, costo promedio: 730.00, tiempo promedio: 596.53 ms
+
+METAHEURISTICA
+small -> mejor configuración: T50_a0.9_i5, costo promedio: 15.00, tiempo promedio: 5.74 ms
+medium -> mejor configuración: T200_a0.9_i25, costo promedio: 99.00, tiempo promedio: 161.28 ms
+large -> mejor configuración: T100_a0.9_i25, costo promedio: 891.50, tiempo promedio: 7722.75 ms
