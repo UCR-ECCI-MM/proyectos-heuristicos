@@ -49,6 +49,8 @@ def ejecutar_heuristica(carpeta_data, ruta_salida, tipo_prueba):
 
             for configuracion in CONFIGURACIONES:
                 resultado = heuristica(instancia, configuracion)
+                print("Resultado completo:")
+                print(resultado["solucion"].posiciones)
 
                 print(
                     f"  {configuracion}: "
